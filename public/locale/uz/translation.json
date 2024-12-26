@@ -1,0 +1,83 @@
+{
+  "errors": {
+    "general": {
+      "something_went_wrong": "Nimadir noto‘g‘ri bajarildi. Iltimos, qayta urinib ko‘ring.",
+      "unexpected_error": "Kutilmagan xato yuz berdi. Iltimos, qayta urinib ko‘ring.",
+      "validation_error": "Validatsiya xatoligi",
+      "failed_to_fetch": "Maʼlumotlarni olish muvaffaqiyatsiz tugadi"
+    }
+  },
+
+  "auth": {
+    "username": "Foydalanuvchi nomi",
+    "enter_your_username": "Foydalanuvchi nomingizni kiriting",
+    "username_required": "Foydalanuvchi nomi talab qilinadi",
+
+    "password": "Parol",
+    "enter_your_password": "Parolingizni kiriting",
+    "password_required": "Parol talab qilinadi",
+
+    "rememberMe": "Meni eslab qol",
+
+    "sign_in": "Kirish",
+    "sign_in_success": "Siz tizimga muvaffaqiyatli kirdingiz.",
+    "sign_in_failure": "Tizimga kirish muvaffaqiyatsiz yakunlandi. Iltimos, maʼlumotlaringizni tekshiring."
+  },
+
+  "locale": {
+    "uz": "Uz",
+    "en": "En",
+    "ru": "Ru"
+  },
+
+  "app_sidebar": {
+    "menu": "Menyu",
+    "home": "Bosh sahifa",
+    "users": "Foydalanuvchilar",
+    "admins": "Adminlar",
+    "teachers": "O‘qituvchilar",
+    "students": "O‘quvchilar",
+    "parents": "Ota-onalar",
+    "subjects": "Fanlar",
+    "classes": "Sinflar",
+    "lessons": "Darslar",
+    "exams": "Imtihonlar",
+    "assignments": "Vazifalar",
+    "results": "Natijalar",
+    "attendance": "Davomat",
+    "events": "Tadbirlar",
+    "messages": "Xabarlar",
+    "announcements": "E'lonlar",
+    "others": "Boshqalar",
+    "profile": "Profil",
+    "settings": "Sozlamalar",
+    "logout": "Chiqish",
+    "search_placeholder": "Hujjatlarni qidiring",
+    "rooms": "Xonalar"
+  },
+
+  "role": {
+    "super-admin": "Super Admin",
+    "admin": "Admin",
+    "teacher": "O‘qituvchi",
+    "student": "Talaba",
+    "parent": "Ota-ona"
+  },
+
+  "logout": {
+    "title": "Aniq ishonchingiz komilmi?",
+    "description": "Tizimdan chiqish joriy sessiyani yakunlaydi. Iltimos, davom etishni xohlasangiz tasdiqlang.",
+    "success_title": "Chiqish amalga oshirildi - Tashrifingiz uchun rahmat!",
+    "success_description": "Siz muvaffaqiyatli tizimdan chiqdingiz. Tashrifingiz uchun minnatdormiz va sizni yana kutib olishni orziqib kutmoqdamiz. Davom etish uchun qayta tizimga kiring."
+  },
+
+  "button": {
+    "cancel": "Bekor qilish",
+    "logout": "Tizimdan chiqish",
+    "confirm": "Tasdiqlash",
+    "delete": "O'chirish",
+    "submit": "Yuborish",
+    "update": "Yangilash",
+    "save": "Saqlash"
+  }
+}

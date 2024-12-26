@@ -1,0 +1,83 @@
+{
+  "errors": {
+    "general": {
+      "something_went_wrong": "Something went wrong. Please try again",
+      "unexpected_error": "An unexpected error occurred. Please try again.",
+      "validation_error": "Validation error",
+      "failed_to_fetch": "Failed to fetch"
+    }
+  },
+
+  "auth": {
+    "username": "Username",
+    "enter_your_username": "Enter your username",
+    "username_required": "Username is required",
+
+    "password": "Password",
+    "enter_your_password": "Enter your password",
+    "password_required": "Password is required",
+
+    "rememberMe": "Remember me",
+
+    "sign_in": "Sign in",
+    "sign_in_success": "You have been signed in successfully",
+    "sign_in_failure": "Failed to sign in. Please check your credentials."
+  },
+
+  "locale": {
+    "uz": "Uz",
+    "en": "En",
+    "ru": "Ru"
+  },
+
+  "app_sidebar": {
+    "menu": "Menu",
+    "home": "Home",
+    "users": "Users",
+    "admins": "Admins",
+    "teachers": "Teachers",
+    "students": "Students",
+    "parents": "Parents",
+    "subjects": "Subjects",
+    "classes": "Classes",
+    "lessons": "Lessons",
+    "exams": "Exams",
+    "assignments": "Assignments",
+    "results": "Results",
+    "attendance": "Attendance",
+    "events": "Events",
+    "messages": "Messages",
+    "announcements": "Announcements",
+    "others": "Others",
+    "profile": "Profile",
+    "settings": "Settings",
+    "logout": "Logout",
+    "search_placeholder": "Search the docs",
+    "rooms": "Rooms"
+  },
+
+  "role": {
+    "super-admin": "Super Admin",
+    "admin": "Admin",
+    "teacher": "Teacher",
+    "student": "Student",
+    "parent": "Parent"
+  },
+
+  "logout": {
+    "title": "Are you absolutely sure?",
+    "description": "Logging out will end your current session. Please confirm if you wish to proceed.",
+    "success_title": "Logged Out - Thank You for Visiting!",
+    "success_description": "You have been successfully logged out. We're grateful for your visit and look forward to welcoming you back. Please log in again to continue exploring."
+  },
+
+  "button": {
+    "cancel": "Cancel",
+    "logout": "Logout",
+    "confirm": "Confirm",
+    "delete": "Delete",
+    "submit": "Submit",
+    "update": "Update",
+    "save": "Save"
+  }
+}
