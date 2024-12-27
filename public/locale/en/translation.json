@@ -1,4 +1,97 @@
 {
+  "admin_dashboard": {
+    "admins": "Admins",
+    "teachers": "Teachers",
+    "students": "Students",
+    "subjects": "Subjects",
+
+    "boys": "Boys",
+    "girls": "Girls",
+
+    "attendance": "Attendance",
+    "present": "Present",
+    "absent": "Absent",
+
+    "mon": "Mon",
+    "tue": "Tue",
+    "wed": "Wed",
+    "thu": "Thu",
+    "fri": "Fri",
+
+    "finance_chart": "Financial Chart",
+    "income": "Income",
+    "expense": "Expense",
+
+    "jan": "Jan",
+    "feb": "Feb",
+    "mar": "Mar",
+    "apr": "Apr",
+    "may": "May",
+    "jun": "Jun",
+    "jul": "Jul",
+    "aug": "Aug",
+    "sep": "Sep",
+    "oct": "Oct",
+    "nov": "Nov",
+    "dec": "Dec",
+
+    "events": "Events",
+    "announcements": "Announcements",
+    "no_data_available": "No Data Available",
+    "view": "View",
+    "crm": "CRM"
+  },
+
+  "data-table": {
+    "search": "Search",
+    "view": "View",
+    "toggle_columns": "Toggle Columns",
+    "selected_rows": "row(s) selected",
+    "rows_per_page": "Rows per page",
+    "page": "Page",
+    "hide_column": "Hide Column",
+    "sort_asc": "Sort Asc",
+    "sort_desc": "Sort Desc",
+    "no_results": "No Data Available",
+    "actions": {
+      "title": "Actions",
+      "data_id": "Data ID",
+      "edit": "Edit",
+      "delete": "Delete",
+      "profile": "Profile"
+    },
+    "columns": {
+      "name": "Name",
+      "actions": "Actions",
+      "phoneNumber": "Phone Number",
+      "fullName": "Full Name",
+      "username": "Username",
+      "isActive": "Status",
+      "gender": "Gender",
+      "birthday": "Birthday",
+      "address": "Address",
+      "subjects": "Subjects",
+      "classes": "Classes",
+      "parent": "Parents",
+      "students": "Students",
+      "teachers": "Teachers",
+      "createdAt": "Created At",
+      "teacher": "Teacher",
+      "room": "Room",
+      "capacity": "Capacity",
+      "group": "Group",
+      "subject": "Subject",
+      "day": "Week day",
+      "startTime": "Start Time",
+      "endTime": "End Time"
+    },
+    "active": "Active",
+    "inactive": "Inactive",
+    "male": "Male",
+    "female": "Female",
+    "items": "Items"
+  },
+
   "errors": {
     "general": {
       "something_went_wrong": "Something went wrong. Please try again",
