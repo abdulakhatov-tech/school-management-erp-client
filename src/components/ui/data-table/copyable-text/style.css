@@ -1,0 +1,7 @@
+.copyText {
+  display: none;
+}
+
+.copyText__wrapper:hover .copyText {
+  display: block;
+}

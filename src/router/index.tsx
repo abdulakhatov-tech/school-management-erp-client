@@ -6,6 +6,9 @@ import RequireAuth from "./require-auth";
 import PrivateRoute from "./private-route";
 import DashboardLayout from "@/layouts/dashboard-layout";
 
+// list
+const AdminsPage = lazy(() => import("@/pages/list/admins"));
+
 const NotFoundPage = lazy(() => import("@/pages/not-found"));
 const ErrorsPage = lazy(() => import("@/pages/errors"));
 const LogoutPage = lazy(() => import("@/pages/logout"));
@@ -30,6 +33,14 @@ const AppRouter: React.FC = () => {
         </RequireAuth>
       ),
       children: [
+        {
+          path: "/list/admins",
+          element: (
+            <PrivateRoute allowedRoles={["admin", "super-admin"]}>
+              <AdminsPage />
+            </PrivateRoute>
+          ),
+        },
         {
           path: "/logout",
           element: (

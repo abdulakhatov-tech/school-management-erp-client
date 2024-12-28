@@ -89,7 +89,16 @@
     "inactive": "Inactive",
     "male": "Male",
     "female": "Female",
-    "items": "Items"
+    "items": "Items",
+
+    "status_options": {
+      "active": "Active",
+      "inactive": "Inactive",
+      "on-leave": "On-Leave",
+      "retired": "Retired",
+      "resigned": "Resigned",
+      "pending": "Pending"
+    }
   },
 
   "errors": {
@@ -124,6 +133,8 @@
   },
 
   "app_sidebar": {
+    "dashboard": "Dashboard",
+    "list": "List",
     "menu": "Menu",
     "home": "Home",
     "users": "Users",
@@ -146,7 +157,13 @@
     "settings": "Settings",
     "logout": "Logout",
     "search_placeholder": "Search the docs",
-    "rooms": "Rooms"
+    "rooms": "Rooms",
+
+    "admin": "Admin",
+    "super-admin": "Super Admin",
+    "teacher": "Teacher",
+    "student": "Student",
+    "parent": "Parent"
   },
 
   "role": {

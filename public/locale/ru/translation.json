@@ -1,5 +1,4 @@
 {
-  
   "admin_dashboard": {
     "admins": "Админы",
     "teachers": "Учителя",
@@ -85,7 +84,16 @@
     "inactive": "Неактивный",
     "male": "Мужчина",
     "female": "Женщина",
-    "items": "Элементы"
+    "items": "Элементы",
+
+    "status_options": {
+      "active": "Активный",
+      "inactive": "Неактивный",
+      "on-leave": "В отпуске",
+      "retired": "В отставке",
+      "resigned": "Уволен",
+      "pending": "В ожидании"
+    }
   },
 
   "errors": {
@@ -120,6 +128,8 @@
   },
 
   "app_sidebar": {
+    "dashboard": "Панель управления",
+    "list": "Список",
     "menu": "Меню",
     "home": "Главная",
     "users": "Пользователи",
@@ -142,7 +152,13 @@
     "settings": "Настройки",
     "logout": "Выйти",
     "search_placeholder": "Искать в документации",
-    "rooms": "Комнаты"
+    "rooms": "Комнаты",
+
+    "admin": "Админ",
+    "super-admin": "Супер Админ",
+    "teacher": "Учитель",
+    "student": "Студент",
+    "parent": "Родитель"
   },
 
   "role": {

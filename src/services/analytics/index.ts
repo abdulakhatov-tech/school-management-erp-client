@@ -6,7 +6,8 @@ export const useAnalyticsService = () => {
   const $axios = useAxiosInstance();
   const [searchParams] = useSearchParams();
 
-  const date = searchParams.get("date") || new Date();
+  const date =
+    searchParams.get("date") || new Date().toISOString().split("T")[0];
 
   const getAnalytics = useQueryHandler({
     queryKey: ["analytics", date],

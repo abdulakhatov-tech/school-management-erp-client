@@ -9,8 +9,10 @@ import {
   BreadcrumbPage,
   BreadcrumbSeparator,
 } from "@/components/ui/breadcrumb";
+import { useTranslation } from "react-i18next";
 
 const Navigation: React.FC = () => {
+  const { t } = useTranslation()
   const location = useLocation();
   const pathSegments = location.pathname.split("/").filter(Boolean);
 
@@ -23,10 +25,10 @@ const Navigation: React.FC = () => {
         <React.Fragment key={path}>
           <BreadcrumbItem>
             {isLast ? (
-              <BreadcrumbPage>{capitalize(segment)}</BreadcrumbPage>
+              <BreadcrumbPage>{t(`app_sidebar.${segment}`)}</BreadcrumbPage>
             ) : (
               <BreadcrumbLink>
-                <Link to={path}>{capitalize(segment)}</Link>
+                <Link to={path}>{t(`app_sidebar.${segment}`)}</Link>
               </BreadcrumbLink>
             )}
           </BreadcrumbItem>
@@ -36,15 +38,12 @@ const Navigation: React.FC = () => {
     });
   };
 
-  const capitalize = (text: string) =>
-    text.charAt(0).toUpperCase() + text.slice(1);
-
   return (
     <Breadcrumb className='hidden md:block'>
       <BreadcrumbList>
         <BreadcrumbItem>
           <BreadcrumbLink>
-            <Link to='/'>Dashboard</Link>
+            <Link to='/'>{t('app_sidebar.dashboard')}</Link>
           </BreadcrumbLink>
         </BreadcrumbItem>
         <BreadcrumbSeparator />

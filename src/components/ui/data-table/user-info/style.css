@@ -1,0 +1,15 @@
+.copyText {
+  display: none;
+}
+
+.copyText__wrapper:hover .copyText {
+  display: block;
+}
+
+.eye_wrapper .eye {
+  display: none;
+}
+
+.eye_wrapper:hover .eye {
+  display: block;
+}
