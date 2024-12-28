@@ -40,7 +40,7 @@ const AdminDashboard: React.FC = () => {
         <FinanceChart />
       </div>
       {/* RIGHT SIDE */}
-      <div className='flex flex-col sm:flex-row md:flex-col gap-4 lg:max-w-[270px]'>
+      <div className='flex flex-col sm:flex-row md:flex-col gap-4 lg:max-w-[280px]'>
         {/* CALENDAR */}
         <Calendar />
 

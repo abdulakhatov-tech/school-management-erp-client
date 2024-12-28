@@ -25,7 +25,7 @@ const Loading: React.FC = () => {
       </div>
 
       {/* RIGHT SIDE */}
-      <div className='flex flex-col sm:flex-row md:flex-col gap-4 min-w-[270px] lg:max-w-[270px]'>
+      <div className='flex flex-col sm:flex-row md:flex-col gap-4 min-w-[280px] lg:max-w-[280px]'>
         {/* CALENDAR */}
         <Skeleton className='w-full aspect-video h-[300px]' />
 

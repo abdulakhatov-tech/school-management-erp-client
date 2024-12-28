@@ -6,17 +6,18 @@ import ParentDashboard from "./parent";
 import TeacherDashboard from "./teacher";
 import StudentDashboard from "./student";
 import { TUser } from "@/interfaces/user";
+import { Section } from "@/components/layout";
 
 const HomePageComponent: React.FC = () => {
   const user = useAuthUser<TUser>();
 
   return (
-    <>
-      {user?.role === "admin" && <AdminDashboard />}
-      {user?.role === "teacher" && <TeacherDashboard />}
+    <Section id='dashboard'>
+      {/* {user?.role === "admin" && <AdminDashboard />} */}
+      {user?.role === "admin" && <TeacherDashboard />}
       {user?.role === "student" && <StudentDashboard />}
       {user?.role === "parent" && <ParentDashboard />}
-    </>
+    </Section>
   );
 };
 
