@@ -13,9 +13,9 @@ const HomePageComponent: React.FC = () => {
 
   return (
     <Section id='dashboard'>
-      {/* {user?.role === "admin" && <AdminDashboard />} */}
-      {/* {user?.role === "teacher" && <TeacherDashboard />} */}
-      {user?.role === "admin" && <StudentDashboard />}
+      {user?.role === "admin" && <AdminDashboard />}
+      {user?.role === "teacher" && <TeacherDashboard />}
+      {user?.role === "student" && <StudentDashboard />}
       {user?.role === "parent" && <ParentDashboard />}
     </Section>
   );
