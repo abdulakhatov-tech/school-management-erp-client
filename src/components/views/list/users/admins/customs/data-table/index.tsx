@@ -40,7 +40,7 @@ function DataTable<TData, TValue>({
         </div>
       </div>
 
-      <div className="rounded-md border min-h-[750px]">
+      <div className="rounded-md border min-h-[740px]">
         {loading ? (
           <TableLoading columns={columns.length} />
         ) : (

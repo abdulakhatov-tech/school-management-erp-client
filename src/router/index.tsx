@@ -8,6 +8,7 @@ import DashboardLayout from "@/layouts/dashboard-layout";
 
 // list
 const AdminsPage = lazy(() => import("@/pages/list/admins"));
+const AdminProfilePage = lazy(() => import("@/pages/list/admins/profile"));
 
 const NotFoundPage = lazy(() => import("@/pages/not-found"));
 const ErrorsPage = lazy(() => import("@/pages/errors"));
@@ -40,6 +41,15 @@ const AppRouter: React.FC = () => {
               <AdminsPage />
             </PrivateRoute>
           ),
+          children: [
+            {
+              path: ":adminId",
+              element: (
+                <PrivateRoute allowedRoles={["admin", "super-admin"]}>
+                  <AdminProfilePage />
+                </PrivateRoute>)
+            }
+          ]
         },
         {
           path: "/logout",

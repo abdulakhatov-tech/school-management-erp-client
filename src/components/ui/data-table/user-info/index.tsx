@@ -5,8 +5,10 @@ import { PhotoProvider, PhotoView } from "react-photo-view";
 import "./style.css";
 import noUser from "@/assets/icons/no-user.svg";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
+import { Link } from "react-router-dom";
 
 interface User {
+  _id?: string;
   profilePhoto?: string;
   fullName?: string;
   username?: string;
@@ -17,26 +19,31 @@ interface DataTableUserInfoProps {
   accessorKey: "fullName";
 }
 
-const DataTableUserInfo: React.FC<DataTableUserInfoProps> = ({ row, accessorKey }) => {
+const DataTableUserInfo: React.FC<DataTableUserInfoProps> = ({
+  row,
+  accessorKey,
+}) => {
   const user = row.original;
 
   // Handle image error and set fallback icon
-  const handleImageError = (e: React.SyntheticEvent<HTMLImageElement, Event>) => {
+  const handleImageError = (
+    e: React.SyntheticEvent<HTMLImageElement, Event>
+  ) => {
     e.currentTarget.src = noUser; // Set fallback icon if image is broken or invalid
   };
 
   return (
-    <div className="flex items-center gap-2">
+    <div className='flex items-center gap-2'>
       <PhotoProvider>
-        <div className="w-12 h-12">
+        <div className='w-12 h-12'>
           <AspectRatio ratio={16 / 9}>
             <PhotoView src={user?.profilePhoto}>
-              <div className="relative cursor-pointer eye_wrapper">
-                <Eye className="absolute z-2 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-white eye w-5 h-5" />
+              <div className='relative cursor-pointer eye_wrapper'>
+                <Eye className='absolute z-2 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-white eye w-5 h-5' />
                 <img
                   src={user?.profilePhoto}
                   alt={user[accessorKey] || "User"}
-                  className="rounded-full object-cover bg-[#f1f1f1] w-12 h-12"
+                  className='rounded-full object-cover bg-[#f1f1f1] w-12 h-12'
                   onError={handleImageError} // Trigger handleImageError on image load failure
                 />
               </div>
@@ -45,7 +52,9 @@ const DataTableUserInfo: React.FC<DataTableUserInfoProps> = ({ row, accessorKey 
         </div>
       </PhotoProvider>
       <div>
-        <h4 className="text-[16px] font-bold capitalize">{user?.fullName}</h4>
+        <Link to={`/list/admins/${user?._id}`}>
+          <h4 className='text-[16px] font-bold capitalize hover:underline hover:text-blue-500'>{user?.fullName}</h4>
+        </Link>
         <span>@{user?.username}</span>
       </div>
     </div>
