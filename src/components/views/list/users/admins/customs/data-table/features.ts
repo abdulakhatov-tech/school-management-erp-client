@@ -11,6 +11,8 @@ import {
   getPaginationRowModel,
   ColumnDef,
 } from "@tanstack/react-table";
+import useAuthUser from "react-auth-kit/hooks/useAuthUser";
+import { TUser } from "@/interfaces/user";
 
 interface DataTableProps<TData, TValue> {
   columns: ColumnDef<TData, TValue>[];
@@ -21,6 +23,7 @@ const useDataTableFeatures = <TData, TValue>({
   data,
   columns,
 }: DataTableProps<TData, TValue>) => {
+  const user = useAuthUser() as TUser;
   const [sorting, setSorting] = useState<SortingState>([]);
   const [columnFilters, setColumnFilters] = useState<ColumnFiltersState>([]);
   const [columnVisibility, setColumnVisibility] = useState<VisibilityState>({});
@@ -45,8 +48,20 @@ const useDataTableFeatures = <TData, TValue>({
     },
   });
 
+  const isSuperAdmin = user?.role === "super-admin";
+  const isAdmin = user?.role === "admin";
+
+  // Check if the pathname matches and role is allowed to view edit action
+  const canModify =
+    (location.pathname === "/list/admins" && isSuperAdmin) ||
+    (["/list/teachers", "/list/students", "/list/parents"].includes(
+      location.pathname
+    ) &&
+      (isSuperAdmin || isAdmin));
+
   return {
     table,
+    canModify,
   };
 };
 

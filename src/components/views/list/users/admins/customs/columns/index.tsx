@@ -35,6 +35,13 @@ export const useColumns = () => {
       cell: ({ row }) => <ActiveStatus row={row} />,
     },
     {
+      accessorKey: "role",
+      header: ({ column }) => (
+        <ColumnHeader column={column} title='role' />
+      ),
+      cell: ({ row }) => t(`app_sidebar.${row.original.role}`),
+    },
+    {
       accessorKey: "phoneNumber",
       header: ({ column }) => (
         <ColumnHeader column={column} title='phoneNumber' />

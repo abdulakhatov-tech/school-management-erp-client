@@ -1,17 +1,22 @@
+import { useCallback, useEffect } from "react";
 import { useTranslation } from "react-i18next";
+import { useParams, useSearchParams } from "react-router-dom";
 
 import useAxiosInstance from "@/api";
 import { useToast } from "@/hooks/use-toast";
 import useQueryHandler from "@/hooks/useQueryHandler";
-import { useSearchParams } from "react-router-dom";
-import { useCallback, useEffect } from "react";
 import { IPaginationParams } from "@/interfaces/pagination";
+import { useMutation, useQueryClient } from "@tanstack/react-query";
 
 export const useAdminService = () => {
+  const param = useParams();
   const { toast } = useToast();
   const { t } = useTranslation();
   const $axios = useAxiosInstance();
+  const queryClient = useQueryClient();
   const [searchParams, setSearchParams] = useSearchParams();
+
+  const adminId = searchParams.get("adminId") || param?.adminId;
 
   // Get limit and page from search params
   const getLimit = useCallback(() => {
@@ -71,7 +76,99 @@ export const useAdminService = () => {
     },
   });
 
+  const getAdminById = useQueryHandler({
+    queryKey: ["admins", adminId],
+    queryFn: async () => {
+      if (!adminId) return null;
+
+      const response = await $axios.get(`/admins/${adminId}`);
+      return response?.data?.data;
+    },
+    onError: () => {
+      toast({
+        variant: "destructive",
+        title: t("admin_form.failed_to_fetch_admin"),
+      });
+    },
+  });
+
+  const createAdmin = useMutation({
+    mutationFn: async (body: object) => {
+      const response = await $axios.post("/admins/create", body);
+      return response?.data?.data;
+    },
+    onSuccess: () => {
+      toast({
+        title: t("admin_form.admin_created_successfully"),
+      });
+
+      queryClient.invalidateQueries({
+        queryKey: ["admins"],
+      });
+    },
+    onError: (error: any) => {
+      toast({
+        variant: "destructive",
+        title:
+          error?.response?.data?.message ||
+          t("admin_form.failed_to_create_admin"),
+      });
+    },
+  });
+
+  const updateAdmin = useMutation({
+    mutationFn: async (body: object) => {
+      const response = await $axios.put(`/admins/${adminId}`, body);
+      return response?.data?.data;
+    },
+    onSuccess: () => {
+      queryClient.invalidateQueries({
+        queryKey: ["admins"],
+      });
+
+      toast({
+        title: t("admin_form.admin_updated_successfully"),
+      });
+    },
+    onError: (error: any) => {
+      toast({
+        variant: "destructive",
+        title:
+          error?.response?.data?.message ||
+          t("admin_form.failed_to_update_admin"),
+      });
+    },
+  });
+
+  const deleteAdmin = useMutation({
+    mutationFn: async () => {
+      const response = await $axios.delete(`/admins/${adminId}`);
+      return response?.data;
+    },
+    onSuccess: () => {
+      queryClient.invalidateQueries({
+        queryKey: ["admins"],
+      });
+
+      toast({
+        title: t("admin_form.admin_deleted_successfully"),
+      });
+    },
+    onError: (error: any) => {
+      toast({
+        variant: "destructive",
+        title:
+          error?.response?.data?.message ||
+          t("admin_form.failed_to_delete_admin"),
+      });
+    },
+  });
+
   return {
     getAllAdmins,
+    getAdminById,
+    createAdmin,
+    updateAdmin,
+    deleteAdmin,
   };
 };

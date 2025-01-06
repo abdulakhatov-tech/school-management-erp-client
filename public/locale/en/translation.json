@@ -1,4 +1,86 @@
 {
+  "user_form": {
+    "fullName": "Full Name",
+    "enter_your_fullName": "Enter your full name",
+    "fullName_required": "Full Name is required",
+
+    "username": "Username",
+    "enter_your_username": "Enter your username",
+    "username_required": "Username is required",
+
+    "phoneNumber": "Phone Number",
+    "enter_your_phoneNumber": "Enter your phone number",
+    "phoneNumber_required": "Phone Number is required",
+    "phoneNumber_invalid_format": "Invalid phone number format",
+
+    "email": "Email",
+    "enter_your_email": "Enter your email",
+    "email_required": "Email is required",
+    "email_invalid_format": "Invalid email format",
+
+    "gender": "Gender",
+    "select_your_gender": "Select your gender",
+    "gender_required": "Gender is required",
+    "male": "Male",
+    "female": "Female",
+
+    "birthday": "Birthday",
+    "select_your_birthday": "Select your birthday",
+    "birthday_required": "Birthday is required",
+
+    "address": "Address",
+    "enter_your_address": "Enter your address",
+    "address_required": "Address is required",
+
+    "password": "Password",
+    "enter_your_password": "Password",
+    "password_required": "Password is required",
+
+    "profilePhoto": "Profile Photo",
+    "profilePhoto_required": "Profile Photo is required",
+    "invalid_profilePhoto_url": "Invalid Profile Photo URL",
+
+    "user_login_info": "User Login Info",
+    "user_info": "User Info",
+
+    "subjects": "Subjects",
+    "select_your_subjects": "Select Subjects",
+    "subjects_required": "Subjects is required",
+
+    "groups": "Groups",
+    "select_your_groups": "Select Groups",
+    "groups_required": "Groups is required",
+
+    "parent": "Parent",
+    "select_your_parent": "Enter your parent",
+    "parent_required": "Parent is required",
+
+    "group": "Group",
+    "select_your_group": "Enter your group",
+    "group_required": "Group is required",
+
+    "students": "Students",
+    "select_students": "Select Students",
+    "students_required": "Students is required",
+
+    "status": "Status",
+    "select_status": "Select Status"
+  },
+
+  "admin_form": {
+    "add-admin": "Add Admin",
+    "edit-admin": "Edit Admin",
+    "delete-admin": "Delete Admin",
+    "delete_description": "This action cannot be undone. This will permanently delete and remove your data from our servers.",
+    "admin_created_successfully": "Admin created successfully",
+    "admin_deleted_successfully": "Admin deleted successfully",
+    "admin_updated_successfully": "Admin updated successfully",
+    "failed_to_create_admin": "Failed to create Admin, Please try again later",
+    "failed_to_edit_admin": "Failed to edit Admin, Please try again later",
+    "failed_to_delete_admin": "Failed to delete Admin, Please try again later",
+    "failed_to_fetch_admin": "Failed to fetch Admin, Please try again try"
+  },
+
   "admin_dashboard": {
     "admins": "Admins",
     "teachers": "Teachers",
@@ -83,7 +165,8 @@
       "subject": "Subject",
       "day": "Week day",
       "startTime": "Start Time",
-      "endTime": "End Time"
+      "endTime": "End Time",
+      "role": "Role"
     },
     "active": "Active",
     "inactive": "Inactive",

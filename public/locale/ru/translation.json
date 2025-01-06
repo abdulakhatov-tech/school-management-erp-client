@@ -1,4 +1,81 @@
 {
+  "user_form": {
+    "fullName": "Полное имя",
+    "enter_your_fullName": "Введите ваше полное имя",
+    "fullName_required": "Полное имя обязательно",
+
+    "username": "Имя пользователя",
+    "enter_your_username": "Введите имя пользователя",
+    "username_required": "Имя пользователя обязательно",
+
+    "phoneNumber": "Номер телефона",
+    "enter_your_phoneNumber": "Введите номер телефона",
+    "phoneNumber_required": "Номер телефона обязателен",
+    "phoneNumber_invalid_format": "Неверный формат номера телефона",
+
+    "gender": "Пол",
+    "select_your_gender": "Выберите ваш пол",
+    "gender_required": "Пол обязателен",
+    "male": "Мужской",
+    "female": "Женский",
+
+    "birthday": "Дата рождения",
+    "select_your_birthday": "Выберите дату рождения",
+    "birthday_required": "Дата рождения обязательна",
+
+    "address": "Адрес",
+    "enter_your_address": "Введите ваш адрес",
+    "address_required": "Адрес обязателен",
+
+    "password": "Пароль",
+    "enter_your_password": "Пароль",
+    "password_required": "Пароль обязателен",
+
+    "profilePhoto": "Фотография профиля",
+    "profilePhoto_required": "Фотография профиля обязательна",
+    "invalid_profilePhoto_url": "Недействительная ссылка на фотографию профиля",
+
+    "user_login_info": "Информация для входа пользователя",
+    "user_info": "Информация о пользователе",
+
+    "subjects": "Предметы",
+    "select_your_subjects": "Выберите предметы",
+    "subjects_required": "Предметы обязательны",
+
+    "groups": "Группы",
+    "select_your_groups": "Выберите группы",
+    "groups_required": "Группы обязательны",
+
+    "parent": "Родитель",
+    "select_your_parent": "Введите вашего родителя",
+    "parent_required": "Родитель обязателен",
+
+    "group": "Группа",
+    "select_your_group": "Введите вашу группу",
+    "group_required": "Группа обязательна",
+
+    "students": "Студенты",
+    "select_students": "Выберите студентов",
+    "students_required": "Студенты обязательны",
+
+    "status": "Статус",
+    "select_status": "Выберите статус"
+  },
+
+  "admin_form": {
+    "add-admin": "Добавить администратора",
+    "edit-admin": "Редактировать администратора",
+    "delete-admin": "Удалить администратора",
+    "delete_description": "Это действие нельзя отменить. Это навсегда удалит и уберет ваши данные с наших серверов.",
+    "admin_created_successfully": "Администратор успешно создан",
+    "admin_deleted_successfully": "Администратор успешно удален",
+    "admin_updated_successfully": "Администратор успешно обновлен",
+    "failed_to_create_admin": "Не удалось создать администратора, пожалуйста, попробуйте позже",
+    "failed_to_edit_admin": "Не удалось изменить администратора, пожалуйста, попробуйте позже",
+    "failed_to_delete_admin": "Не удалось удалить администратора, пожалуйста, попробуйте позже",
+    "failed_to_fetch_admin": "Не удалось получить данные администратора, пожалуйста, попробуйте снова."
+  },
+
   "admin_dashboard": {
     "admins": "Админы",
     "teachers": "Учителя",
@@ -78,7 +155,8 @@
       "subject": "Предмет",
       "day": "День недели",
       "startTime": "Время начала",
-      "endTime": "Время окончания"
+      "endTime": "Время окончания",
+      "role": "Роль"
     },
     "active": "Активный",
     "inactive": "Неактивный",

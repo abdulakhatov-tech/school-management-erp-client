@@ -6,6 +6,7 @@ import {
   ViewOptions,
   SelectedRowCount,
 } from "@/components/ui/data-table";
+import AddBtn from "../add-btn";
 import { StatusSelector } from "./customs";
 import useDataTableFeatures from "./features";
 import { Table } from "@/components/ui/table";
@@ -13,14 +14,12 @@ import { Skeleton } from "@/components/ui/skeleton";
 import { DataTablePropsI } from "@/interfaces/data-table";
 import { PaginationLoading, TableLoading } from "./loading";
 
-
-
 function DataTable<TData, TValue>({
   data,
   columns,
   loading = false,
 }: DataTablePropsI<TData, TValue>) {
-  const { table } = useDataTableFeatures<TData, TValue>({
+  const { table, canModify } = useDataTableFeatures<TData, TValue>({
     columns,
     data: data?.data || [],
   });
@@ -36,11 +35,12 @@ function DataTable<TData, TValue>({
           ) : (
             <ViewOptions table={table} />
           )}
+          {canModify && <AddBtn />}
+          
         </div>
       </div>
 
-
-      <div className='rounded-md border min-h-[700px]'>
+      <div className="rounded-md border min-h-[750px]">
         {loading ? (
           <TableLoading columns={columns.length} />
         ) : (

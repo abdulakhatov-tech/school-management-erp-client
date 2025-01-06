@@ -18,7 +18,7 @@ const AppRouter: React.FC = () => {
     {
       path: "/",
       element: (
-        <RequireAuth fallbackPath={'/auth/sign-in'}>
+        <RequireAuth fallbackPath={"/auth/sign-in"}>
           <PrivateRoute
             allowedRoles={[
               "super-admin",
@@ -45,7 +45,13 @@ const AppRouter: React.FC = () => {
           path: "/logout",
           element: (
             <PrivateRoute
-              allowedRoles={["super-admin" ,"admin", "teacher", "student", "parent"]}
+              allowedRoles={[
+                "super-admin",
+                "admin",
+                "teacher",
+                "student",
+                "parent",
+              ]}
             >
               <LogoutPage />
             </PrivateRoute>

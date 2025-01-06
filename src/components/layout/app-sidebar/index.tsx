@@ -25,7 +25,7 @@ const AppSidebar: React.FC = ({
         {/* We create a SidebarGroup for each parent. */}
         {items.map((item: ISidebarItems) => (
           <SidebarGroup key={item._id}>
-            <SidebarGroupLabel>{item.label}</SidebarGroupLabel>
+            <SidebarGroupLabel className="font-sans text-base font-normal text-gray-600">{item.label}</SidebarGroupLabel>
             <SidebarGroupContent>
               <SidebarMenu className='px-2'>
                 {item.items.map((item: ISidebarItem) => (

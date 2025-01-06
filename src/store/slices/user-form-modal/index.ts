@@ -1,7 +1,7 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 
+export type UserModalActionType = "add" | "edit" | "delete";
 export type UserModalType = "admin" | "teacher" | "student" | "parent";
-export type UserModalActionType = "create" | "edit" | "delete";
 
 interface IInitialState {
   dataId: string | null;

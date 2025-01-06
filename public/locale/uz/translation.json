@@ -1,4 +1,81 @@
 {
+  "user_form": {
+    "fullName": "To'liq ism",
+    "enter_your_fullName": "To'liq ismingizni kiriting",
+    "fullName_required": "To'liq ism kiritilishi shart",
+
+    "username": "Foydalanuvchi nomi",
+    "enter_your_username": "Foydalanuvchi nomingizni kiriting",
+    "username_required": "Foydalanuvchi nomi kiritilishi shart",
+
+    "phoneNumber": "Telefon raqami",
+    "enter_your_phoneNumber": "Telefon raqamingizni kiriting",
+    "phoneNumber_required": "Telefon raqami kiritilishi shart",
+    "phoneNumber_invalid_format": "Telefon raqamining formati noto‘g‘ri",
+
+    "gender": "Jins",
+    "select_your_gender": "Jinsingizni tanlang",
+    "gender_required": "Jins kiritilishi shart",
+    "male": "Erkak",
+    "female": "Ayol",
+
+    "birthday": "Tug'ilgan sana",
+    "select_your_birthday": "Tug'ilgan sanani tanlang",
+    "birthday_required": "Tug'ilgan sana kiritilishi shart",
+
+    "address": "Manzil",
+    "enter_your_address": "Manzilingizni kiriting",
+    "address_required": "Manzil kiritilishi shart",
+
+    "password": "Parol",
+    "enter_your_password": "Parol",
+    "password_required": "Parol kiritilishi shart",
+
+    "profilePhoto": "Profil rasmi",
+    "profilePhoto_required": "Profil rasmi kiritilishi shart",
+    "invalid_profilePhoto_url": "Noto‘g‘ri profil rasmi URL",
+
+    "user_login_info": "Foydalanuvchi kirish ma’lumoti",
+    "user_info": "Foydalanuvchi ma’lumoti",
+
+    "subjects": "Fanlar",
+    "select_your_subjects": "Fanlarni tanlang",
+    "subjects_required": "Fanlar talab qilinadi",
+
+    "groups": "Guruhlar",
+    "select_your_groups": "Guruhlarni tanlang",
+    "groups_required": "Guruhlar talab qilinadi",
+
+    "parent": "Ota-ona",
+    "select_your_parent": "Ota-onangizni kiriting",
+    "parent_required": "Ota-ona talab qilinadi",
+
+    "group": "Guruh",
+    "select_your_group": "Guruhingizni kiriting",
+    "group_required": "Guruh talab qilinadi",
+
+    "students": "Talabalar",
+    "select_students": "Talabalarni tanlang",
+    "students_required": "Talabalar talab qilinadi",
+
+    "status": "Holat",
+    "select_status": "Holatni tanlang"
+  },
+
+  "admin_form": {
+    "add-admin": "Admin qo'shish",
+    "edit-admin": "Adminni tahrirlash",
+    "delete-admin": "Adminni o‘chirish",
+    "delete_description": "Bu amalni bekor qilib bo‘lmaydi. Bu ma’lumotlaringizni serverlarimizdan doimiy o‘chiradi va olib tashlaydi.",
+    "admin_created_successfully": "Admin muvaffaqiyatli yaratildi",
+    "admin_deleted_successfully": "Admin muvaffaqiyatli o‘chirildi",
+    "admin_updated_successfully": "Admin muvaffaqiyatli yangilandi",
+    "failed_to_create_admin": "Adminni yaratib bo'lmadi, iltimos keyinroq qayta urinib ko'ring",
+    "failed_to_edit_admin": "Adminni tahrirlab bo‘lmadi, iltimos keyinroq qayta urinib ko‘ring",
+    "failed_to_delete_admin": "Adminni o‘chirib bo‘lmadi, iltimos keyinroq qayta urinib ko‘ring",
+    "failed_to_fetch_admin": "Admin ma'lumotlarini olish muvaffaqiyatsiz tugadi, iltimos qaytadan urinib ko'ring."
+  },
+  
   "admin_dashboard": {
     "admins": "Administratorlar",
     "teachers": "O‘qituvchilar",
@@ -78,7 +155,8 @@
       "subject": "Fan",
       "day": "Hafta kuni",
       "startTime": "Boshlanish vaqti",
-      "endTime": "Tugash vaqti"
+      "endTime": "Tugash vaqti",
+      "role": "Rol"
     },
     "active": "Faol",
     "inactive": "Nofaol",

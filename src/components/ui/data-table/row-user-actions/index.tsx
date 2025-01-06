@@ -16,8 +16,10 @@ import useDataTableRowActionsFeatures from "./features";
 
 const DataTableRowActions: React.FC<{ row: any }> = ({ row }) => {
   const { t } = useTranslation();
+
   const data = row.original as TUser;
   const {
+    canModify,
     handleView,
     handleAction,
     isDropdownOpen,
@@ -49,18 +51,23 @@ const DataTableRowActions: React.FC<{ row: any }> = ({ row }) => {
             <Copy /> {t("data-table.actions.data_id")}
           </DropdownMenuItem>
           <DropdownMenuSeparator />
-          <DropdownMenuItem onClick={() => handleView(data?._id)} >
+          <DropdownMenuItem onClick={() => handleView(data?._id)}>
             <Eye />
-            {t("data-table.actions.profile")}
+            {t("data-table.view")}
           </DropdownMenuItem>
-          <DropdownMenuItem onClick={() => handleAction(data?._id, 'edit')}>
-            <Pencil />
-            {t("data-table.actions.edit")}
-          </DropdownMenuItem>
-          <DropdownMenuItem onClick={() => handleAction(data?._id, 'delete')}>
-            <Trash2 />
-            {t("data-table.actions.delete")}
-          </DropdownMenuItem>
+          {canModify && (
+            <DropdownMenuItem onClick={() => handleAction(data?._id, "edit")}>
+              <Pencil />
+              {t("data-table.actions.edit")}
+            </DropdownMenuItem>
+          )}
+
+          {canModify && (
+            <DropdownMenuItem onClick={() => handleAction(data?._id, "delete")}>
+              <Trash2 />
+              {t("data-table.actions.delete")}
+            </DropdownMenuItem>
+          )}
         </DropdownMenuContent>
       </DropdownMenu>
     </div>
