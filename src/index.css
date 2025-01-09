@@ -267,6 +267,7 @@ body {
   padding: 10px !important;
   margin: 10px !important;
   width: 99% !important;
+  height: fit-content !important;
 }
 
 .rbc-event:nth-child(1) {

@@ -95,6 +95,17 @@
     "failed_to_fetch_teacher": "Failed to fetch Teacher, Please try again later"
   },
 
+  "teachers_list_profile": {
+    "shortcuts": "Shortcuts",
+    "performance": "Performance",
+    "announcements": "Announcements",
+    "schedule": "Schedule",
+    "teacher": "Teacher",
+    "male": "Male",
+    "female": "male",
+    "bio": "Passionate and resourceful teacher dedicated to fostering a positive learning environment, developing engaging educational experiences, and empowering students to achieve academic success. Proficient in communication, curriculum planning, and classroom management to ensure effective learning and personal growth."
+  },
+
   "admin_dashboard": {
     "admins": "Admins",
     "teachers": "Teachers",

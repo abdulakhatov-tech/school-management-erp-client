@@ -89,6 +89,17 @@
     "failed_to_delete_teacher": "O‘qituvchi ni o‘chirib bo'lmadi, iltimos keyinroq qayta urinib ko'ring",
     "failed_to_fetch_teacher": "O‘qituvchi ma'lumotlarini olish muvaffaqiyatsiz tugadi, iltimos qaytadan urinib ko'ring."
   },
+
+  "teachers_list_profile": {
+    "shortcuts": "Tezkor havolalar",
+    "performance": "Ish samaradorligi",
+    "announcements": "Eʼlonlar",
+    "schedule": "Dars jadvali",
+    "teacher": "O'qituvchi",
+    "male": "Erkak",
+    "female": "Ayol",
+    "bio": "Ilm-fan sohasida muvaffaqiyatga erishish uchun talabalarni rag'batlantirish, ijobiy o'quv muhitini yaratish va qiziqarli ta'lim tajribalari ishlab chiqishda o'zini bag'ishlagan va resursli o'qituvchi. Samarali o'qitish va shaxsiy rivojlanishni ta'minlash uchun muloqot, o'quv dasturlarini rejalashtirish va sinf boshqaruvi bo'yicha malakali."
+  },
   
   "admin_dashboard": {
     "admins": "Administratorlar",
