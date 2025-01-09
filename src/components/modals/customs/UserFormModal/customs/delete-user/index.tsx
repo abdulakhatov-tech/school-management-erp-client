@@ -14,12 +14,13 @@ import noUser from "@/assets/icons/no-user.svg";
 import { useAdminService } from "@/services/users/admins";
 import { UserModalType } from "@/store/slices/user-form-modal";
 import { useTeacherService } from "@/services/users/teachers";
+import { useStudentService } from "@/services/users/students";
 
 const DeleteUser: React.FC = () => {
   const { t } = useTranslation();
   const { getAdminById } = useAdminService();
   const { getTeacherById } = useTeacherService();
-  // const { getStudentById } = useStudentsService();
+  const { getStudentById } = useStudentService();
   // const { getParentById } = useParentsService();
 
   const { handleClose, handleDeleteUser, handleImageError, modalType } =
@@ -28,7 +29,7 @@ const DeleteUser: React.FC = () => {
   const userServices = {
     admin: getAdminById,
     teacher: getTeacherById,
-    student: getAdminById,
+    student: getStudentById,
     parent: getAdminById,
   };
 

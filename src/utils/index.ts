@@ -36,7 +36,35 @@ const useMockData = () => {
     },
   ];
 
-  return { admin_status_options };
+  const student_status_option = [
+    {
+      _id: "1",
+      label: t("data-table.status_options.enrolled"),
+      value: "enrolled",
+    },
+    {
+      _id: "2",
+      label: t("data-table.status_options.graduated"),
+      value: "graduated",
+    },
+    {
+      _id: "3",
+      label: t("data-table.status_options.dropped-out"),
+      value: "dropped-out",
+    },
+    {
+      _id: "4",
+      label: t("data-table.status_options.expelled"),
+      value: "expelled",
+    },
+    {
+      _id: "5",
+      label: t("data-table.status_options.on-leave"),
+      value: "on-leave",
+    },
+  ];
+
+  return { admin_status_options, student_status_option };
 };
 
 export default useMockData;

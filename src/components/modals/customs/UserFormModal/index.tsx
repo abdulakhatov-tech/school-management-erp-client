@@ -8,6 +8,7 @@ import { Dialog, DialogContent } from "@/components/ui/dialog";
 import { UserModalType } from "@/store/slices/user-form-modal";
 import AdminForm from "@/components/views/list/users/admins/customs/form";
 import TeacherForm from "@/components/views/list/users/teachers/customs/form";
+import StudentForm from "@/components/views/list/users/students/customs/form";
 
 const UserFormModal: React.FC = () => {
   const { handleCloseUserModal } = useUserFormModalFeatures();
@@ -18,7 +19,7 @@ const UserFormModal: React.FC = () => {
   const formComponents: Record<UserModalType, JSX.Element | null> = {
     admin: actionType !== "delete" ? <AdminForm /> : <DeleteUser />,
     teacher: actionType !== "delete" ? <TeacherForm /> : <DeleteUser />,
-    student: actionType !== "delete" ? <AdminForm /> : <DeleteUser />,
+    student: actionType !== "delete" ? <StudentForm /> : <DeleteUser />,
     parent: actionType !== "delete" ? <AdminForm /> : <DeleteUser />,
   };
 

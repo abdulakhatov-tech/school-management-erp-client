@@ -1,5 +1,5 @@
 import { useAppSelector } from "@/hooks/useRedux";
-// import { useStudentService } from "@/services/users/students";
+import { useStudentService } from "@/services/users/students";
 // import { useParentService } from "@/services/users/parents";
 import { useTeacherService } from "@/services/users/teachers";
 import { useAdminService } from "@/services/users/admins";
@@ -14,14 +14,14 @@ const useDeleteUserFeatures = () => {
 
   const { deleteAdmin } = useAdminService();
   const { deleteTeacher } = useTeacherService();
-  //   const { deleteStudent } = useStudentService();
+  const { deleteStudent } = useStudentService();
   //   const { deleteParent } = useParentService();
 
   // Mapping modalType to delete functions
   const deleteActions: Record<string, (() => Promise<void>) | undefined> = {
     admin: deleteAdmin.mutateAsync,
     teacher: deleteTeacher.mutateAsync,
-    // student: deleteStudent.mutateAsync,
+    student: deleteStudent.mutateAsync,
     // parent: deleteParent.mutateAsync,
   };
 

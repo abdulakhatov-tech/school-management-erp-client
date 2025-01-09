@@ -64,7 +64,11 @@
     "students_required": "Students is required",
 
     "status": "Status",
-    "select_status": "Select Status"
+    "select_status": "Select Status",
+
+    "class": "Class",
+    "select_class": "Select Class",
+    "class_required": "Class is required"
   },
 
   "admin_form": {
@@ -104,6 +108,20 @@
     "male": "Male",
     "female": "male",
     "bio": "Passionate and resourceful teacher dedicated to fostering a positive learning environment, developing engaging educational experiences, and empowering students to achieve academic success. Proficient in communication, curriculum planning, and classroom management to ensure effective learning and personal growth."
+  },
+
+  "student_form": {
+    "add-student": "Add Student",
+    "edit-student": "Edit Student",
+    "delete-student": "Delete Student",
+    "delete_description": "This action cannot be undone. This will permanently delete and remove your data from our servers.",
+    "student_created_successfully": "Student created successfully",
+    "student_deleted_successfully": "Student deleted successfully",
+    "student_updated_successfully": "Student updated successfully",
+    "failed_to_create_student": "Failed to create Student, Please try again later",
+    "failed_to_edit_student": "Failed to edit Student, Please try again later",
+    "failed_to_delete_student": "Failed to delete Student, Please try again later",
+    "failed_to_fetch_student": "Failed to fetch Student, Please try again later"
   },
 
   "admin_dashboard": {
@@ -206,7 +224,13 @@
       "on-leave": "On-Leave",
       "retired": "Retired",
       "resigned": "Resigned",
-      "pending": "Pending"
+      "pending": "Pending",
+
+      "enrolled": "Enrolled",
+      "graduated": "Graduated",
+      "dropped-out": "Dropped Out",
+      "expelled": "Expelled"
+
     }
   },
 

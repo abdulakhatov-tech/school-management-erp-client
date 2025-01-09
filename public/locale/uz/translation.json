@@ -59,7 +59,11 @@
     "students_required": "Talabalar talab qilinadi",
 
     "status": "Holat",
-    "select_status": "Holatni tanlang"
+    "select_status": "Holatni tanlang",
+
+    "class": "Sinf",
+    "select_class": "Sinfni tanlang",
+    "class_required": "Sinf kiritilishi shart"
   },
 
   "admin_form": {
@@ -99,6 +103,20 @@
     "male": "Erkak",
     "female": "Ayol",
     "bio": "Ilm-fan sohasida muvaffaqiyatga erishish uchun talabalarni rag'batlantirish, ijobiy o'quv muhitini yaratish va qiziqarli ta'lim tajribalari ishlab chiqishda o'zini bag'ishlagan va resursli o'qituvchi. Samarali o'qitish va shaxsiy rivojlanishni ta'minlash uchun muloqot, o'quv dasturlarini rejalashtirish va sinf boshqaruvi bo'yicha malakali."
+  },
+
+  "student_form": {
+    "add-student": "Talabani qo'shish",
+    "edit-student": "Talabani tahrirlash",
+    "delete-student": "Talabani o‘chirish",
+    "delete_description": "Bu amalni bekor qilib bo‘lmaydi. Bu ma’lumotlaringizni serverlarimizdan doimiy o‘chiradi va olib tashlaydi.",
+    "student_created_successfully": "Talabani muvaffaqiyatli yaratildi",
+    "student_deleted_successfully": "Talabani muvaffaqiyatli o‘chirildi",
+    "student_updated_successfully": "Talabani muvaffaqiyatli yangilandi",
+    "failed_to_create_student": "Talabani ni yaratib bo'lmadi, iltimos keyinroq qayta urinib ko'ring",
+    "failed_to_edit_student": "Talabani ni tahrirlab bo'lmadi, iltimos keyinroq qayta urinib ko'ring",
+    "failed_to_delete_student": "Talabani ni o‘chirib bo'lmadi, iltimos keyinroq qayta urinib ko'ring",
+    "failed_to_fetch_student": "Talabani ma'lumotlarini olish muvaffaqiyatsiz tugadi, iltimos qaytadan urinib ko'ring."
   },
   
   "admin_dashboard": {
@@ -196,7 +214,11 @@
       "on-leave": "Ta'tilda",
       "retired": "Nafaqada",
       "resigned": "Ishdan bo‘shagan",
-      "pending": "Kutilmoqda"
+      "pending": "Kutilmoqda",
+      "enrolled": "Ro‘yxatga olingan",
+      "graduated": "Bitirgan",
+      "dropped-out": "Tashlab ketgan",
+      "expelled": "Haydalgan"
     }
   },
 
