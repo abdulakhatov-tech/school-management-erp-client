@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 
 import { toast } from "@/hooks/use-toast";
 import { useAppSelector } from "@/hooks/useRedux";
-import { useAdminService } from "@/services/users/admins";
+import { useTeacherService } from "@/services/users/teachers";
 import { handleValidationError } from "@/helpers/validation-error";
 import useUserFormModalFeatures from "@/components/modals/customs/UserFormModal/features";
 
@@ -20,7 +20,7 @@ interface IInitialValues {
   status: string;
 }
 
-const initialAdminValues: IInitialValues = {
+const initialTeacherValues: IInitialValues = {
   fullName: "",
   username: "",
   password: "",
@@ -33,8 +33,8 @@ const initialAdminValues: IInitialValues = {
   status: "pending",
 };
 
-const useAdminsFormFeatures = () => {
-  const { createAdmin, getAdminById, updateAdmin } = useAdminService();
+const useTeachersFormFeatures = () => {
+  const { createTeacher, getTeacherById, updateTeacher } = useTeacherService();
   const { handleCloseUserModal } = useUserFormModalFeatures();
   const { modalType, actionType } = useAppSelector(
     (state) => state.userFormModal
@@ -49,30 +49,30 @@ const useAdminsFormFeatures = () => {
     error: null,
   });
   const [initialValues, setInitialValues] =
-    useState<IInitialValues>(initialAdminValues);
+    useState<IInitialValues>(initialTeacherValues);
 
-  const { data: adminData, isLoading: isAdminDataLoading } = getAdminById;
+  const { data: teacherData, isLoading: isTeacherDataLoading } = getTeacherById;
 
   useEffect(() => {
     setState((prev) => ({ ...prev, loading: true }));
-    if (adminData && !isAdminDataLoading) {
+    if (teacherData && !isTeacherDataLoading) {
       setInitialValues({
-        fullName: adminData.fullName || "",
-        username: adminData.username || "",
-        password: adminData.password || "",
-        phoneNumber: adminData.phoneNumber || "",
-        gender: adminData.gender || "",
-        birthday: adminData.birthday || null,
-        address: adminData.address || "",
-        profilePhoto: adminData.profilePhoto || "",
-        email: adminData.email || "",
-        status: adminData.status || "pending",
+        fullName: teacherData.fullName || "",
+        username: teacherData.username || "",
+        password: teacherData.password || "",
+        phoneNumber: teacherData.phoneNumber || "",
+        gender: teacherData.gender || "",
+        birthday: teacherData.birthday || null,
+        address: teacherData.address || "",
+        profilePhoto: teacherData.profilePhoto || "",
+        email: teacherData.email || "",
+        status: teacherData.status || "pending",
       });
     } else {
-      setInitialValues(initialAdminValues);
+      setInitialValues(initialTeacherValues);
     }
     setState((prev) => ({ ...prev, loading: false }));
-  }, [adminData, isAdminDataLoading]);
+  }, [teacherData, isTeacherDataLoading]);
 
   const handleFormSubmit = async (
     values: IInitialValues,
@@ -86,8 +86,8 @@ const useAdminsFormFeatures = () => {
 
       if (values.email) payload.email = values.email;
 
-      if (modalType === "admin") {
-        const mutation = actionType === "add" ? createAdmin : updateAdmin;
+      if (modalType === "teacher") {
+        const mutation = actionType === "add" ? createTeacher : updateTeacher;
         await mutation.mutateAsync(payload);
       }
 
@@ -119,11 +119,11 @@ const useAdminsFormFeatures = () => {
   return {
     loading: state.loading,
     error: state.error,
-    isAdminDataLoading,
+    isTeacherDataLoading,
     handleFormSubmit,
     initialValues,
     isFormChanged,
   };
 };
 
-export default useAdminsFormFeatures;
+export default useTeachersFormFeatures;

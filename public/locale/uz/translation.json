@@ -75,6 +75,20 @@
     "failed_to_delete_admin": "Adminni o‘chirib bo‘lmadi, iltimos keyinroq qayta urinib ko‘ring",
     "failed_to_fetch_admin": "Admin ma'lumotlarini olish muvaffaqiyatsiz tugadi, iltimos qaytadan urinib ko'ring."
   },
+
+  "teacher_form": {
+    "add-teacher": "O‘qituvchi qo'shish",
+    "edit-teacher": "O‘qituvchi tahrirlash",
+    "delete-teacher": "O‘qituvchi o‘chirish",
+    "delete_description": "Bu amalni bekor qilib bo‘lmaydi. Bu ma’lumotlaringizni serverlarimizdan doimiy o‘chiradi va olib tashlaydi.",
+    "teacher_created_successfully": "O‘qituvchi muvaffaqiyatli yaratildi",
+    "teacher_deleted_successfully": "O‘qituvchi muvaffaqiyatli o‘chirildi",
+    "teacher_updated_successfully": "O‘qituvchi muvaffaqiyatli yangilandi",
+    "failed_to_create_teacher": "O‘qituvchi ni yaratib bo'lmadi, iltimos keyinroq qayta urinib ko'ring",
+    "failed_to_edit_teacher": "O‘qituvchi ni tahrirlab bo‘lmadi, iltimos keyinroq qayta urinib ko'ring",
+    "failed_to_delete_teacher": "O‘qituvchi ni o‘chirib bo'lmadi, iltimos keyinroq qayta urinib ko'ring",
+    "failed_to_fetch_teacher": "O‘qituvchi ma'lumotlarini olish muvaffaqiyatsiz tugadi, iltimos qaytadan urinib ko'ring."
+  },
   
   "admin_dashboard": {
     "admins": "Administratorlar",
@@ -156,7 +170,8 @@
       "day": "Hafta kuni",
       "startTime": "Boshlanish vaqti",
       "endTime": "Tugash vaqti",
-      "role": "Rol"
+      "role": "Rol",
+      "groups": "Guruhlar"
     },
     "active": "Faol",
     "inactive": "Nofaol",

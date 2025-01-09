@@ -1,11 +1,11 @@
 import React from "react";
 import { Eye } from "lucide-react";
+import { Link, useLocation } from "react-router-dom";
 import { PhotoProvider, PhotoView } from "react-photo-view";
 
 import "./style.css";
 import noUser from "@/assets/icons/no-user.svg";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
-import { Link } from "react-router-dom";
 
 interface User {
   _id?: string;
@@ -24,6 +24,10 @@ const DataTableUserInfo: React.FC<DataTableUserInfoProps> = ({
   accessorKey,
 }) => {
   const user = row.original;
+  const location = useLocation();
+
+  const pathname = location.pathname;
+  const path = pathname.split("/")[pathname.split("/").length - 1];
 
   // Handle image error and set fallback icon
   const handleImageError = (
@@ -52,8 +56,10 @@ const DataTableUserInfo: React.FC<DataTableUserInfoProps> = ({
         </div>
       </PhotoProvider>
       <div>
-        <Link to={`/list/admins/${user?._id}`}>
-          <h4 className='text-[16px] font-bold capitalize hover:underline hover:text-blue-500'>{user?.fullName}</h4>
+        <Link to={`/list/${path}/${user?._id}`}>
+          <h4 className='text-[16px] font-bold capitalize hover:underline hover:text-blue-500'>
+            {user?.fullName}
+          </h4>
         </Link>
         <span>@{user?.username}</span>
       </div>

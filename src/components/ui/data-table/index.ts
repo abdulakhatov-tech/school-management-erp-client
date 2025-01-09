@@ -10,4 +10,5 @@ export { default as ViewOptions } from "./view-options";
 export { default as Pagination } from "./pagination";
 export { default as TableHeader } from "./header";
 export { default as UserInfo } from "./user-info";
+export { default as IsActive } from "./isActive";
 export { default as TableBody } from "./body";

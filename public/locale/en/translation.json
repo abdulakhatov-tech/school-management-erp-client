@@ -81,6 +81,20 @@
     "failed_to_fetch_admin": "Failed to fetch Admin, Please try again try"
   },
 
+  "teacher_form": {
+    "add-teacher": "Add Teacher",
+    "edit-teacher": "Edit Teacher",
+    "delete-teacher": "Delete Teacher",
+    "delete_description": "This action cannot be undone. This will permanently delete and remove your data from our servers.",
+    "teacher_created_successfully": "Teacher created successfully",
+    "teacher_deleted_successfully": "Teacher deleted successfully",
+    "teacher_updated_successfully": "Teacher updated successfully",
+    "failed_to_create_teacher": "Failed to create Teacher, Please try again later",
+    "failed_to_edit_teacher": "Failed to edit Teacher, Please try again later",
+    "failed_to_delete_teacher": "Failed to delete Teacher, Please try again later",
+    "failed_to_fetch_teacher": "Failed to fetch Teacher, Please try again later"
+  },
+
   "admin_dashboard": {
     "admins": "Admins",
     "teachers": "Teachers",
@@ -166,7 +180,8 @@
       "day": "Week day",
       "startTime": "Start Time",
       "endTime": "End Time",
-      "role": "Role"
+      "role": "Role",
+      "groups": "Groups"
     },
     "active": "Active",
     "inactive": "Inactive",

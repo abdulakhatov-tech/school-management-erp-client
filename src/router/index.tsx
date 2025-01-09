@@ -10,6 +10,9 @@ import DashboardLayout from "@/layouts/dashboard-layout";
 const AdminsPage = lazy(() => import("@/pages/list/admins"));
 const AdminProfilePage = lazy(() => import("@/pages/list/admins/profile"));
 
+const TeachersPage = lazy(() => import("@/pages/list/teachers"));
+const TeacherProfilePage = lazy(() => import("@/pages/list/teachers/profile"));
+
 const NotFoundPage = lazy(() => import("@/pages/not-found"));
 const ErrorsPage = lazy(() => import("@/pages/errors"));
 const LogoutPage = lazy(() => import("@/pages/logout"));
@@ -47,9 +50,44 @@ const AppRouter: React.FC = () => {
               element: (
                 <PrivateRoute allowedRoles={["admin", "super-admin"]}>
                   <AdminProfilePage />
-                </PrivateRoute>)
-            }
-          ]
+                </PrivateRoute>
+              ),
+            },
+          ],
+        },
+        {
+          path: "/list/teachers",
+          element: (
+            <PrivateRoute
+              allowedRoles={[
+                "admin",
+                "super-admin",
+                "teacher",
+                "student",
+                "parent",
+              ]}
+            >
+              <TeachersPage />
+            </PrivateRoute>
+          ),
+          children: [
+            {
+              path: ":teacherId",
+              element: (
+                <PrivateRoute
+                  allowedRoles={[
+                    "admin",
+                    "super-admin",
+                    "teacher",
+                    "student",
+                    "parent",
+                  ]}
+                >
+                  <TeacherProfilePage />
+                </PrivateRoute>
+              ),
+            },
+          ],
         },
         {
           path: "/logout",

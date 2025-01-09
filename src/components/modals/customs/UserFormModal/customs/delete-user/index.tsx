@@ -13,11 +13,12 @@ import useDeleteUserFeatures from "./features";
 import noUser from "@/assets/icons/no-user.svg";
 import { useAdminService } from "@/services/users/admins";
 import { UserModalType } from "@/store/slices/user-form-modal";
+import { useTeacherService } from "@/services/users/teachers";
 
 const DeleteUser: React.FC = () => {
   const { t } = useTranslation();
   const { getAdminById } = useAdminService();
-  // const { getTeacherById } = useTeachersService();
+  const { getTeacherById } = useTeacherService();
   // const { getStudentById } = useStudentsService();
   // const { getParentById } = useParentsService();
 
@@ -26,7 +27,7 @@ const DeleteUser: React.FC = () => {
 
   const userServices = {
     admin: getAdminById,
-    teacher: getAdminById,
+    teacher: getTeacherById,
     student: getAdminById,
     parent: getAdminById,
   };

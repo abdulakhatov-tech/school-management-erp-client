@@ -4,32 +4,27 @@ import { Form, Formik } from "formik";
 import { useTranslation } from "react-i18next";
 import { toFormikValidationSchema } from "zod-formik-adapter";
 
-import {
-  DateField,
-  InputField,
-  SelectField,
-  UploadImageField,
-} from "@/components/form";
+import useMockData from "@/utils";
 import { LoadingSpinner } from "@/tools";
-import useAdminsFormFeatures from "./features";
 import { Button } from "@/components/ui/button";
+import useTeachersFormFeatures from "./features";
 import { useAppSelector } from "@/hooks/useRedux";
 import FormSubtitle from "@/components/form/subtitle";
 import { useUserValidation } from "@/validations/users";
-import useMockData from "@/utils";
+import { DateField, InputField, SelectField, UploadImageField } from "@/components/form";
 
-const AdminForm: React.FC = () => {
+const TeacherForm: React.FC = () => {
   const {
-    loading,
     error,
+    loading,
     initialValues,
-    handleFormSubmit,
-    isAdminDataLoading,
     isFormChanged,
-  } = useAdminsFormFeatures();
+    handleFormSubmit,
+    isTeacherDataLoading,
+  } = useTeachersFormFeatures();
   const { t } = useTranslation();
-  const { validateAdmin } = useUserValidation();
   const { admin_status_options } = useMockData();
+  const { validateTeacher } = useUserValidation();
   const { actionType } = useAppSelector((state) => state.userFormModal);
 
   return (
@@ -37,7 +32,7 @@ const AdminForm: React.FC = () => {
       enableReinitialize
       onSubmit={handleFormSubmit}
       initialValues={initialValues}
-      validationSchema={toFormikValidationSchema(validateAdmin)}
+      validationSchema={toFormikValidationSchema(validateTeacher)}
     >
       {(props: any) => {
         const formChanged = isFormChanged(props.values);
@@ -52,7 +47,7 @@ const AdminForm: React.FC = () => {
                 name='username'
                 label={t("user_form.username")}
                 placeholder={t("user_form.enter_your_username")}
-                loading={isAdminDataLoading && actionType === "edit"}
+                loading={isTeacherDataLoading && actionType === "edit"}
               />
 
               <InputField
@@ -60,7 +55,7 @@ const AdminForm: React.FC = () => {
                 name='password'
                 label={t("user_form.password")}
                 placeholder={t("user_form.enter_your_password")}
-                loading={isAdminDataLoading && actionType === "edit"}
+                loading={isTeacherDataLoading && actionType === "edit"}
               />
             </div>
 
@@ -72,7 +67,7 @@ const AdminForm: React.FC = () => {
                 name='fullName'
                 label={t("user_form.fullName")}
                 placeholder={t("user_form.enter_your_fullName")}
-                loading={isAdminDataLoading && actionType === "edit"}
+                loading={isTeacherDataLoading && actionType === "edit"}
               />
 
               <InputField
@@ -80,7 +75,7 @@ const AdminForm: React.FC = () => {
                 name='phoneNumber'
                 label={t("user_form.phoneNumber") + " (+9989)"}
                 placeholder={t("user_form.enter_your_phoneNumber")}
-                loading={isAdminDataLoading && actionType === "edit"}
+                loading={isTeacherDataLoading && actionType === "edit"}
               />
 
               <InputField
@@ -88,7 +83,7 @@ const AdminForm: React.FC = () => {
                 name='email'
                 label={t("user_form.email")}
                 placeholder={t("user_form.enter_your_email")}
-                loading={isAdminDataLoading && actionType === "edit"}
+                loading={isTeacherDataLoading && actionType === "edit"}
               />
 
               <SelectField
@@ -100,14 +95,14 @@ const AdminForm: React.FC = () => {
                   { label: t("user_form.female"), value: "female" },
                 ]}
                 placeholder={t("user_form.select_your_gender")}
-                loading={isAdminDataLoading && actionType === "edit"}
+                loading={isTeacherDataLoading && actionType === "edit"}
               />
 
               <DateField
                 name='birthday'
                 label={t("user_form.birthday")}
                 placeholder={t("user_form.enter_your_birthday")}
-                loading={isAdminDataLoading && actionType === "edit"}
+                loading={isTeacherDataLoading && actionType === "edit"}
               />
 
               <InputField
@@ -116,7 +111,7 @@ const AdminForm: React.FC = () => {
                 label={t("user_form.address")}
                 // placeholder={t("user_form.enter_your_address")}
                 placeholder='Beruniy 29, Navruz, Zafarabad, Djizak, Uzbekistan'
-                loading={isAdminDataLoading && actionType === "edit"}
+                loading={isTeacherDataLoading && actionType === "edit"}
               />
             </div>
 
@@ -126,13 +121,13 @@ const AdminForm: React.FC = () => {
               options={admin_status_options}
               placeholder={t("user_form.select_status")}
               value={props.values.status}
-              loading={isAdminDataLoading && actionType === "edit"}
+              loading={isTeacherDataLoading && actionType === "edit"}
             />
 
             <UploadImageField
               name='profilePhoto'
               label={t("user_form.profilePhoto")}
-              loading={isAdminDataLoading && actionType === "edit"}
+              loading={isTeacherDataLoading && actionType === "edit"}
             />
 
             {props.touched.fullName ||
@@ -169,4 +164,4 @@ const AdminForm: React.FC = () => {
   );
 };
 
-export default AdminForm;
+export default TeacherForm;

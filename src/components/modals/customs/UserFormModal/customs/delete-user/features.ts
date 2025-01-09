@@ -1,7 +1,7 @@
 import { useAppSelector } from "@/hooks/useRedux";
-// import { useTeacherService } from "@/services/users/teachers";
 // import { useStudentService } from "@/services/users/students";
 // import { useParentService } from "@/services/users/parents";
+import { useTeacherService } from "@/services/users/teachers";
 import { useAdminService } from "@/services/users/admins";
 import noUser from "@/assets/icons/no-user.svg";
 import useUserFormModalFeatures from "../../features";
@@ -13,14 +13,14 @@ const useDeleteUserFeatures = () => {
   const { handleCloseUserModal } = useUserFormModalFeatures();
 
   const { deleteAdmin } = useAdminService();
-  //   const { deleteTeacher } = useTeacherService();
+  const { deleteTeacher } = useTeacherService();
   //   const { deleteStudent } = useStudentService();
   //   const { deleteParent } = useParentService();
 
   // Mapping modalType to delete functions
   const deleteActions: Record<string, (() => Promise<void>) | undefined> = {
     admin: deleteAdmin.mutateAsync,
-    // teacher: deleteTeacher.mutateAsync,
+    teacher: deleteTeacher.mutateAsync,
     // student: deleteStudent.mutateAsync,
     // parent: deleteParent.mutateAsync,
   };
@@ -47,7 +47,7 @@ const useDeleteUserFeatures = () => {
   const handleImageError = (
     e: React.SyntheticEvent<HTMLImageElement, Event>
   ) => {
-    e.currentTarget.src = noUser; 
+    e.currentTarget.src = noUser;
   };
 
   return {

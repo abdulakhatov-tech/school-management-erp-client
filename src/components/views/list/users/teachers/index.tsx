@@ -3,20 +3,20 @@ import { useTranslation } from "react-i18next";
 
 import { Section } from "@/components/layout";
 import { DataTable, useColumns } from "./customs";
-import { useAdminService } from "@/services/users/admins";
+import { useTeacherService } from "@/services/users/teachers";
 
-const AdminsPageViews: React.FC = () => {
+const TeachersPageView: React.FC = () => {
   const { t } = useTranslation();
   const { columns } = useColumns();
-  const { getAllAdmins } = useAdminService();
+  const { getAllTeachers } = useTeacherService();
 
-  const { data, isLoading } = getAllAdmins;
+  const { data, isLoading } = getAllTeachers;
 
   return (
-    <Section id='admins-page-view' title={t('app_sidebar.admins')}>
+    <Section id='teachers-page-view' title={t("app_sidebar.teachers")}>
       <DataTable columns={columns} data={data} loading={isLoading} />
     </Section>
   );
 };
 
-export default AdminsPageViews;
+export default TeachersPageView;
