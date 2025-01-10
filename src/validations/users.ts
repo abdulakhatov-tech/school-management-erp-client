@@ -82,8 +82,35 @@ export const useUserValidation = () => {
     }),
   });
 
+  const validateParent = z.object({
+    fullName: z.string({ required_error: t("user_form.fullName_required") }),
+    username: z.string({ required_error: t("user_form.username_required") }),
+    password: z.string({ required_error: t("user_form.password_required") }),
+    phoneNumber: z
+      .string({
+        required_error: t("user_form.phoneNumber_required"),
+      })
+      .regex(/^\+998\d{9}$/, {
+        message: t("user_form.phoneNumber_invalid_format"),
+      }),
+    email: z
+      .string()
+      .email({
+        message: t("user_form.invalid_email"),
+      })
+      .optional(),
+    children: z
+      .array(z.string(), {
+        required_error: "users.validation.children",
+      })
+      .min(1, {
+        message: "users.validation.children",
+      }),
+  });
+
   return {
     validateAdmin,
+    validateParent,
     validateTeacher,
     validateStudent,
   };

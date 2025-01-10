@@ -12,6 +12,7 @@ import Loading from "./loading";
 import useDeleteUserFeatures from "./features";
 import noUser from "@/assets/icons/no-user.svg";
 import { useAdminService } from "@/services/users/admins";
+import { useParentsService } from "@/services/users/parents";
 import { useTeacherService } from "@/services/users/teachers";
 import { useStudentService } from "@/services/users/students";
 import { UserModalType } from "@/store/slices/user-form-modal";
@@ -21,7 +22,7 @@ const DeleteUser: React.FC = () => {
   const { getAdminById } = useAdminService();
   const { getTeacherById } = useTeacherService();
   const { getStudentById } = useStudentService();
-  // const { getParentById } = useParentsService();
+  const { getParentById } = useParentsService();
 
   const { handleClose, handleDeleteUser, handleImageError, modalType } =
     useDeleteUserFeatures();
@@ -30,7 +31,7 @@ const DeleteUser: React.FC = () => {
     admin: getAdminById,
     teacher: getTeacherById,
     student: getStudentById,
-    parent: getAdminById,
+    parent: getParentById,
   };
 
   const { data, isLoading } = userServices[modalType as UserModalType] || {};

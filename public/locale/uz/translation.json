@@ -63,7 +63,11 @@
 
     "class": "Sinf",
     "select_class": "Sinfni tanlang",
-    "class_required": "Sinf kiritilishi shart"
+    "class_required": "Sinf kiritilishi shart",
+
+    "children": "Bolalar",
+    "select_children": "Bolalarni tanlang",
+    "children_required": "Bolalar majburiy"
   },
 
   "admin_form": {
@@ -131,7 +135,27 @@
     "parent": "Ota-ona",
     "bio": "O‘quv va akademik maqsadlarga erishish uchun tengdoshlari bilan ishlashni yoqtiradigan, o‘qishga ishtiyoqi baland bo‘lgan talabgor o‘quvchi. Muloqot, tanqidiy fikrlash va muammolarni hal qilish ko‘nikmalariga ega. Har doim o‘rganish va o‘sish istagida, maktab hamjamiyatiga hissa qo‘shishga tayyor."
   },
+
+  "parent_form": {
+    "add-parent": "Ota-ona qo'shish",
+    "edit-parent": "Ota-ona tahrirlash",
+    "delete-parent": "Ota-ona o‘chirish",
+    "delete_description": "Bu amalni bekor qilib bo‘lmaydi. Bu ma’lumotlaringizni serverlarimizdan doimiy o‘chiradi va olib tashlaydi.",
+    "parent_created_successfully": "Ota-ona muvaffaqiyatli yaratildi",
+    "parent_deleted_successfully": "Ota-ona muvaffaqiyatli o‘chirildi",
+    "parent_updated_successfully": "Ota-ona muvaffaqiyatli yangilandi",
+    "failed_to_create_parent": "Ota-ona ni yaratib bo'lmadi, iltimos keyinroq qayta urinib ko'ring",
+    "failed_to_edit_parent": "Ota-ona ni tahrirlab bo'lmadi, iltimos keyinroq qayta urinib ko'ring",
+    "failed_to_delete_parent": "Ota-ona ni o‘chirib bo'lmadi, iltimos keyinroq qayta urinib ko'ring",
+    "failed_to_fetch_parent": "Ota-ona ma'lumotlarini olish muvaffaqiyatsiz tugadi, iltimos qaytadan urinib ko'ring."
+  },
   
+  "parents_list_profile": {
+    "parent": "Ota-ona",
+    "children": "Bolalar",
+    "bio": "Taʼlimning ahamiyatiga ishonuvchi va farzandlarini muvaffaqiyatga erishish uchun ilhomlantiruvchi fidoyi va ishtiyoqli ota-ona. Muloqot qilish, hamdardlik ko‘rsatish va tushunish ko‘nikmalariga ega. Doimo bolalariga yordam berish va ularni yo‘naltirishga tayyor hamda maktab jamoasiga hissa qo‘shishga intiladi."
+  },
+
   "admin_dashboard": {
     "admins": "Administratorlar",
     "teachers": "O‘qituvchilar",
@@ -231,7 +255,8 @@
       "enrolled": "Ro‘yxatga olingan",
       "graduated": "Bitirgan",
       "dropped-out": "Tashlab ketgan",
-      "expelled": "Haydalgan"
+      "expelled": "Haydalgan",
+      "blocked": "Bloklangan"
     }
   },
 

@@ -7,10 +7,10 @@ import { CustomTooltip } from "@/tools";
 import { useAppDispatch } from "@/hooks/useRedux";
 import { UserModalType, setUserFormModal } from "@/store/slices/user-form-modal";
 
-type TPath = "/list/students";
+type TPath = "/list/parents";
 
 const pathToModalType: Record<TPath, string> = {
-  "/list/students": "student",
+  "/list/parents": "parent",
 };
 
 const AddBtn: React.FC<{ loading?: boolean }> = ({ loading }) => {
@@ -33,7 +33,7 @@ const AddBtn: React.FC<{ loading?: boolean }> = ({ loading }) => {
   };
 
   return (
-    <CustomTooltip title={t('student_form.add-student')}>
+    <CustomTooltip title={t('parent_form.add-parent')}>
       <button disabled={loading}>
         <CirclePlus
           className='w-7 md:w-8 h-7 md:h-8 active:scale-95 cursor-pointer'

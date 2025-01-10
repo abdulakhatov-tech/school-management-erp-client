@@ -68,7 +68,11 @@
 
     "class": "Class",
     "select_class": "Select Class",
-    "class_required": "Class is required"
+    "class_required": "Class is required",
+    
+    "children": "Children",
+    "select_children": "Select Children",
+    "children_required": "Children is required"
   },
 
   "admin_form": {
@@ -135,6 +139,26 @@
     "female": "Female",
     "parent": "Parent",
     "bio": "A dedicated and passionate student who thrives on learning and enjoys working with their peers to achieve their academic goals. Strong in communication, critical thinking, and problem-solving skills. Always eager to learn and grow, and eager to contribute to the school community."
+  },
+
+  "parent_form": {
+    "add-parent": "Add Parent",
+    "edit-parent": "Edit Parent",
+    "delete-parent": "Delete Parent",
+    "delete_description": "This action cannot be undone. This will permanently delete and remove your data from our servers.",
+    "parent_created_successfully": "Parent created successfully",
+    "parent_deleted_successfully": "Parent deleted successfully",
+    "parent_updated_successfully": "Parent updated successfully",
+    "failed_to_create_parent": "Failed to create Parent, Please try again later",
+    "failed_to_edit_parent": "Failed to edit Parent, Please try again later",
+    "failed_to_delete_parent": "Failed to delete Parent, Please try again later",
+    "failed_to_fetch_parent": "Failed to fetch Parent, Please try again later"
+  },
+
+  "parents_list_profile": {
+    "parent": "Parent",
+    "children": "Children",
+    "bio": "A dedicated and passionate parent who believes in the importance of education and empowers their children to succeed. Strong in communication, empathy, and understanding skills. Always eager to support and guide their children, and eager to contribute to the school community."
   },
 
   "admin_dashboard": {
@@ -242,8 +266,9 @@
       "enrolled": "Enrolled",
       "graduated": "Graduated",
       "dropped-out": "Dropped Out",
-      "expelled": "Expelled"
+      "expelled": "Expelled",
 
+      "blocked": "Blocked"
     }
   },
 

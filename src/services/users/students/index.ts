@@ -76,6 +76,21 @@ export const useStudentService = () => {
     },
   });
 
+  const getAllStudentsUnpaginated = useQueryHandler({
+    queryKey: ["students"],
+    queryFn: async () => {
+      const response = await $axios.get("/students", { params: { search } });
+
+      return response?.data?.data || [];
+    },
+    onError: () => {
+      toast({
+        variant: "destructive",
+        title: t("student.failed_to_fetch_students"),
+      });
+    },
+  });
+
   const getStudentById = useQueryHandler({
     queryKey: ["students", studentId],
     queryFn: async () => {
@@ -170,5 +185,6 @@ export const useStudentService = () => {
     getAllStudents,
     getStudentById,
     deleteStudent,
+    getAllStudentsUnpaginated,
   };
 };

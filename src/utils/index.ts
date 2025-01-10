@@ -64,7 +64,25 @@ const useMockData = () => {
     },
   ];
 
-  return { admin_status_options, student_status_option };
+  const parent_status_options = [
+    {
+      _id: "1",
+      label: t("data-table.status_options.active"),
+      value: "active",
+    },
+    {
+      _id: "2",
+      label: t("data-table.status_options.inactive"),
+      value: "inactive",
+    },
+    {
+      _id: "3",
+      label: t("data-table.status_options.blocked"),
+      value: "blocked",
+    },
+  ];
+
+  return { admin_status_options, student_status_option, parent_status_options };
 };
 
 export default useMockData;

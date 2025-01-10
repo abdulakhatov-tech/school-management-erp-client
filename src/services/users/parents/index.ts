@@ -8,7 +8,7 @@ import { useToast } from "@/hooks/use-toast";
 import useQueryHandler from "@/hooks/useQueryHandler";
 import { IPaginationParams } from "@/interfaces/pagination";
 
-export const useTeacherService = () => {
+export const useParentsService = () => {
   const param = useParams();
   const { toast } = useToast();
   const { t } = useTranslation();
@@ -16,7 +16,7 @@ export const useTeacherService = () => {
   const queryClient = useQueryClient();
   const [searchParams, setSearchParams] = useSearchParams();
 
-  const teacherId = searchParams.get("teacherId") || param?.teacherId;
+  const parentId = searchParams.get("parentId") || param?.parentId;
 
   // Get limit and page from search params
   const getLimit = useCallback(() => {
@@ -61,49 +61,49 @@ export const useTeacherService = () => {
     params.status = status;
   }
 
-  const getAllTeachers = useQueryHandler({
-    queryKey: ["teachers", params],
+  const getAllParents = useQueryHandler({
+    queryKey: ["parents", params],
     queryFn: async () => {
-      const response = await $axios.get("/teachers", { params });
+      const response = await $axios.get("/parents", { params });
 
       return response?.data;
     },
     onError: () => {
       toast({
         variant: "destructive",
-        title: t("teacher_form.failed_to_fetch_teacher"),
+        title: t("parent_form.failed_to_fetch_parent"),
       });
     },
   });
 
-  const getTeacherById = useQueryHandler({
-    queryKey: ["teachers", teacherId],
+  const getParentById = useQueryHandler({
+    queryKey: ["parents", parentId],
     queryFn: async () => {
-      if (!teacherId) return null;
+      if (!parentId) return null;
 
-      const response = await $axios.get(`/teachers/${teacherId}`);
+      const response = await $axios.get(`/parents/${parentId}`);
       return response?.data?.data;
     },
     onError: () => {
       toast({
         variant: "destructive",
-        title: t("teacher_form.failed_to_fetch_teacher"),
+        title: t("parent_form.failed_to_fetch_parent"),
       });
     },
   });
 
-  const createTeacher = useMutation({
+  const createParent = useMutation({
     mutationFn: async (body: object) => {
-      const response = await $axios.post("/teachers/create", body);
+      const response = await $axios.post("/parents/create", body);
       return response?.data?.data;
     },
     onSuccess: () => {
       toast({
-        title: t("teacher_form.teacher_created_successfully"),
+        title: t("parent_form.parent_created_successfully"),
       });
 
       queryClient.invalidateQueries({
-        queryKey: ["teachers"],
+        queryKey: ["parents"],
       });
     },
     onError: (error: any) => {
@@ -111,23 +111,23 @@ export const useTeacherService = () => {
         variant: "destructive",
         title:
           error?.response?.data?.message ||
-          t("teacher_form.failed_to_create_teacher"),
+          t("parent_form.failed_to_create_parent"),
       });
     },
   });
 
-  const updateTeacher = useMutation({
+  const updateParent = useMutation({
     mutationFn: async (body: object) => {
-      const response = await $axios.put(`/teachers/${teacherId}`, body);
+      const response = await $axios.put(`/parents/${parentId}`, body);
       return response?.data?.data;
     },
     onSuccess: () => {
       queryClient.invalidateQueries({
-        queryKey: ["teachers"],
+        queryKey: ["parents"],
       });
 
       toast({
-        title: t("teacher_form.teacher_updated_successfully"),
+        title: t("parent_form.parent_updated_successfully"),
       });
     },
     onError: (error: any) => {
@@ -135,23 +135,23 @@ export const useTeacherService = () => {
         variant: "destructive",
         title:
           error?.response?.data?.message ||
-          t("teacher_form.failed_to_update_teacher"),
+          t("parent_form.failed_to_update_parent"),
       });
     },
   });
 
-  const deleteTeacher = useMutation({
+  const deleteParent = useMutation({
     mutationFn: async () => {
-      const response = await $axios.delete(`/teachers/${teacherId}`);
+      const response = await $axios.delete(`/parents/${parentId}`);
       return response?.data;
     },
     onSuccess: () => {
       queryClient.invalidateQueries({
-        queryKey: ["teachers"],
+        queryKey: ["parents"],
       });
 
       toast({
-        title: t("teacher_form.teacher_deleted_successfully"),
+        title: t("parent_form.parent_deleted_successfully"),
       });
     },
     onError: (error: any) => {
@@ -159,16 +159,16 @@ export const useTeacherService = () => {
         variant: "destructive",
         title:
           error?.response?.data?.message ||
-          t("teacher_form.failed_to_delete_teacher"),
+          t("parent_form.failed_to_delete_parent"),
       });
     },
   });
 
   return {
-    getAllTeachers,
-    getTeacherById,
-    createTeacher,
-    updateTeacher,
-    deleteTeacher,
+    getAllParents,
+    getParentById,
+    createParent,
+    updateParent,
+    deleteParent,
   };
 };
