@@ -124,6 +124,19 @@
     "failed_to_fetch_student": "Failed to fetch Student, Please try again later"
   },
 
+  "students_list_profile": {
+    "shortcuts": "Shortcuts",
+    "performance": "Performance",
+    "attendance": "Attendance",
+    "schedule": "Schedule",
+    "grades": "Grades",
+    "student": "Student",
+    "male": "Male",
+    "female": "Female",
+    "parent": "Parent",
+    "bio": "A dedicated and passionate student who thrives on learning and enjoys working with their peers to achieve their academic goals. Strong in communication, critical thinking, and problem-solving skills. Always eager to learn and grow, and eager to contribute to the school community."
+  },
+
   "admin_dashboard": {
     "admins": "Admins",
     "teachers": "Teachers",

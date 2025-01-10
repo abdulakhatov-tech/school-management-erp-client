@@ -1,10 +1,10 @@
+import noUser from "@/assets/icons/no-user.svg";
 import { useAppSelector } from "@/hooks/useRedux";
+import useUserFormModalFeatures from "../../features";
+import { useAdminService } from "@/services/users/admins";
 import { useStudentService } from "@/services/users/students";
 // import { useParentService } from "@/services/users/parents";
 import { useTeacherService } from "@/services/users/teachers";
-import { useAdminService } from "@/services/users/admins";
-import noUser from "@/assets/icons/no-user.svg";
-import useUserFormModalFeatures from "../../features";
 
 const useDeleteUserFeatures = () => {
   const { modalType, actionType, dataId } = useAppSelector(

@@ -12,9 +12,9 @@ import Loading from "./loading";
 import useDeleteUserFeatures from "./features";
 import noUser from "@/assets/icons/no-user.svg";
 import { useAdminService } from "@/services/users/admins";
-import { UserModalType } from "@/store/slices/user-form-modal";
 import { useTeacherService } from "@/services/users/teachers";
 import { useStudentService } from "@/services/users/students";
+import { UserModalType } from "@/store/slices/user-form-modal";
 
 const DeleteUser: React.FC = () => {
   const { t } = useTranslation();
@@ -58,13 +58,9 @@ const DeleteUser: React.FC = () => {
       </PhotoProvider>
       <div className='text-center'>
         <h4 className='text-[16px] font-bold capitalize'>
-          {modalType !== "admin" &&
-          modalType !== "teacher" &&
-          modalType !== "parent"
-            ? data?.name
-            : data?.fullName}
+          {data?.fullName}
         </h4>
-        <span>{data?.username}</span>
+        <span>@{data?.username}</span>
       </div>
     </div>
   );

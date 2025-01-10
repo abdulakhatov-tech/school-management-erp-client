@@ -118,6 +118,19 @@
     "failed_to_delete_student": "Talabani ni o‘chirib bo'lmadi, iltimos keyinroq qayta urinib ko'ring",
     "failed_to_fetch_student": "Talabani ma'lumotlarini olish muvaffaqiyatsiz tugadi, iltimos qaytadan urinib ko'ring."
   },
+
+  "students_list_profile": {
+    "shortcuts": "Qisqa yo‘llar",
+    "performance": "Natijadorlik",
+    "attendance": "Davomat",
+    "schedule": "Dars jadvali",
+    "grades": "Baholar",
+    "student": "Talaba",
+    "male": "Erkak",
+    "female": "Ayol",
+    "parent": "Ota-ona",
+    "bio": "O‘quv va akademik maqsadlarga erishish uchun tengdoshlari bilan ishlashni yoqtiradigan, o‘qishga ishtiyoqi baland bo‘lgan talabgor o‘quvchi. Muloqot, tanqidiy fikrlash va muammolarni hal qilish ko‘nikmalariga ega. Har doim o‘rganish va o‘sish istagida, maktab hamjamiyatiga hissa qo‘shishga tayyor."
+  },
   
   "admin_dashboard": {
     "admins": "Administratorlar",
