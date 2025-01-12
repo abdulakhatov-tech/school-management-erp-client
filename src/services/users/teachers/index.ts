@@ -76,6 +76,21 @@ export const useTeacherService = () => {
     },
   });
 
+  const getAllTeachersUnpaginated = useQueryHandler({
+    queryKey: ["teachers"],
+    queryFn: async () => {
+      const response = await $axios.get("/teachers", { params: { search } });
+
+      return response?.data?.data || [];
+    },
+    onError: () => {
+      toast({
+        variant: "destructive",
+        title: t("teacher_form.failed_to_fetch_teachers"),
+      });
+    },
+  });
+
   const getTeacherById = useQueryHandler({
     queryKey: ["teachers", teacherId],
     queryFn: async () => {
@@ -165,6 +180,7 @@ export const useTeacherService = () => {
   });
 
   return {
+    getAllTeachersUnpaginated,
     getAllTeachers,
     getTeacherById,
     createTeacher,

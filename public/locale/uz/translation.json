@@ -149,11 +149,80 @@
     "failed_to_delete_parent": "Ota-ona ni o‘chirib bo'lmadi, iltimos keyinroq qayta urinib ko'ring",
     "failed_to_fetch_parent": "Ota-ona ma'lumotlarini olish muvaffaqiyatsiz tugadi, iltimos qaytadan urinib ko'ring."
   },
-  
+
   "parents_list_profile": {
     "parent": "Ota-ona",
     "children": "Bolalar",
     "bio": "Taʼlimning ahamiyatiga ishonuvchi va farzandlarini muvaffaqiyatga erishish uchun ilhomlantiruvchi fidoyi va ishtiyoqli ota-ona. Muloqot qilish, hamdardlik ko‘rsatish va tushunish ko‘nikmalariga ega. Doimo bolalariga yordam berish va ularni yo‘naltirishga tayyor hamda maktab jamoasiga hissa qo‘shishga intiladi."
+  },
+
+  "class_form": {
+    "add-class": "Sinf qo'shish",
+    "edit-class": "Sinfni tahrirlash",
+    "delete-class": "Sinfni o'chirish",
+    "delete_description": "Bu amalni bekor qilib bo'lmaydi. Bu ma'lumotlaringizni serverlarimizdan butunlay o‘chirib tashlaydi.",
+    "class_created_successfully": "Sinf muvaffaqiyatli yaratildi",
+    "class_deleted_successfully": "Sinf muvaffaqiyatli o'chirildi",
+    "class_updated_successfully": "Sinf muvaffaqiyatli yangilandi",
+    "failed_to_create_class": "Sinfni yaratib bo'lmadi, iltimos keyinroq qayta urinib ko'ring",
+    "failed_to_edit_class": "Sinfni tahrirlab bo'lmadi, iltimos keyinroq qayta urinib ko'ring",
+    "failed_to_delete_class": "Sinfni o‘chirib bo‘lmadi, iltimos keyinroq qayta urinib ko‘ring",
+    "failed_to_fetch_class": "Sinfni olishda xatolik, iltimos keyinroq qayta urinib ko‘ring",
+
+    "grades": {
+      "1-a": "1 (A) Sinf",
+      "1-b": "1 (B) Sinf",
+      "1-c": "1 (C) Sinf",
+      "2-a": "2 (A) Sinf",
+      "2-b": "2 (B) Sinf",
+      "2-c": "2 (C) Sinf",
+      "3-a": "3 (A) Sinf",
+      "3-b": "3 (B) Sinf",
+      "3-c": "3 (C) Sinf",
+      "4-a": "4 (A) Sinf",
+      "4-b": "4 (B) Sinf",
+      "4-c": "4 (C) Sinf",
+      "5-a": "5 (A) Sinf",
+      "5-b": "5 (B) Sinf",
+      "5-c": "5 (C) Sinf",
+      "6-a": "6 (A) Sinf",
+      "6-b": "6 (B) Sinf",
+      "6-c": "6 (C) Sinf",
+      "7-a": "7 (A) Sinf",
+      "7-b": "7 (B) Sinf",
+      "7-c": "7 (C) Sinf",
+      "8-a": "8 (A) Sinf",
+      "8-b": "8 (B) Sinf",
+      "8-c": "8 (C) Sinf",
+      "9-a": "9 (A) Sinf",
+      "9-b": "9 (B) Sinf",
+      "9-c": "9 (C) Sinf",
+      "10-a": "10 (A) Sinf",
+      "10-b": "10 (B) Sinf",
+      "10-c": "10 (C) Sinf",
+      "11-a": "11 (A) Sinf",
+      "11-b": "11 (B) Sinf",
+      "11-c": "11 (C) Sinf"
+    },
+
+    "name": "Ism",
+    "enter_name": "Ism kiriting",
+    "name_required": "Ism majburiy!",
+    "grade": "Sinf",
+    "select_grade": "Sinfni tanlang",
+    "grade_required": "Sinf majburiy!",
+    "status": "Holat",
+    "select_status": "Holatni tanlang",
+    "status_required": "Holat majburiy!",
+    "room": "Xona",
+    "select_room": "Xonani tanlang",
+    "room_required": "Xona majburiy!",
+    "teacher": "O'qituvchi",
+    "select_teacher": "O'qituvchini tanlang",
+    "teacher_required": "O'qituvchi majburiy!",
+    "type": "Turi",
+    "select_type": "Turini tanlang",
+    "type_required": "Tur majburiy!"
   },
 
   "admin_dashboard": {
@@ -237,7 +306,8 @@
       "startTime": "Boshlanish vaqti",
       "endTime": "Tugash vaqti",
       "role": "Rol",
-      "groups": "Guruhlar"
+      "groups": "Guruhlar",
+      "grade": "Sinf"
     },
     "active": "Faol",
     "inactive": "Nofaol",
@@ -256,7 +326,11 @@
       "graduated": "Bitirgan",
       "dropped-out": "Tashlab ketgan",
       "expelled": "Haydalgan",
-      "blocked": "Bloklangan"
+      "blocked": "Bloklangan",
+      "completed": "Tugallangan",
+      "cancelled": "Bekor qilingan",
+      "paused": "To'xtatilgan",
+      "archived": "Arxivlangan"
     }
   },
 

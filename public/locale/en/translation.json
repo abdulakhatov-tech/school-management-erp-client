@@ -69,7 +69,7 @@
     "class": "Class",
     "select_class": "Select Class",
     "class_required": "Class is required",
-    
+
     "children": "Children",
     "select_children": "Select Children",
     "children_required": "Children is required"
@@ -161,6 +161,80 @@
     "bio": "A dedicated and passionate parent who believes in the importance of education and empowers their children to succeed. Strong in communication, empathy, and understanding skills. Always eager to support and guide their children, and eager to contribute to the school community."
   },
 
+  "class_form": {
+    "add-class": "Add Class",
+    "edit-class": "Edit Class",
+    "delete-class": "Delete Class",
+    "delete_description": "This action cannot be undone. This will permanently delete and remove your data from our servers.",
+    "class_created_successfully": "Class created successfully",
+    "class_deleted_successfully": "Class deleted successfully",
+    "class_updated_successfully": "Class updated successfully",
+    "failed_to_create_class": "Failed to create Class, Please try again later",
+    "failed_to_edit_class": "Failed to edit Class, Please try again later",
+    "failed_to_delete_class": "Failed to delete Class, Please try again later",
+    "failed_to_fetch_class": "Failed to fetch Class, Please try again later",
+
+    "grades": {
+      "1-a": "1 (A) Grade",
+      "1-b": "1 (B) Grade",
+      "1-c": "1 (C) Grade",
+      "2-a": "2 (A) Grade",
+      "2-b": "2 (B) Grade",
+      "2-c": "2 (C) Grade",
+      "3-a": "3 (A) Grade",
+      "3-b": "3 (B) Grade",
+      "3-c": "3 (C) Grade",
+      "4-a": "4 (A) Grade",
+      "4-b": "4 (B) Grade",
+      "4-c": "4 (C) Grade",
+      "5-a": "5 (A) Grade",
+      "5-b": "5 (B) Grade",
+      "5-c": "5 (C) Grade",
+      "6-a": "6 (A) Grade",
+      "6-b": "6 (B) Grade",
+      "6-c": "6 (C) Grade",
+      "7-a": "7 (A) Grade",
+      "7-b": "7 (B) Grade",
+      "7-c": "7 (C) Grade",
+      "8-a": "8 (A) Grade",
+      "8-b": "8 (B) Grade",
+      "8-c": "8 (C) Grade",
+      "9-a": "9 (A) Grade",
+      "9-b": "9 (B) Grade",
+      "9-c": "9 (C) Grade",
+      "10-a": "10 (A) Grade",
+      "10-b": "10 (B) Grade",
+      "10-c": "10 (C) Grade",
+      "11-a": "11 (A) Grade",
+      "11-b": "11 (B) Grade",
+      "11-c": "11 (C) Grade"
+    },
+
+    "name": "Name",
+    "enter_name": "Enter Name",
+    "name_required": "Name is required!",
+
+    "grade": "Grade",
+    "select_grade": "Select grade",
+    "grade_required": "Grade is required!",
+
+    "status": "Status",
+    "select_status": "Select status",
+    "status_required": "Status is required!",
+
+    "room": "Room",
+    "select_room": "Select room",
+    "room_required": "Room is required!",
+
+    "teacher": "Teacher",
+    "select_teacher": "Select teacher",
+    "teacher_required": "Teacher is required!",
+
+    "type": "Type",
+    "select_type": "Select type",
+    "type_required": "Type is required!"
+  },
+
   "admin_dashboard": {
     "admins": "Admins",
     "teachers": "Teachers",
@@ -247,7 +321,8 @@
       "startTime": "Start Time",
       "endTime": "End Time",
       "role": "Role",
-      "groups": "Groups"
+      "groups": "Groups",
+      "grade": "Grade"
     },
     "active": "Active",
     "inactive": "Inactive",
@@ -268,7 +343,11 @@
       "dropped-out": "Dropped Out",
       "expelled": "Expelled",
 
-      "blocked": "Blocked"
+      "blocked": "Blocked",
+      "completed": "Completed",
+      "cancelled": "Cancelled",
+      "paused": "Paused",
+      "archived": "Archived"
     }
   },
 

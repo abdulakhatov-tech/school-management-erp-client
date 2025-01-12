@@ -1,3 +1,5 @@
+import { useNavigate } from "react-router-dom";
+
 import noUser from "@/assets/icons/no-user.svg";
 import { useAppSelector } from "@/hooks/useRedux";
 import useUserFormModalFeatures from "../../features";
@@ -7,6 +9,7 @@ import { useParentsService } from "@/services/users/parents";
 import { useTeacherService } from "@/services/users/teachers";
 
 const useDeleteUserFeatures = () => {
+  const navigate = useNavigate();
   const { modalType, actionType, dataId } = useAppSelector(
     (state) => state.userFormModal
   );
@@ -36,6 +39,7 @@ const useDeleteUserFeatures = () => {
     if (deleteAction) {
       try {
         await deleteAction();
+        navigate(`/list/${modalType}s`);
         handleClose();
       } catch (error) {
         console.error(`Failed to delete ${modalType}:`, error);
