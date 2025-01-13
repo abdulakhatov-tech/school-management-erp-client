@@ -17,9 +17,6 @@ const useClassValidation = () => {
     room: z.string({
       required_error: t("class_form.room_required"),
     }),
-    grade: z.string({
-      required_error: t("class_form.grade_required"),
-    }),
   });
 
   return {

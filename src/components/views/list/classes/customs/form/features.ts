@@ -2,22 +2,20 @@ import { isEqual } from "lodash";
 import { useEffect, useState } from "react";
 
 import { IRoom } from "@/interfaces/room";
+import { toast } from "@/hooks/use-toast";
 import { ITeacher } from "@/interfaces/user";
+import { useAppSelector } from "@/hooks/useRedux";
 import { useRoomService } from "@/services/rooms";
 import { useClassService } from "@/services/classes";
 import { useTeacherService } from "@/services/users/teachers";
-import { useAppSelector } from "@/hooks/useRedux";
 import useClassFormModalFeatures from "@/components/modals/customs/ClassFormModal/features";
 import { handleValidationError } from "@/helpers/validation-error";
-import { toast } from "@/hooks/use-toast";
-import { useNavigate } from "react-router-dom";
 
 interface IInitialValues {
   name: string;
   status: string;
   teacher: string;
   room: string;
-  grade: string;
 }
 
 const initialClassValues: IInitialValues = {
@@ -25,12 +23,9 @@ const initialClassValues: IInitialValues = {
   status: "pending",
   teacher: "",
   room: "",
-  grade: "",
 };
 
 const useClassFormFeatures = () => {
-  const navigate = useNavigate();
-
   const { getAllRoomsUnpaginated } = useRoomService();
   const { getAllTeachersUnpaginated } = useTeacherService();
   const { createClass, updateClass, getClassById } = useClassService();
@@ -60,7 +55,6 @@ const useClassFormFeatures = () => {
         status: classData.status || "pending",
         teacher: classData.teacher._id || "",
         room: classData.room._id || "",
-        grade: classData.grade || "",
       });
     } else {
       setInitialValues(initialClassValues);

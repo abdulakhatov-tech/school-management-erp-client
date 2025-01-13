@@ -21,6 +21,8 @@ const ParentProfilePage = lazy(() => import("@/pages/list/parents/profile"));
 
 const ClassesPage = lazy(() => import("@/pages/list/classes"));
 
+const LessonsPage = lazy(() => import("@/pages/list/lessons"));
+
 const NotFoundPage = lazy(() => import("@/pages/not-found"));
 const ErrorsPage = lazy(() => import("@/pages/errors"));
 const LogoutPage = lazy(() => import("@/pages/logout"));
@@ -178,6 +180,22 @@ const AppRouter: React.FC = () => {
               ]}
             >
               <ClassesPage />
+            </PrivateRoute>
+          ),
+        },
+        {
+          path: "/list/lessons",
+          element: (
+            <PrivateRoute
+              allowedRoles={[
+                "admin",
+                "super-admin",
+                "teacher",
+                "student",
+                "parent",
+              ]}
+            >
+              <LessonsPage />
             </PrivateRoute>
           ),
         },

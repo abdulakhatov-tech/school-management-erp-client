@@ -206,7 +206,7 @@
     },
 
     "name": "Ism",
-    "enter_name": "Ism kiriting",
+    "select_name": "Ismni tanlang",
     "name_required": "Ism majburiy!",
     "grade": "Sinf",
     "select_grade": "Sinfni tanlang",

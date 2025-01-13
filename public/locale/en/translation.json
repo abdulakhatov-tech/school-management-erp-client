@@ -211,7 +211,7 @@
     },
 
     "name": "Name",
-    "enter_name": "Enter Name",
+    "select_name": "Select Name",
     "name_required": "Name is required!",
 
     "grade": "Grade",

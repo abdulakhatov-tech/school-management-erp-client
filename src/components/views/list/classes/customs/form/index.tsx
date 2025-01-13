@@ -43,20 +43,12 @@ const ClassForm: React.FC = () => {
         return (
           <Form className='flex flex-col gap-4' autoComplete='true'>
             <div className='grid md:grid-cols-2 gap-4'>
-              <InputField
-                type='text'
+              <SelectField
                 name='name'
                 label={t("class_form.name")}
-                placeholder={t("class_form.enter_name")}
-                loading={isClassDataLoading && actionType === "edit"}
-              />
-
-              <SelectField
-                name='grade'
-                label={t("class_form.grade")}
                 options={grade_options}
-                placeholder={t("class_form.select_grade")}
-                value={props.values.grade}
+                placeholder={t("class_form.select_name")}
+                value={props.values.name}
                 loading={isClassDataLoading && actionType === "edit"}
               />
 
@@ -78,8 +70,7 @@ const ClassForm: React.FC = () => {
                 loading={isTeachersDataLoading && actionType === "edit"}
                 searchable={true}
               />
-            </div>
-
+           
             <SelectField
               name='status'
               label={t("class_form.status")}
@@ -88,6 +79,8 @@ const ClassForm: React.FC = () => {
               value={props.values.status}
                 loading={isClassDataLoading && actionType === "edit"}
             />
+            </div>
+
 
             {props.touched.name ||
               props.touched.status ||

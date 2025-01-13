@@ -206,7 +206,7 @@
     },
 
     "name": "Имя",
-    "enter_name": "Введите имя",
+    "select_name": "Выберите имя",
     "name_required": "Имя обязательно!",
     "grade": "Класс",
     "select_grade": "Выберите класс",

@@ -27,19 +27,35 @@ export const useColumns = () => {
       accessorKey: "name",
       header: ({ column }) => <ColumnHeader column={column} title='name' />,
       cell: ({ row }) => (
-        <CopyableText
-          row={row}
-          accessorKey='name'
-          className='text-base font-semibold'
-        />
+        <span>{row.original.name} {t('user_form.class')}</span>
       ),
     },
     {
-      accessorKey: "grade",
-      header: ({ column }) => <ColumnHeader column={column} title='grade' />,
+      accessorKey: "capacity",
+      header: ({ column }) => <ColumnHeader column={column} title='capacity' />,
       cell: ({ row }) => (
-        <span className='text-sm font-semibold'>{row.original?.grade ? t(`class_form.grades.${row.original?.grade}`) : '-' }</span>
+        <span>
+          {row.original?.capacity}{" "}
+          {row.original?.capacity > 1
+            ? t("app_sidebar.students")
+            : t("students_list_profile.student")}
+        </span>
       ),
+    },
+    {
+      accessorKey: "room",
+      header: ({ column }) => <ColumnHeader column={column} title='room' />,
+      cell: ({ row }) =>
+        row.original?.room ? (
+          <Link
+            to={`/list/rooms/${row.original?.room?._id}`}
+            className='hover:underline hover:text-blue-500'
+          >
+            {row.original?.room?.name} {t("class_form.room")}
+          </Link>
+        ) : (
+          "-"
+        ),
     },
     {
       accessorKey: "teacher",
@@ -52,25 +68,6 @@ export const useColumns = () => {
           {row.original?.teacher?.fullName}
         </Link>
       ),
-    },
-    {
-      accessorKey: "room",
-      header: ({ column }) => <ColumnHeader column={column} title='room' />,
-      cell: ({ row }) =>
-        row.original?.room ? (
-          <Link
-            to={`/list/rooms/${row.original?.room?._id}`}
-            className='hover:underline hover:text-blue-500'
-          >
-            {row.original?.room?.name}
-          </Link>
-        ) : (
-          "-"
-        ),
-    },
-    {
-      accessorKey: "capacity",
-      header: ({ column }) => <ColumnHeader column={column} title='capacity' />,
     },
     {
       accessorKey: "createdAt",
@@ -96,4 +93,4 @@ export const useColumns = () => {
   };
 };
 
-export default useColumns
+export default useColumns;
