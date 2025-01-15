@@ -1,5 +1,6 @@
 export { default as RowSelectionHeader } from "./row-selection-header";
 export { default as SelectedRowCount } from "./selected-row-count";
+export { default as RowLessonActions } from "./row-lesson-actions";
 export { default as RowClassActions } from "./row-class-actions";
 export { default as RowUserActions } from "./row-user-actions";
 export { default as ActiveStatus } from "./active-status";

@@ -228,12 +228,104 @@ const useMockData = () => {
     },
   ];
 
+  const lesson_status_options = [
+    {
+      _id: "1",
+      label: t("lesson_form.scheduled"),
+      value: "scheduled",
+    },
+    {
+      _id: "2",
+      label: t("lesson_form.ongoing"),
+      value: "ongoing",
+    },
+    {
+      _id: "3",
+      label: t("lesson_form.completed"),
+      value: "completed",
+    },
+    {
+      _id: "4",
+      label: t("lesson_form.cancelled"),
+      value: "cancelled",
+    },
+  ];
+
+  const week_days = [
+    { value: "MONDAY", label: t("week_days.monday") },
+    { value: "TUESDAY", label: t("week_days.tuesday") },
+    { value: "WEDNESDAY", label: t("week_days.wednesday") },
+    { value: "THURSDAY", label: t("week_days.thursday") },
+    { value: "FRIDAY", label: t("week_days.friday") },
+  ];
+
+  const subjects = [
+    {
+      label: "English",
+      value: "English",
+    },
+    {
+      label: "Russian",
+      value: "Russian",
+    },
+    {
+      label: "Mother tongue",
+      value: "Mother tongue",
+    },
+    {
+      label: "History",
+      value: "History",
+    },
+    {
+      label: "Geography",
+      value: "Geography",
+    },
+    {
+      label: "Information Technology",
+      value: "Information Technology",
+    },
+    {
+      label: "Mathematics",
+      value: "Mathematics",
+    },
+    {
+      label: "Physics",
+      value: "Physics",
+    },
+    {
+      label: "Geometry",
+      value: "Geometry",
+    },
+    {
+      label: "Chemistry",
+      value: "Chemistry",
+    },
+    {
+      label: "Biology",
+      value: "Biology",
+    },
+    {
+      label: "Literature",
+      value: "Literature",
+    },
+    {
+      label: "Music",
+      value: "Music",
+    },
+    {
+      label: "Physical Education",
+      value: "Physical Education",
+    },
+  ];
+
   return {
     admin_status_options,
     student_status_option,
     parent_status_options,
     class_status_options,
+    lesson_status_options,
     grade_options,
+    week_days,
   };
 };
 

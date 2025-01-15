@@ -169,42 +169,6 @@
     "failed_to_delete_class": "Sinfni o‘chirib bo‘lmadi, iltimos keyinroq qayta urinib ko‘ring",
     "failed_to_fetch_class": "Sinfni olishda xatolik, iltimos keyinroq qayta urinib ko‘ring",
 
-    "grades": {
-      "1-a": "1 (A) Sinf",
-      "1-b": "1 (B) Sinf",
-      "1-c": "1 (C) Sinf",
-      "2-a": "2 (A) Sinf",
-      "2-b": "2 (B) Sinf",
-      "2-c": "2 (C) Sinf",
-      "3-a": "3 (A) Sinf",
-      "3-b": "3 (B) Sinf",
-      "3-c": "3 (C) Sinf",
-      "4-a": "4 (A) Sinf",
-      "4-b": "4 (B) Sinf",
-      "4-c": "4 (C) Sinf",
-      "5-a": "5 (A) Sinf",
-      "5-b": "5 (B) Sinf",
-      "5-c": "5 (C) Sinf",
-      "6-a": "6 (A) Sinf",
-      "6-b": "6 (B) Sinf",
-      "6-c": "6 (C) Sinf",
-      "7-a": "7 (A) Sinf",
-      "7-b": "7 (B) Sinf",
-      "7-c": "7 (C) Sinf",
-      "8-a": "8 (A) Sinf",
-      "8-b": "8 (B) Sinf",
-      "8-c": "8 (C) Sinf",
-      "9-a": "9 (A) Sinf",
-      "9-b": "9 (B) Sinf",
-      "9-c": "9 (C) Sinf",
-      "10-a": "10 (A) Sinf",
-      "10-b": "10 (B) Sinf",
-      "10-c": "10 (C) Sinf",
-      "11-a": "11 (A) Sinf",
-      "11-b": "11 (B) Sinf",
-      "11-c": "11 (C) Sinf"
-    },
-
     "name": "Ism",
     "select_name": "Ismni tanlang",
     "name_required": "Ism majburiy!",
@@ -223,6 +187,57 @@
     "type": "Turi",
     "select_type": "Turini tanlang",
     "type_required": "Tur majburiy!"
+  },
+
+  "lesson_form": {
+    "add-lesson": "Dars qo‘shish",
+    "edit-lesson": "Darsni tahrirlash",
+    "delete-lesson": "Darsni o‘chirish",
+    "delete_description": "Bu amalni qaytarib bo‘lmaydi. Bu ma'lumotlaringizni serverlarimizdan butunlay o‘chirib tashlaydi.",
+    "lesson_created_successfully": "Dars muvaffaqiyatli yaratildi",
+    "lesson_deleted_successfully": "Dars muvaffaqiyatli o‘chirildi",
+    "lesson_updated_successfully": "Dars muvaffaqiyatli yangilandi",
+    "failed_to_create_lesson": "Darsni yaratib bo‘lmadi, iltimos, keyinroq yana urinib ko‘ring",
+    "failed_to_edit_lesson": "Darsni tahrir qilib bo‘lmadi, iltimos, keyinroq yana urinib ko‘ring",
+    "failed_to_delete_lesson": "Darsni o‘chirib bo‘lmadi, iltimos, keyinroq yana urinib ko‘ring",
+    "failed_to_fetch_lesson": "Darsni olishda xatolik, iltimos, keyinroq yana urinib ko‘ring",
+
+    "scheduled": "Rejalashtirilgan",
+    "ongoing": "Davom etmoqda",
+    "completed": "Tugallangan",
+    "cancelled": "Bekor qilingan",
+
+    "name": "Ism",
+    "select_name": "Ismni tanlang",
+    "name_required": "Ism majburiy!",
+
+    "class": "Sinf",
+    "select_class": "Sinfni tanlang",
+    "class_required": "Sinf majburiy!",
+
+    "teacher": "O‘qituvchi",
+    "select_teacher": "O‘qituvchini tanlang",
+    "teacher_required": "O‘qituvchi majburiy!",
+
+    "subject": "Fan",
+    "select_subject": "Fanni tanlang",
+    "subject_required": "Fan majburiy!",
+
+    "day": "Hafta kuni",
+    "select_day": "Hafta kunini tanlang",
+    "day_required": "Hafta kuni talab qilinadi!",
+
+    "startTime": "Boshlanish vaqti",
+    "select_startTime": "Boshlanish vaqtini tanlang",
+    "startTime_required": "Boshlanish vaqti talab qilinadi!",
+
+    "endTime": "Tugash vaqti",
+    "select_endTime": "Tugash vaqtini tanlang",
+    "endTime_required": "Tugash vaqti talab qilinadi!",
+
+    "status": "Holat",
+    "select_status": "Holatni tanlang",
+    "status_required": "Holat talab qilinadi!"
   },
 
   "admin_dashboard": {
@@ -307,7 +322,8 @@
       "endTime": "Tugash vaqti",
       "role": "Rol",
       "groups": "Guruhlar",
-      "grade": "Sinf"
+      "grade": "Sinf",
+      "class": "Sinf"
     },
     "active": "Faol",
     "inactive": "Nofaol",
@@ -422,5 +438,32 @@
     "submit": "Yuborish",
     "update": "Yangilash",
     "save": "Saqlash"
+  },
+
+  "subjects": {
+    "English": "Ingliz tili",
+    "Russian": "Rus tili",
+    "Mother tongue": "Ona tili",
+    "History": "Tarix",
+    "Geography": "Geografiya",
+    "Information Technology": "Axborot texnologiyalari",
+    "Mathematics": "Matematika",
+    "Physics": "Fizika",
+    "Geometry": "Geometriya",
+    "Chemistry": "Kimyo",
+    "Biology": "Biologiya",
+    "Literature": "Adabiyot",
+    "Music": "Musiqa",
+    "Physical Education": "Jismoniy tarbiya"
+  },
+
+  "week_days": {
+    "monday": "Dushanba",
+    "tuesday": "Seshanba",
+    "wednesday": "Chorshanba",
+    "thursday": "Payshanba",
+    "friday": "Juma",
+    "saturday": "Shanba",
+    "sunday": "Yakshanba"
   }
 }

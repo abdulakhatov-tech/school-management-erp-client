@@ -9,8 +9,8 @@ import useMockData from "@/utils";
 import { LoadingSpinner } from "@/tools";
 import useClassFormFeatures from "./features";
 import { Button } from "@/components/ui/button";
+import { SelectField } from "@/components/form";
 import { useAppSelector } from "@/hooks/useRedux";
-import { InputField, SelectField } from "@/components/form";
 
 const ClassForm: React.FC = () => {
   const { t } = useTranslation();

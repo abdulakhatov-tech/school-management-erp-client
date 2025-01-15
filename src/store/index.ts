@@ -1,11 +1,17 @@
 import { configureStore } from "@reduxjs/toolkit";
-import { classFormModal, theme, userFormModal } from "./slices";
+import {
+  theme,
+  userFormModal,
+  classFormModal,
+  lessonFormModal,
+} from "./slices";
 
 export const store = configureStore({
   reducer: {
     theme,
     userFormModal,
     classFormModal,
+    lessonFormModal,
   },
 });
 

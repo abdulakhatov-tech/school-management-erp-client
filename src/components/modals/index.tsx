@@ -1,12 +1,12 @@
 import React from "react";
-import { ClassFormModal, UserFormModal } from "./customs";
+import { ClassFormModal, LessonFormModal, UserFormModal } from "./customs";
 
 const ModalVisibility: React.FC = () => {
   return (
     <>
       <UserFormModal />
       <ClassFormModal />
-      {/* <SubjectFormModal /> */}
+      <LessonFormModal />
     </>
   );
 };
