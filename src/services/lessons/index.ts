@@ -76,6 +76,21 @@ export const useLessonService = () => {
     },
   });
 
+  const getAllLessonsUnpaginated = useQueryHandler({
+    queryKey: ["lessons"],
+    queryFn: async () => {
+      const response = await $axios.get("/lessons", { params: { search } });
+
+      return response?.data || [];
+    },
+    onError: () => {
+      toast({
+        variant: "destructive",
+        title: t("lesson_form.failed_to_fetch_lesson"),
+      });
+    },
+  });
+
   const getLessonById = useQueryHandler({
     queryKey: ["lessons", lessonId],
     queryFn: async () => {
@@ -170,5 +185,6 @@ export const useLessonService = () => {
     createLesson,
     updateLesson,
     deleteLesson,
+    getAllLessonsUnpaginated,
   };
 };

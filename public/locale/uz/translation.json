@@ -240,6 +240,70 @@
     "status_required": "Holat talab qilinadi!"
   },
 
+  "subject_form": {
+    "add-subject": "Fan qo‘shish",
+    "edit-subject": "Fanni tahrirlash",
+    "delete-subject": "Fanni o‘chirish",
+    "delete_description": "Bu amal bekor qilinmaydi. Bu ma'lumotlaringizni serverlarimizdan butunlay o‘chirib tashlaydi.",
+    "subject_created_successfully": "Fan muvaffaqiyatli yaratildi",
+    "subject_deleted_successfully": "Fan muvaffaqiyatli o‘chirildi",
+    "subject_updated_successfully": "Fan muvaffaqiyatli yangilandi",
+    "failed_to_create_subject": "Fan yaratishda xatolik, iltimos, keyinroq qayta urinib ko‘ring",
+    "failed_to_edit_subject": "Fan tahrirlashda xatolik, iltimos, keyinroq qayta urinib ko‘ring",
+    "failed_to_delete_subject": "Fan o‘chirishda xatolik, iltimos, keyinroq qayta urinib ko‘ring",
+    "failed_to_fetch_subject": "Fan ma'lumotlarini olishda xatolik, iltimos, keyinroq qayta urinib ko‘ring",
+
+    "name": "Nomi",
+    "select_name": "Nomini tanlang",
+    "name_required": "Nom kiritish shart!",
+
+    "imgUrl": "Rasm yuklash",
+    "imgUrl_required": "Rasm URL manzili talab qilinadi!",
+    "invalid_imgUrl_url": "Noto‘g‘ri rasm URL manzili",
+
+    "description": "Tavsif",
+    "enter_description": "Tavsif kiriting",
+    "description_required": "Tavsif kiritish shart!",
+
+    "status": "Holat",
+    "select_status": "Holatni tanlang",
+    "status_required": "Holat kiritish shart!",
+
+    "pending": "Kutilmoqda",
+    "active": "Faol",
+    "inactive": "Nofaol"
+  },
+
+  "exam_form": {
+    "add-exam": "Imtihon qo‘shish",
+    "edit-exam": "Imtihonni tahrirlash",
+    "delete-exam": "Imtihonni o‘chirish",
+    "delete_description": "Bu amal bekor qilinmaydi. Bu sizning ma'lumotlaringizni serverlarimizdan butunlay o‘chirib tashlaydi.",
+    "exam_created_successfully": "Imtihon muvaffaqiyatli yaratildi",
+    "exam_deleted_successfully": "Imtihon muvaffaqiyatli o‘chirildi",
+    "exam_updated_successfully": "Imtihon muvaffaqiyatli yangilandi",
+    "failed_to_create_exam": "Imtihonni yaratib bo‘lmadi, iltimos keyinroq urinib ko‘ring",
+    "failed_to_edit_exam": "Imtihonni tahrirlab bo‘lmadi, iltimos keyinroq urinib ko‘ring",
+    "failed_to_delete_exam": "Imtihonni o‘chirib bo‘lmadi, iltimos keyinroq urinib ko‘ring",
+    "failed_to_fetch_exam": "Imtihon ma’lumotlarini olishda xatolik, iltimos keyinroq urinib ko‘ring",
+
+    "name": "Sarlavha",
+    "enter_name": "Sarlavhani kiriting",
+    "name_required": "Sarlavha kiritish majburiy!",
+
+    "lesson": "Dars",
+    "select_lesson": "Darsni tanlang",
+    "lesson_required": "Dars tanlash majburiy!",
+
+    "startTime": "Boshlanish vaqti",
+    "select_startTime": "Boshlanish vaqtini tanlang",
+    "startTime_required": "Boshlanish vaqtini kiritish majburiy!",
+
+    "endTime": "Tugash vaqti",
+    "select_endTime": "Tugash vaqtini tanlang",
+    "endTime_required": "Tugash vaqtini kiritish majburiy!"
+  },
+
   "admin_dashboard": {
     "admins": "Administratorlar",
     "teachers": "O‘qituvchilar",
@@ -323,7 +387,9 @@
       "role": "Rol",
       "groups": "Guruhlar",
       "grade": "Sinf",
-      "class": "Sinf"
+      "class": "Sinf",
+      "description": "Tavsif",
+      "lesson": "Dars"
     },
     "active": "Faol",
     "inactive": "Nofaol",

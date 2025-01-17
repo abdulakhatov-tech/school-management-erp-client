@@ -136,6 +136,13 @@ const useSidebarMenu = () => {
           icon: GrAnnounce,
           visible: ["super-admin", "admin", "teacher", "student", "parent"],
         },
+        {
+          _id: "1-16",
+          href: "/list/subjects",
+          label: t("app_sidebar.subjects"),
+          icon: MdSubject,
+          visible: ["super-admin", "admin"],
+        },
       ],
     },
     {

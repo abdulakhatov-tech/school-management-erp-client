@@ -6,7 +6,6 @@ import { ColumnDef } from "@tanstack/react-table";
 import {
   RowClassActions,
   ColumnHeader,
-  CopyableText,
   RowSelection,
   RowSelectionHeader,
 } from "@/components/ui/data-table";

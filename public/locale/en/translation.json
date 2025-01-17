@@ -250,6 +250,70 @@
     "status_required": "Status is required!"
   },
 
+  "subject_form": {
+    "add-subject": "Add Subject",
+    "edit-subject": "Edit Subject",
+    "delete-subject": "Delete Subject",
+    "delete_description": "This action cannot be undone. This will permanently delete and remove your data from our servers.",
+    "subject_created_successfully": "Subject created successfully",
+    "subject_deleted_successfully": "Subject deleted successfully",
+    "subject_updated_successfully": "Subject updated successfully",
+    "failed_to_create_subject": "Failed to create Subject, Please try again later",
+    "failed_to_edit_subject": "Failed to edit Subject, Please try again later",
+    "failed_to_delete_subject": "Failed to delete Subject, Please try again later",
+    "failed_to_fetch_subject": "Failed to fetch Subject, Please try again later",
+
+    "name": "Name",
+    "select_name": "Select name",
+    "name_required": "Name is required!",
+
+    "imgUrl": "Upload Image",
+    "imgUrl_required": "Img Url is required!",
+    "invalid_imgUrl_url": "Invalid Img URL",
+
+    "description": "Description",
+    "enter_description": "Enter description",
+    "description_required": "Description is required!",
+    
+    "status": "Status",
+    "select_status": "Select status",
+    "status_required": "Status is required!",
+
+    "pending": "Pending",
+    "active": "Active",
+    "inactive": "Inactive"
+  },
+
+  "exam_form": {
+    "add-exam": "Add Exam",
+    "edit-exam": "Edit Exam",
+    "delete-exam": "Delete Exam",
+    "delete_description": "This action cannot be undone. This will permanently delete and remove your data from our servers.",
+    "exam_created_successfully": "Exam created successfully",
+    "exam_deleted_successfully": "Exam deleted successfully",
+    "exam_updated_successfully": "Exam updated successfully",
+    "failed_to_create_exam": "Failed to create Exam, Please try again later",
+    "failed_to_edit_exam": "Failed to edit Exam, Please try again later",
+    "failed_to_delete_exam": "Failed to delete Exam, Please try again later",
+    "failed_to_fetch_exam": "Failed to fetch Exam, Please try again later",
+
+    "name": "Title",
+    "enter_name": "Enter title",
+    "name_required": "Title is required!",
+
+    "lesson": "Lesson",
+    "select_lesson": "Select lesson",
+    "lesson_required": "Lesson is required!",
+
+    "startTime": "Start time",
+    "select_startTime": "Select start time",
+    "startTime_required": "Start time is required!",
+
+    "endTime": "End time",
+    "select_endTime": "Select end time",
+    "endTime_required": "End time is required!"
+  },
+
   "admin_dashboard": {
     "admins": "Admins",
     "teachers": "Teachers",
@@ -338,7 +402,9 @@
       "role": "Role",
       "groups": "Groups",
       "grade": "Grade",
-      "class": "Class"
+      "class": "Class",
+      "description": "Description",
+      "lesson": "Lesson"
     },
     "active": "Active",
     "inactive": "Inactive",

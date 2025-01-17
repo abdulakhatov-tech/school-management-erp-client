@@ -240,6 +240,70 @@
     "status_required": "Статус обязателен!"
   },
 
+  "subject_form": {
+    "add-subject": "Добавить предмет",
+    "edit-subject": "Редактировать предмет",
+    "delete-subject": "Удалить предмет",
+    "delete_description": "Это действие нельзя отменить. Это навсегда удалит и удалит ваши данные с наших серверов.",
+    "subject_created_successfully": "Предмет успешно создан",
+    "subject_deleted_successfully": "Предмет успешно удален",
+    "subject_updated_successfully": "Предмет успешно обновлен",
+    "failed_to_create_subject": "Не удалось создать предмет, попробуйте позже",
+    "failed_to_edit_subject": "Не удалось отредактировать предмет, попробуйте позже",
+    "failed_to_delete_subject": "Не удалось удалить предмет, попробуйте позже",
+    "failed_to_fetch_subject": "Не удалось получить предмет, попробуйте позже",
+
+    "name": "Название",
+    "select_name": "Выберите название",
+    "name_required": "Название обязательно!",
+
+    "imgUrl": "Загрузить изображение",
+    "imgUrl_required": "URL изображения обязателен!",
+    "invalid_imgUrl_url": "Неверный URL изображения",
+
+    "description": "Описание",
+    "enter_description": "Введите описание",
+    "description_required": "Описание обязательно!",
+
+    "status": "Статус",
+    "select_status": "Выберите статус",
+    "status_required": "Статус обязателен!",
+
+    "pending": "В ожидании",
+    "active": "Активный",
+    "inactive": "Неактивный"
+  },
+
+  "exam_form": {
+    "add-exam": "Добавить экзамен",
+    "edit-exam": "Редактировать экзамен",
+    "delete-exam": "Удалить экзамен",
+    "delete_description": "Это действие необратимо. Это навсегда удалит и удалит ваши данные с наших серверов.",
+    "exam_created_successfully": "Экзамен успешно создан",
+    "exam_deleted_successfully": "Экзамен успешно удален",
+    "exam_updated_successfully": "Экзамен успешно обновлен",
+    "failed_to_create_exam": "Не удалось создать экзамен, пожалуйста, повторите попытку позже",
+    "failed_to_edit_exam": "Не удалось отредактировать экзамен, пожалуйста, повторите попытку позже",
+    "failed_to_delete_exam": "Не удалось удалить экзамен, пожалуйста, повторите попытку позже",
+    "failed_to_fetch_exam": "Не удалось получить экзамен, пожалуйста, повторите попытку позже",
+
+    "name": "Название",
+    "enter_name": "Введите название",
+    "name_required": "Название обязательно!",
+
+    "lesson": "Урок",
+    "select_lesson": "Выберите урок",
+    "lesson_required": "Урок обязателен!",
+
+    "startTime": "Время начала",
+    "select_startTime": "Выберите время начала",
+    "startTime_required": "Время начала обязательно!",
+
+    "endTime": "Время окончания",
+    "select_endTime": "Выберите время окончания",
+    "endTime_required": "Время окончания обязательно!"
+  },
+
   "admin_dashboard": {
     "admins": "Админы",
     "teachers": "Учителя",
@@ -323,7 +387,9 @@
       "role": "Роль",
       "groups": "Группы",
       "grade": "Класс",
-      "class": "Класс"
+      "class": "Класс",
+      "description": "Описание",
+      "lesson": "Урок"
     },
     "active": "Активный",
     "inactive": "Неактивный",

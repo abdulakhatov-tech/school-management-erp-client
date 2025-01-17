@@ -4,14 +4,18 @@ import {
   userFormModal,
   classFormModal,
   lessonFormModal,
+  subjectFormModal,
+  examFormModal,
 } from "./slices";
 
 export const store = configureStore({
   reducer: {
     theme,
     userFormModal,
+    examFormModal,
     classFormModal,
     lessonFormModal,
+    subjectFormModal,
   },
 });
 

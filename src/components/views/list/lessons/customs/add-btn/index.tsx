@@ -36,7 +36,7 @@ const AddBtn: React.FC<{ loading?: boolean }> = ({ loading }) => {
   };
 
   return (
-    <CustomTooltip title={t("lesson_form.create-lesson")}>
+    <CustomTooltip title={t("lesson_form.add-lesson")}>
       <button disabled={loading}>
         <CirclePlus
           className='w-7 md:w-8 h-7 md:h-8 active:scale-95 cursor-pointer'

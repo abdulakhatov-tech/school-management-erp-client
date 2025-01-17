@@ -259,71 +259,31 @@ const useMockData = () => {
     { value: "FRIDAY", label: t("week_days.friday") },
   ];
 
-  const subjects = [
+  const subject_status_options = [
     {
-      label: "English",
-      value: "English",
+      _id: "1",
+      label: t("subject_form.active"),
+      value: "active",
     },
     {
-      label: "Russian",
-      value: "Russian",
+      _id: "2",
+      label: t("subject_form.inactive"),
+      value: "inactive",
     },
     {
-      label: "Mother tongue",
-      value: "Mother tongue",
-    },
-    {
-      label: "History",
-      value: "History",
-    },
-    {
-      label: "Geography",
-      value: "Geography",
-    },
-    {
-      label: "Information Technology",
-      value: "Information Technology",
-    },
-    {
-      label: "Mathematics",
-      value: "Mathematics",
-    },
-    {
-      label: "Physics",
-      value: "Physics",
-    },
-    {
-      label: "Geometry",
-      value: "Geometry",
-    },
-    {
-      label: "Chemistry",
-      value: "Chemistry",
-    },
-    {
-      label: "Biology",
-      value: "Biology",
-    },
-    {
-      label: "Literature",
-      value: "Literature",
-    },
-    {
-      label: "Music",
-      value: "Music",
-    },
-    {
-      label: "Physical Education",
-      value: "Physical Education",
+      _id: "3",
+      label: t("subject_form.pending"),
+      value: "pending",
     },
   ];
 
   return {
-    admin_status_options,
+    subject_status_options,
     student_status_option,
     parent_status_options,
-    class_status_options,
     lesson_status_options,
+    admin_status_options,
+    class_status_options,
     grade_options,
     week_days,
   };

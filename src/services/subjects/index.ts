@@ -91,8 +91,100 @@ export const useSubjectService = () => {
     },
   });
 
+  const getSubjectById = useQueryHandler({
+    queryKey: ["subjects", subjectId],
+    queryFn: async () => {
+      if (!subjectId) return null;
+
+      const response = await $axios.get(`/subjects/${subjectId}`);
+      return response?.data?.data;
+    },
+    onError: () => {
+      toast({
+        variant: "destructive",
+        title: t("subject_form.failed_to_fetch_subject"),
+      });
+    },
+  });
+
+  const createSubject = useMutation({
+    mutationFn: async (body: object) => {
+      const response = await $axios.post("/subjects/create", body);
+      return response?.data?.data;
+    },
+    onSuccess: () => {
+      toast({
+        title: t("subject_form.subject_created_successfully"),
+      });
+
+      queryClient.invalidateQueries({
+        queryKey: ["subjects"],
+      });
+    },
+    onError: (error: any) => {
+      toast({
+        variant: "destructive",
+        title:
+          error?.response?.data?.message ||
+          t("subject_form.failed_to_create_subject"),
+      });
+    },
+  });
+
+  const updateSubject = useMutation({
+    mutationFn: async (body: object) => {
+      const response = await $axios.put(`/subjects/${subjectId}`, body);
+      return response?.data?.data;
+    },
+    onSuccess: () => {
+      queryClient.invalidateQueries({
+        queryKey: ["subjects"],
+      });
+
+      toast({
+        title: t("subject_form.subject_updated_successfully"),
+      });
+    },
+    onError: (error: any) => {
+      toast({
+        variant: "destructive",
+        title:
+          error?.response?.data?.message ||
+          t("subject_form.failed_to_update_subject"),
+      });
+    },
+  });
+
+  const deleteSubject = useMutation({
+    mutationFn: async () => {
+      const response = await $axios.delete(`/subjects/${subjectId}`);
+      return response?.data;
+    },
+    onSuccess: () => {
+      queryClient.invalidateQueries({
+        queryKey: ["subjects"],
+      });
+
+      toast({
+        title: t("subject_form.subject_deleted_successfully"),
+      });
+    },
+    onError: (error: any) => {
+      toast({
+        variant: "destructive",
+        title:
+          error?.response?.data?.message ||
+          t("subject_form.failed_to_delete_subject"),
+      });
+    },
+  });
+
   return {
+    updateSubject,
+    deleteSubject,
+    createSubject,
     getAllSubjects,
+    getSubjectById,
     getAllSubjectsUnpaginated,
   };
 };

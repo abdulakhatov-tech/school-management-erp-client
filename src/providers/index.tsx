@@ -3,6 +3,7 @@ import React, { useEffect } from "react";
 import AuthProvider from "react-auth-kit";
 import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+import 'react-photo-view/dist/react-photo-view.css';
 
 import "@/i18n";
 import { store } from "@/store";
