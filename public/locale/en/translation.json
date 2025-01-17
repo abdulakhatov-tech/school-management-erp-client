@@ -314,6 +314,36 @@
     "endTime_required": "End time is required!"
   },
 
+  "assignment_form": {
+    "add-assignment": "Add Assignment",
+    "edit-assignment": "Edit Assignment",
+    "delete-assignment": "Delete Assignment",
+    "delete_description": "This action cannot be undone. This will permanently delete and remove your data from our servers.",
+    "assignment_created_successfully": "Assignment created successfully",
+    "assignment_deleted_successfully": "Assignment deleted successfully",
+    "assignment_updated_successfully": "Assignment updated successfully",
+    "failed_to_create_assignment": "Failed to create Assignment, Please try again later",
+    "failed_to_edit_assignment": "Failed to edit Assignment, Please try again later",
+    "failed_to_delete_assignment": "Failed to delete Assignment, Please try again later",
+    "failed_to_fetch_assignment": "Failed to fetch Assignment, Please try again later",
+
+    "name": "Task",
+    "enter_name": "Enter task",
+    "name_required": "Task is required!",
+
+    "lesson": "Lesson",
+    "select_lesson": "Select lesson",
+    "lesson_required": "Lesson is required!",
+
+    "dueDate": "Due date",
+    "select_dueDate": "Select due date",
+    "dueDate_required": "Due date is required!",
+
+    "startDate": "Start date",
+    "select_startDate": "Select start date",
+    "startDate_required": "Start date is required!"
+  },
+
   "admin_dashboard": {
     "admins": "Admins",
     "teachers": "Teachers",
@@ -404,7 +434,9 @@
       "grade": "Grade",
       "class": "Class",
       "description": "Description",
-      "lesson": "Lesson"
+      "lesson": "Lesson",
+      "startDate": "Start date",
+      "dueDate": "Due date"
     },
     "active": "Active",
     "inactive": "Inactive",

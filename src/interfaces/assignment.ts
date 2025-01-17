@@ -1,10 +1,10 @@
 import { ILesson } from "./lesson";
 
-export interface IExam {
+export interface IAssignment {
   _id: string;
   name: string;
-  startTime: string;
-  endTime: string;
+  startDate: string;
+  dueDate: string;
   lesson: ILesson;
   results: any[];
   createdAt: string;

@@ -304,6 +304,36 @@
     "endTime_required": "Время окончания обязательно!"
   },
 
+  "assignment_form": {
+    "add-assignment": "Добавить задание",
+    "edit-assignment": "Редактировать задание",
+    "delete-assignment": "Удалить задание",
+    "delete_description": "Это действие необратимо. Это навсегда удалит и удалит ваши данные с наших серверов.",
+    "assignment_created_successfully": "Задание успешно создано",
+    "assignment_deleted_successfully": "Задание успешно удалено",
+    "assignment_updated_successfully": "Задание успешно обновлено",
+    "failed_to_create_assignment": "Не удалось создать задание, пожалуйста, попробуйте позже",
+    "failed_to_edit_assignment": "Не удалось редактировать задание, пожалуйста, попробуйте позже",
+    "failed_to_delete_assignment": "Не удалось удалить задание, пожалуйста, попробуйте позже",
+    "failed_to_fetch_assignment": "Не удалось получить задание, пожалуйста, попробуйте позже",
+
+    "name": "Задача",
+    "enter_name": "Введите задачу",
+    "name_required": "Задача обязательна!",
+
+    "lesson": "Урок",
+    "select_lesson": "Выберите урок",
+    "lesson_required": "Урок обязателен!",
+
+    "dueDate": "Срок сдачи",
+    "select_dueDate": "Выберите срок сдачи",
+    "dueDate_required": "Срок сдачи обязателен!",
+
+    "startDate": "Дата начала",
+    "select_startDate": "Выберите дату начала",
+    "startDate_required": "Дата начала обязательна!"
+  },
+
   "admin_dashboard": {
     "admins": "Админы",
     "teachers": "Учителя",
@@ -389,7 +419,9 @@
       "grade": "Класс",
       "class": "Класс",
       "description": "Описание",
-      "lesson": "Урок"
+      "lesson": "Урок",
+      "startDate": "Дата начала",
+      "dueDate": "Срок сдачи"
     },
     "active": "Активный",
     "inactive": "Неактивный",

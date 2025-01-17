@@ -7,7 +7,7 @@ import useAxiosInstance from "@/api";
 import { useToast } from "@/hooks/use-toast";
 import useQueryHandler from "@/hooks/useQueryHandler";
 
-export const useExamService = () => {
+export const useAssignmentService = () => {
   const param = useParams();
   const { toast } = useToast();
   const { t } = useTranslation();
@@ -15,7 +15,7 @@ export const useExamService = () => {
   const queryClient = useQueryClient();
   const [searchParams, setSearchParams] = useSearchParams();
 
-  const examId = searchParams.get("examId") || param?.examId;
+  const assignmentId = searchParams.get("assignmentId") || param?.assignmentId;
 
   // Get limit and page from search params
   const getLimit = useCallback(() => {
@@ -35,6 +35,14 @@ export const useExamService = () => {
     return searchParams.get("lesson") || "all";
   }, [searchParams]);
 
+  const getStartDate = useCallback(() => {
+    return searchParams.get("startDate") || "";
+  }, [searchParams]);
+
+  const getDueDate = useCallback(() => {
+    return searchParams.get("dueDate") || "";
+  }, [searchParams]);
+
   useEffect(() => {
     const newSearchParams = new URLSearchParams(searchParams);
 
@@ -50,6 +58,8 @@ export const useExamService = () => {
     page?: number;
     search?: string;
     lesson?: string;
+    startDate?: string;
+    dueDate?: string;
   } = {
     limit: getLimit(),
     page: getPage(),
@@ -65,64 +75,74 @@ export const useExamService = () => {
     params.lesson = lesson;
   }
 
-  const getAllExams = useQueryHandler({
-    queryKey: ["exams", params],
+  const startDate = getStartDate();
+  if (startDate) {
+    params.startDate = startDate;
+  }
+
+  const dueDate = getDueDate();
+  if (dueDate) {
+    params.dueDate = dueDate;
+  }
+
+  const getAllAssignments = useQueryHandler({
+    queryKey: ["assignments", params],
     queryFn: async () => {
-      const response = await $axios.get("/exams", { params });
+      const response = await $axios.get("/assignments", { params });
 
       return response?.data;
     },
     onError: () => {
       toast({
         variant: "destructive",
-        title: t("exam_form.failed_to_fetch_exams"),
+        title: t("assignment_form.failed_to_fetch_assignments"),
       });
     },
   });
 
-  const getAllExamsUnpaginated = useQueryHandler({
-    queryKey: ["exams"],
+  const getAllAssignmentsUnpaginated = useQueryHandler({
+    queryKey: ["assignments"],
     queryFn: async () => {
-      const response = await $axios.get("/exams", { params: { search } });
+      const response = await $axios.get("/assignments", { params: { search } });
 
       return response?.data?.data || [];
     },
     onError: () => {
       toast({
         variant: "destructive",
-        title: t("exam_form.failed_to_fetch_exams"),
+        title: t("assignment_form.failed_to_fetch_assignments"),
       });
     },
   });
 
-  const getExamById = useQueryHandler({
-    queryKey: ["exams", examId],
+  const getAssignmentById = useQueryHandler({
+    queryKey: ["assignments", assignmentId],
     queryFn: async () => {
-      if (!examId) return null;
+      if (!assignmentId) return null;
 
-      const response = await $axios.get(`/exams/${examId}`);
+      const response = await $axios.get(`/assignments/${assignmentId}`);
       return response?.data?.data;
     },
     onError: () => {
       toast({
         variant: "destructive",
-        title: t("exam_form.failed_to_fetch_exam"),
+        title: t("assignment_form.failed_to_fetch_assignment"),
       });
     },
   });
 
-  const createExam = useMutation({
+  const createAssignment = useMutation({
     mutationFn: async (body: object) => {
-      const response = await $axios.post("/exams/create", body);
+      const response = await $axios.post("/assignments/create", body);
       return response?.data?.data;
     },
     onSuccess: () => {
       toast({
-        title: t("exam_form.exam_created_successfully"),
+        title: t("assignment_form.assignment_created_successfully"),
       });
 
       queryClient.invalidateQueries({
-        queryKey: ["exams"],
+        queryKey: ["assignments"],
       });
     },
     onError: (error: any) => {
@@ -130,23 +150,23 @@ export const useExamService = () => {
         variant: "destructive",
         title:
           error?.response?.data?.message ||
-          t("exam_form.failed_to_create_exam"),
+          t("assignment_form.failed_to_create_assignment"),
       });
     },
   });
 
-  const updateExam = useMutation({
+  const updateAssignment = useMutation({
     mutationFn: async (body: object) => {
-      const response = await $axios.put(`/exams/${examId}`, body);
+      const response = await $axios.put(`/assignments/${assignmentId}`, body);
       return response?.data?.data;
     },
     onSuccess: () => {
       queryClient.invalidateQueries({
-        queryKey: ["exams"],
+        queryKey: ["assignments"],
       });
 
       toast({
-        title: t("exam_form.exam_updated_successfully"),
+        title: t("assignment_form.assignment_updated_successfully"),
       });
     },
     onError: (error: any) => {
@@ -154,23 +174,23 @@ export const useExamService = () => {
         variant: "destructive",
         title:
           error?.response?.data?.message ||
-          t("exam_form.failed_to_update_exam"),
+          t("assignment_form.failed_to_update_assignment"),
       });
     },
   });
 
-  const deleteExam = useMutation({
+  const deleteAssignment = useMutation({
     mutationFn: async () => {
-      const response = await $axios.delete(`/exams/${examId}`);
+      const response = await $axios.delete(`/assignments/${assignmentId}`);
       return response?.data;
     },
     onSuccess: () => {
       queryClient.invalidateQueries({
-        queryKey: ["exams"],
+        queryKey: ["assignments"],
       });
 
       toast({
-        title: t("exam_form.exam_deleted_successfully"),
+        title: t("assignment_form.assignment_deleted_successfully"),
       });
     },
     onError: (error: any) => {
@@ -178,17 +198,17 @@ export const useExamService = () => {
         variant: "destructive",
         title:
           error?.response?.data?.message ||
-          t("exam_form.failed_to_delete_exam"),
+          t("assignment_form.failed_to_delete_assignment"),
       });
     },
   });
 
   return {
-    updateExam,
-    deleteExam,
-    createExam,
-    getAllExams,
-    getExamById,
-    getAllExamsUnpaginated,
+    updateAssignment,
+    deleteAssignment,
+    createAssignment,
+    getAllAssignments,
+    getAssignmentById,
+    getAllAssignmentsUnpaginated,
   };
 };

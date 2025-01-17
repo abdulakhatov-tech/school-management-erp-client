@@ -6,6 +6,7 @@ import {
   ClassFormModal,
   LessonFormModal,
   SubjectFormModal,
+  AssignmentFormModal,
 } from "./customs";
 
 const ModalVisibility: React.FC = () => {
@@ -16,6 +17,7 @@ const ModalVisibility: React.FC = () => {
       <ClassFormModal />
       <LessonFormModal />
       <SubjectFormModal />
+      <AssignmentFormModal />
     </>
   );
 };

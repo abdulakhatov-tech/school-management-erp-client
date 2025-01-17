@@ -304,6 +304,36 @@
     "endTime_required": "Tugash vaqtini kiritish majburiy!"
   },
 
+  "assignment_form": {
+    "add-assignment": "Topshiriq qo'shish",
+    "edit-assignment": "Topshiriqni tahrirlash",
+    "delete-assignment": "Topshiriqni o'chirish",
+    "delete_description": "Bu amalni bekor qilib bo'lmaydi. Bu sizning ma'lumotlaringizni bizning serverlardan butunlay o'chiradi.",
+    "assignment_created_successfully": "Topshiriq muvaffaqiyatli yaratildi",
+    "assignment_deleted_successfully": "Topshiriq muvaffaqiyatli o'chirildi",
+    "assignment_updated_successfully": "Topshiriq muvaffaqiyatli yangilandi",
+    "failed_to_create_assignment": "Topshiriqni yaratib bo'lmadi, iltimos keyinroq urinib ko'ring",
+    "failed_to_edit_assignment": "Topshiriqni tahrirlashda xatolik, iltimos keyinroq urinib ko'ring",
+    "failed_to_delete_assignment": "Topshiriqni o'chirib bo'lmadi, iltimos keyinroq urinib ko'ring",
+    "failed_to_fetch_assignment": "Topshiriqni olib kelib bo'lmadi, iltimos keyinroq urinib ko'ring",
+
+    "name": "Vazifa",
+    "enter_name": "Vazifani kiriting",
+    "name_required": "Vazifa majburiy!",
+
+    "lesson": "Dars",
+    "select_lesson": "Darsni tanlang",
+    "lesson_required": "Dars majburiy!",
+
+    "dueDate": "Topshirish muddati",
+    "select_dueDate": "Topshirish muddatini tanlang",
+    "dueDate_required": "Topshirish muddati majburiy!",
+
+    "startDate": "Boshlanish sanasi",
+    "select_startDate": "Boshlanish sanasini tanlang",
+    "startDate_required": "Boshlanish sanasi majburiy!"
+  },
+
   "admin_dashboard": {
     "admins": "Administratorlar",
     "teachers": "O‘qituvchilar",
@@ -389,7 +419,9 @@
       "grade": "Sinf",
       "class": "Sinf",
       "description": "Tavsif",
-      "lesson": "Dars"
+      "lesson": "Dars",
+      "startDate": "Boshlanish sanasi",
+      "dueDate": "Topsirish sanasi"
     },
     "active": "Faol",
     "inactive": "Nofaol",

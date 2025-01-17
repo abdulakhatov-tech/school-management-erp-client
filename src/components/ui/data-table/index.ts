@@ -1,3 +1,4 @@
+export { default as RowAssignmentActions } from "./row-assignment-actions";
 export { default as RowSelectionHeader } from "./row-selection-header";
 export { default as RowSubjectActions } from "./row-subject-actions";
 export { default as SelectedRowCount } from "./selected-row-count";

@@ -1,7 +1,8 @@
 import React from "react";
+import AssignmentsPageView from "@/components/views/list/assignments";
 
 const AssignmentsPage:React.FC = () => {
-  return <div>AssignmentsPage</div>;
+  return <AssignmentsPageView/>
 };
 
 export default AssignmentsPage;
