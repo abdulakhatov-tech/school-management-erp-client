@@ -334,6 +334,20 @@
     "startDate_required": "Boshlanish sanasi majburiy!"
   },
 
+  "result_form": {
+    "add-result": "Natija qo'shish",
+    "edit-result": "Natijani tahrirlash",
+    "delete-result": "Natijani o'chirish",
+    "delete_description": "Ushbu amalni bekor qilib bo'lmaydi. Bu sizning ma'lumotlaringizni serverlarimizdan butunlay o'chirib tashlaydi.",
+    "result_created_successfully": "Natija muvaffaqiyatli yaratildi",
+    "result_deleted_successfully": "Natija muvaffaqiyatli o'chirildi",
+    "result_updated_successfully": "Natija muvaffaqiyatli yangilandi",
+    "failed_to_create_result": "Natijani yaratib bo'lmadi, iltimos, keyinroq yana urinib ko'ring",
+    "failed_to_edit_result": "Natijani tahrirlab bo'lmadi, iltimos, keyinroq yana urinib ko'ring",
+    "failed_to_delete_result": "Natijani o'chirib bo'lmadi, iltimos, keyinroq yana urinib ko'ring",
+    "failed_to_fetch_result": "Natijani olish imkoni bo'lmadi, iltimos, keyinroq yana urinib ko'ring"
+  },
+
   "admin_dashboard": {
     "admins": "Administratorlar",
     "teachers": "O‘qituvchilar",
@@ -421,7 +435,13 @@
       "description": "Tavsif",
       "lesson": "Dars",
       "startDate": "Boshlanish sanasi",
-      "dueDate": "Topsirish sanasi"
+      "dueDate": "Topsirish sanasi",
+      "title": "Sarlavha",
+      "student": "Talaba",
+      "score": "Baholash",
+      "all_types": "Barcha turlar",
+      "all_classes": "Barcha sinflar",
+      "all_lessons": "Barcha darslar"
     },
     "active": "Faol",
     "inactive": "Nofaol",

@@ -29,6 +29,8 @@ const SubjectsPage = lazy(() => import("@/pages/list/subjects"));
 
 const AssignmentsPage = lazy(() => import("@/pages/list/assignments"));
 
+const ResultsPage = lazy(() => import("@/pages/list/results"));
+
 const NotFoundPage = lazy(() => import("@/pages/not-found"));
 const ErrorsPage = lazy(() => import("@/pages/errors"));
 const LogoutPage = lazy(() => import("@/pages/logout"));
@@ -234,6 +236,22 @@ const AppRouter: React.FC = () => {
               ]}
             >
               <AssignmentsPage />
+            </PrivateRoute>
+          )
+        },
+        {
+          path: "/list/results",
+          element: (
+            <PrivateRoute
+              allowedRoles={[
+                "admin",
+                "super-admin",
+                "teacher",
+                "student",
+                "parent",
+              ]}
+            >
+              <ResultsPage />
             </PrivateRoute>
           )
         },

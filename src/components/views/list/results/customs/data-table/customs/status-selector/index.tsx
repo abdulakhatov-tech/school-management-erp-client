@@ -9,46 +9,46 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
-import { ILesson } from "@/interfaces/lesson";
+import { IClass } from "@/interfaces/class";
 import { Skeleton } from "@/components/ui/skeleton";
-import { useLessonService } from "@/services/lessons";
+import { useClassService } from "@/services/classes";
 
 const StatusSelector: React.FC = () => {
-  const { t } = useTranslation();
-  const { getAllLessonsUnpaginated } = useLessonService();
+  const { t } = useTranslation()
+  const { getAllClasssUnpaginated } = useClassService();
   const [searchParams, setSearchParams] = useSearchParams();
 
-  const { data = [], isLoading } = getAllLessonsUnpaginated;
+  const { data = [], isLoading } = getAllClasssUnpaginated;
 
-  const lesson_options = data?.data?.map((lesson: ILesson) => ({
-    _id: lesson._id,
-    label: lesson.name,
-    value: lesson._id,
+  const class_options = data?.map((item: IClass) => ({
+    _id: item._id,
+    label: item.name,
+    value: item._id,
   }));
 
   // Get the current status value from the URL params or default to "active"
-  const currentStatus = searchParams.get("lesson") || "all";
+  const currentStatus = searchParams.get("class") || "all";
 
   const handleSelectChange = (value: string) => {
     // Create a new instance of searchParams to preserve other query params
     const newSearchParams = new URLSearchParams(searchParams);
-    newSearchParams.set("lesson", value); // Update the status parameter
+    newSearchParams.set("class", value); // Update the status parameter
     setSearchParams(newSearchParams); // Apply the updated query parameters
   };
 
   return (
     <Select value={currentStatus} onValueChange={handleSelectChange}>
       <SelectTrigger className='w-[180px]'>
-        <SelectValue placeholder='Select Lesson' />
+        <SelectValue placeholder='Select Class' />
       </SelectTrigger>
       <SelectContent>
-        <SelectItem value={"all"}>{t('data-table.columns.all_lessons')}</SelectItem>
+        <SelectItem value={"all"}>{t('data-table.columns.all_classes')}</SelectItem>
         {isLoading ? (
           <Skeleton className='h-10 w-[200px]' />
         ) : (
-          lesson_options?.map((item: any) => (
+          class_options?.map((item: any) => (
             <SelectItem key={item._id} value={item.value}>
-              {item.label}
+              {item.label} {t('data-table.columns.class')}
             </SelectItem>
           ))
         )}

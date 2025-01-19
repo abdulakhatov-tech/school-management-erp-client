@@ -344,6 +344,20 @@
     "startDate_required": "Start date is required!"
   },
 
+  "result_form": {
+    "add-result": "Add Result",
+    "edit-result": "Edit Result",
+    "delete-result": "Delete Result",
+    "delete_description": "This action cannot be undone. This will permanently delete and remove your data from our servers.",
+    "result_created_successfully": "Result created successfully",
+    "result_deleted_successfully": "Result deleted successfully",
+    "result_updated_successfully": "Result updated successfully",
+    "failed_to_create_result": "Failed to create Result, Please try again later",
+    "failed_to_edit_result": "Failed to edit Result, Please try again later",
+    "failed_to_delete_result": "Failed to delete Result, Please try again later",
+    "failed_to_fetch_result": "Failed to fetch Result, Please try again later"
+  },
+
   "admin_dashboard": {
     "admins": "Admins",
     "teachers": "Teachers",
@@ -436,7 +450,13 @@
       "description": "Description",
       "lesson": "Lesson",
       "startDate": "Start date",
-      "dueDate": "Due date"
+      "dueDate": "Due date",
+      "title": "Title",
+      "student": "Student",
+      "score": "Score",
+      "all_types": "All Types",
+      "all_classes": "All Classes",
+      "all_lessons": "All Lessons"
     },
     "active": "Active",
     "inactive": "Inactive",

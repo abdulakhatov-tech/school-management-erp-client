@@ -2,10 +2,11 @@ import { configureStore } from "@reduxjs/toolkit";
 import {
   theme,
   userFormModal,
+  examFormModal,
   classFormModal,
   lessonFormModal,
+  resultFormModal,
   subjectFormModal,
-  examFormModal,
   assignmentFormModal,
 } from "./slices";
 
@@ -16,6 +17,7 @@ export const store = configureStore({
     examFormModal,
     classFormModal,
     lessonFormModal,
+    resultFormModal,
     subjectFormModal,
     assignmentFormModal,
   },

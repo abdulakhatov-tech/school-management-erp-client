@@ -3,6 +3,7 @@ export { default as RowSelectionHeader } from "./row-selection-header";
 export { default as RowSubjectActions } from "./row-subject-actions";
 export { default as SelectedRowCount } from "./selected-row-count";
 export { default as RowLessonActions } from "./row-lesson-actions";
+export { default as RowResultActions } from "./row-result-actions";
 export { default as RowClassActions } from "./row-class-actions";
 export { default as RowUserActions } from "./row-user-actions";
 export { default as RowExamActions } from "./row-exam-actions";
