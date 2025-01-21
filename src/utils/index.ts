@@ -277,7 +277,31 @@ const useMockData = () => {
     },
   ];
 
+  const announcement_status_options = [
+    {
+      _id: "1",
+      label: t("data-table.status_options.approved"),
+      value: "approved",
+    },
+    {
+      _id: "2",
+      label: t("data-table.status_options.pending"),
+      value: "pending",
+    },
+    {
+      _id: "3",
+      label: t("data-table.status_options.rejected"),
+      value: "rejected",
+    },
+    {
+      _id: "4",
+      label: t("data-table.status_options.finished"),
+      value: "finished",
+    },
+  ];
+
   return {
+    announcement_status_options,
     subject_status_options,
     student_status_option,
     parent_status_options,

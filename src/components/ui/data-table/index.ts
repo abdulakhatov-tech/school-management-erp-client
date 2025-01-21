@@ -1,3 +1,4 @@
+export { default as RowAnnouncementActions } from "./row-announcement-actions";
 export { default as RowAssignmentActions } from "./row-assignment-actions";
 export { default as DatePickerWithRange } from "./date-picker-with-range";
 export { default as RowSelectionHeader } from "./row-selection-header";

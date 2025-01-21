@@ -401,7 +401,42 @@
     "crm": "CRM"
   },
 
+  "announcement_form": {
+    "add-announcement": "Add Announcement",
+    "edit-announcement": "Edit Announcement",
+    "delete-announcement": "Delete Announcement",
+    "delete_description": "This action cannot be undone. This will permanently delete and remove your data from our servers.",
+    "announcement_created_successfully": "Announcement created successfully",
+    "announcement_deleted_successfully": "Announcement deleted successfully",
+    "announcement_updated_successfully": "Announcement updated successfully",
+    "failed_to_create_announcement": "Failed to create Announcement, Please try again later",
+    "failed_to_edit_announcement": "Failed to edit Announcement, Please try again later",
+    "failed_to_delete_announcement": "Failed to delete Announcement, Please try again later",
+    "failed_to_fetch_announcement": "Failed to fetch Announcement, Please try again later",
+
+    "name": "Title",
+    "enter_name": "Enter title",
+    "name_required": "Title is required!",
+
+    "description": "Description",
+    "enter_description": "Enter description",
+    "description_required": "Description is required!",
+
+    "date": "Date",
+    "select_date": "Select date",
+    "date_required": "Date is required!",
+
+    "class": "Class",
+    "select_class": "Select class",
+    "class_required": "Class is required!",
+
+    "status": "Status",
+    "select_status": "Select status",
+    "status_required": "Status is required!"
+  },
+
   "data-table": {
+    "general": "General",
     "search": "Search",
     "view": "View",
     "toggle_columns": "Toggle Columns",
@@ -458,7 +493,10 @@
       "all_classes": "All Classes",
       "all_lessons": "All Lessons",
       "all_subjects": "All Subjects",
-      "email": "Email"
+      "email": "Email",
+      "status": "Status",
+      "createdBy": "Created By",
+      "date": "Date"
     },
     "active": "Active",
     "inactive": "Inactive",
@@ -483,7 +521,11 @@
       "completed": "Completed",
       "cancelled": "Cancelled",
       "paused": "Paused",
-      "archived": "Archived"
+      "archived": "Archived",
+
+      "approved": "Approved",
+      "rejected": "Rejected",
+      "finished": "Finished"
     }
   },
 

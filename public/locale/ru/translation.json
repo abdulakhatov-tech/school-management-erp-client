@@ -386,7 +386,42 @@
     "crm": "CRM"
   },
 
+  "announcement_form": {
+    "add-announcement": "Добавить объявление",
+    "edit-announcement": "Редактировать объявление",
+    "delete-announcement": "Удалить объявление",
+    "delete_description": "Это действие нельзя отменить. Это навсегда удалит и удалит ваши данные с наших серверов.",
+    "announcement_created_successfully": "Объявление успешно создано",
+    "announcement_deleted_successfully": "Объявление успешно удалено",
+    "announcement_updated_successfully": "Объявление успешно обновлено",
+    "failed_to_create_announcement": "Не удалось создать объявление, попробуйте позже",
+    "failed_to_edit_announcement": "Не удалось редактировать объявление, попробуйте позже",
+    "failed_to_delete_announcement": "Не удалось удалить объявление, попробуйте позже",
+    "failed_to_fetch_announcement": "Не удалось получить объявление, попробуйте позже",
+
+    "name": "Заголовок",
+    "enter_name": "Введите заголовок",
+    "name_required": "Заголовок обязателен!",
+
+    "description": "Описание",
+    "enter_description": "Введите описание",
+    "description_required": "Описание обязательно!",
+
+    "date": "Дата",
+    "select_date": "Выберите дату",
+    "date_required": "Дата обязательна!",
+
+    "class": "Класс",
+    "select_class": "Выберите класс",
+    "class_required": "Класс обязателен!",
+
+    "status": "Статус",
+    "select_status": "Выберите статус",
+    "status_required": "Статус обязателен!"
+  },
+
   "data-table": {
+    "general": "Общее",
     "search": "Поиск",
     "view": "Просмотр",
     "toggle_columns": "Переключить столбцы",
@@ -443,7 +478,10 @@
       "all_classes": "Все классы",
       "all_lessons": "Все уроки",
       "all_subjects": "Все предметы",
-      "email": "Электронная почта"
+      "email": "Электронная почта",
+      "status": "Статус",
+      "createdBy": "Создано",
+      "date": "Дата"
     },
     "active": "Активный",
     "inactive": "Неактивный",
@@ -467,7 +505,11 @@
       "completed": "Завершено",
       "cancelled": "Отменено",
       "paused": "Приостановлено",
-      "archived": "Архивировано"
+      "archived": "Архивировано",
+
+      "approved": "Одобрено",
+      "rejected": "Отклонено",
+      "finished": "Завершено"
     }
   },
 

@@ -6,3 +6,4 @@ export { default as lessonFormModal } from "./lesson-form-modal";
 export { default as resultFormModal } from "./result-form-modal";
 export { default as subjectFormModal } from "./subject-form-modal";
 export { default as assignmentFormModal } from "./assignment-form-modal";
+export { default as announcementFormModal } from "./announcement-form-modal";

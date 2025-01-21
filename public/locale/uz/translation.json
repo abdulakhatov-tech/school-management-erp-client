@@ -386,7 +386,42 @@
     "crm": "CRM"
   },
 
+  "announcement_form": {
+    "add-announcement": "E'lon qo'shish",
+    "edit-announcement": "E'lonni tahrirlash",
+    "delete-announcement": "E'lonni o'chirish",
+    "delete_description": "Bu amalni bekor qilib bo'lmaydi. Bu ma'lumotlaringizni serverlarimizdan butunlay o‘chirib tashlaydi.",
+    "announcement_created_successfully": "E'lon muvaffaqiyatli yaratildi",
+    "announcement_deleted_successfully": "E'lon muvaffaqiyatli o‘chirildi",
+    "announcement_updated_successfully": "E'lon muvaffaqiyatli yangilandi",
+    "failed_to_create_announcement": "E'lonni yaratib bo'lmadi, iltimos, keyinroq urinib ko'ring",
+    "failed_to_edit_announcement": "E'lonni tahrirlay olmadi, iltimos, keyinroq urinib ko'ring",
+    "failed_to_delete_announcement": "E'lonni o'chirib bo'lmadi, iltimos, keyinroq urinib ko'ring",
+    "failed_to_fetch_announcement": "E'lonni olishda xatolik, iltimos, keyinroq urinib ko'ring",
+
+    "name": "Sarlavha",
+    "enter_name": "Sarlavhani kiriting",
+    "name_required": "Sarlavha majburiy!",
+
+    "description": "Tavsif",
+    "enter_description": "Tavsif kiriting",
+    "description_required": "Tavsif majburiy!",
+
+    "date": "Sana",
+    "select_date": "Sanani tanlang",
+    "date_required": "Sana majburiy!",
+
+    "class": "Sinf",
+    "select_class": "Sinfni tanlang",
+    "class_required": "Sinf majburiy!",
+
+    "status": "Holat",
+    "select_status": "Holatni tanlang",
+    "status_required": "Holat majburiy!"
+  },
+
   "data-table": {
+    "general": "Umumiy",
     "search": "Qidirish",
     "view": "Ko‘rish",
     "toggle_columns": "Ustunlarni almashtirish",
@@ -443,7 +478,10 @@
       "all_classes": "Barcha sinflar",
       "all_lessons": "Barcha darslar",
       "all_subjects": "Barcha fanlar",
-      "email": "Elektron pochta"
+      "email": "Elektron pochta",
+      "status": "Holat",
+      "createdBy": "Yaratgan",
+      "date": "Sana"
     },
     "active": "Faol",
     "inactive": "Nofaol",
@@ -466,7 +504,11 @@
       "completed": "Tugallangan",
       "cancelled": "Bekor qilingan",
       "paused": "To'xtatilgan",
-      "archived": "Arxivlangan"
+      "archived": "Arxivlangan",
+
+      "approved": "Tasdiqlandi",
+      "rejected": "Rad etildi",
+      "finished": "Tugallandi"
     }
   },
 
