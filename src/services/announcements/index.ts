@@ -163,7 +163,7 @@ export const useAnnouncementsService = () => {
         variant: "destructive",
         title:
           error?.response?.data?.message ||
-          t("announcement_form.failed_to_update_announcement"),
+          t("announcement_form.failed_to_edit_announcement"),
       });
     },
   });
@@ -192,40 +192,11 @@ export const useAnnouncementsService = () => {
     },
   });
 
-  const changeStatusById = useMutation({
-    mutationFn: async (body: { status: string }) => {
-      const response = await $axios.post(
-        `/announcements/${announcementId}/status`,
-        body
-      );
-
-      return response?.data?.data;
-    },
-    onSuccess: () => {
-      toast({
-        title: t("announcement_form.status_changed"),
-      });
-
-      queryClient.invalidateQueries({
-        queryKey: ["announcements"],
-      });
-    },
-    onError: (error: any) => {
-      toast({
-        variant: "destructive",
-        title:
-          error?.response?.data?.message ||
-          t("announcement_form.failed_to_change_status"),
-      });
-    },
-  });
-
   return {
     getAnnouncementById,
     getAllAnnouncements,
     createAnnouncement,
     updateAnnouncement,
-    deleteAnnouncement,
-    changeStatusById,
+    deleteAnnouncement
   };
 };

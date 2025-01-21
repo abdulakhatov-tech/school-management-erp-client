@@ -413,6 +413,7 @@
     "failed_to_edit_announcement": "Failed to edit Announcement, Please try again later",
     "failed_to_delete_announcement": "Failed to delete Announcement, Please try again later",
     "failed_to_fetch_announcement": "Failed to fetch Announcement, Please try again later",
+    "failed_to_fetch_announcements": "Failed to fetch Announcements, Please try again later",
 
     "name": "Title",
     "enter_name": "Enter title",

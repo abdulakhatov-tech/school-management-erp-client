@@ -398,6 +398,7 @@
     "failed_to_edit_announcement": "E'lonni tahrirlay olmadi, iltimos, keyinroq urinib ko'ring",
     "failed_to_delete_announcement": "E'lonni o'chirib bo'lmadi, iltimos, keyinroq urinib ko'ring",
     "failed_to_fetch_announcement": "E'lonni olishda xatolik, iltimos, keyinroq urinib ko'ring",
+    "failed_to_fetch_announcements": "Eʼlonlarni yuklab bo‘lmadi, iltimos, keyinroq qayta urinib ko‘ring",
 
     "name": "Sarlavha",
     "enter_name": "Sarlavhani kiriting",

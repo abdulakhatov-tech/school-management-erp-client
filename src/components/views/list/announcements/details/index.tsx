@@ -10,6 +10,7 @@ import { useAnnouncementsService } from "@/services/announcements";
 const AnnouncementDetailsPageView: React.FC = () => {
   const { t } = useTranslation();
   const { getAnnouncementById } = useAnnouncementsService();
+  
   const { data, isLoading } = getAnnouncementById;
 
   return (
