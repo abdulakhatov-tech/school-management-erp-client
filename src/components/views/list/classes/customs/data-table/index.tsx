@@ -29,13 +29,13 @@ import {
         <div className='flex items-center justify-between py-4'>
           <SearchInput table={table} loading={loading} />
           <div className='flex items-center gap-2 md:gap-3'>
-            <StatusSelector />
+            <StatusSelector loading={loading} />
             {loading ? (
               <Skeleton className='w-20 h-8' />
             ) : (
               <ViewOptions table={table} />
             )}
-            {canModify && <AddBtn />}
+            {canModify && <AddBtn loading={loading} />}
             
           </div>
         </div>

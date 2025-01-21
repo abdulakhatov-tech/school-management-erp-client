@@ -9,6 +9,7 @@ import {
 } from "@/store/slices/result-form-modal";
 import { CustomTooltip } from "@/tools";
 import { useAppDispatch } from "@/hooks/useRedux";
+import { Skeleton } from "@/components/ui/skeleton";
 
 type TPath = "/list/results";
 
@@ -34,6 +35,10 @@ const AddBtn: React.FC<{ loading?: boolean }> = ({ loading }) => {
       );
     }
   };
+
+  if(loading) {
+    return <Skeleton className="w-9 h-9 rounded-full" />
+  }
 
   return (
     <CustomTooltip title={t("result_form.add-result")}>

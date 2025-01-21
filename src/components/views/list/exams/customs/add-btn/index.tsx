@@ -9,6 +9,7 @@ import {
   ExamModalType,
   setExamFormModal,
 } from "@/store/slices/exam-form-modal";
+import { Skeleton } from "@/components/ui/skeleton";
 
 type TPath = "/list/exams";
 
@@ -34,6 +35,10 @@ const AddBtn: React.FC<{ loading?: boolean }> = ({ loading }) => {
       );
     }
   };
+
+  if(loading) {
+    return <Skeleton className="w-9 h-9 rounded-full" />
+  }
 
   return (
     <CustomTooltip title={t("exam_form.add-exam")}>

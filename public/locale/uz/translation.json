@@ -441,7 +441,9 @@
       "score": "Baholash",
       "all_types": "Barcha turlar",
       "all_classes": "Barcha sinflar",
-      "all_lessons": "Barcha darslar"
+      "all_lessons": "Barcha darslar",
+      "all_subjects": "Barcha fanlar",
+      "email": "Elektron pochta"
     },
     "active": "Faol",
     "inactive": "Nofaol",

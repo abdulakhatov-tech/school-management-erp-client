@@ -9,8 +9,9 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
+import { Skeleton } from "@/components/ui/skeleton";
 
-const StatusSelector: React.FC = () => {
+const StatusSelector: React.FC<{ loading: boolean }> = ({ loading }) => {
   const { t } = useTranslation();
   const [searchParams, setSearchParams] = useSearchParams();
 
@@ -23,6 +24,10 @@ const StatusSelector: React.FC = () => {
     newSearchParams.set("type", value); // Update the status parameter
     setSearchParams(newSearchParams); // Apply the updated query parameters
   };
+
+  if(loading) {
+    return <Skeleton className="w-[180px] h-8" />
+  }
 
   return (
     <Select value={currentStatus} onValueChange={handleSelectChange}>

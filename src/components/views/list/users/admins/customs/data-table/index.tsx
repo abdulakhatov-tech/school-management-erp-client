@@ -5,6 +5,7 @@ import {
   TableHeader,
   ViewOptions,
   SelectedRowCount,
+  DatePickerWithRange,
 } from "@/components/ui/data-table";
 import AddBtn from "../add-btn";
 import { StatusSelector } from "./customs";
@@ -29,13 +30,14 @@ function DataTable<TData, TValue>({
       <div className='flex items-center justify-between py-4'>
         <SearchInput table={table} loading={loading} />
         <div className='flex items-center gap-2 md:gap-3'>
-          <StatusSelector />
+          <DatePickerWithRange loading={loading} />
+          <StatusSelector loading={loading} />
           {loading ? (
             <Skeleton className='w-20 h-8' />
           ) : (
             <ViewOptions table={table} />
           )}
-          {canModify && <AddBtn />}
+          {canModify && <AddBtn loading={loading} />}
           
         </div>
       </div>

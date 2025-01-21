@@ -1,4 +1,5 @@
 export { default as RowAssignmentActions } from "./row-assignment-actions";
+export { default as DatePickerWithRange } from "./date-picker-with-range";
 export { default as RowSelectionHeader } from "./row-selection-header";
 export { default as RowSubjectActions } from "./row-subject-actions";
 export { default as SelectedRowCount } from "./selected-row-count";
@@ -7,6 +8,7 @@ export { default as RowResultActions } from "./row-result-actions";
 export { default as RowClassActions } from "./row-class-actions";
 export { default as RowUserActions } from "./row-user-actions";
 export { default as RowExamActions } from "./row-exam-actions";
+export { default as ClassSelector } from "./class-selector";
 export { default as ActiveStatus } from "./active-status";
 export { default as CopyableText } from "./copyable-text";
 export { default as ColumnHeader } from "./column-header";

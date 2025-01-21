@@ -5,6 +5,7 @@ import { useTranslation } from "react-i18next";
 
 import { CustomTooltip } from "@/tools";
 import { useAppDispatch } from "@/hooks/useRedux";
+import { Skeleton } from "@/components/ui/skeleton";
 import { UserModalType, setUserFormModal } from "@/store/slices/user-form-modal";
 
 type TPath = "/list/parents";
@@ -31,6 +32,10 @@ const AddBtn: React.FC<{ loading?: boolean }> = ({ loading }) => {
       );
     }
   };
+
+  if(loading) {
+    return <Skeleton className="w-9 h-9 rounded-full" />
+  }
 
   return (
     <CustomTooltip title={t('parent_form.add-parent')}>

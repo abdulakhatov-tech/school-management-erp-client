@@ -9,8 +9,9 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import useMockData from "@/utils";
+import { Skeleton } from "@/components/ui/skeleton";
 
-const StatusSelector: React.FC = () => {
+const StatusSelector: React.FC<{ loading: boolean }> = ({ loading }) => {
   const { student_status_option } = useMockData();
   const [searchParams, setSearchParams] = useSearchParams();
 
@@ -22,9 +23,13 @@ const StatusSelector: React.FC = () => {
     setSearchParams(searchParams); 
   };
 
+  if(loading) {
+    return <Skeleton className="w-[150px] h-9" />
+  }
+
   return (
     <Select value={currentStatus} onValueChange={handleSelectChange}>
-      <SelectTrigger className="w-[180px]">
+      <SelectTrigger className="w-[150px]">
         <SelectValue placeholder="Select Status" />
       </SelectTrigger>
       <SelectContent>

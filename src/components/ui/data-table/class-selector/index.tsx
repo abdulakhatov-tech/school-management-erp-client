@@ -37,12 +37,12 @@ const StatusSelector: React.FC<{ loading: boolean }> = ({ loading }) => {
   };
 
   if (loading) {
-    return <Skeleton className='w-[180px] h-8' />;
+    return <Skeleton className='w-[130px] h-8' />;
   }
 
   return (
     <Select value={currentStatus} onValueChange={handleSelectChange}>
-      <SelectTrigger className='w-[180px]'>
+      <SelectTrigger className='w-[130px]'>
         <SelectValue placeholder='Select Class' />
       </SelectTrigger>
       <SelectContent>

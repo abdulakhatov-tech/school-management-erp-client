@@ -9,6 +9,7 @@ import {
   AssignmentModalType,
   setAssignmentFormModal,
 } from "@/store/slices/assignment-form-modal";
+import { Skeleton } from "@/components/ui/skeleton";
 
 type TPath = "/list/assignments";
 
@@ -34,6 +35,10 @@ const AddBtn: React.FC<{ loading?: boolean }> = ({ loading }) => {
       );
     }
   };
+
+  if(loading) {
+    return <Skeleton className="w-9 h-9 rounded-full" />
+  }
 
   return (
     <CustomTooltip title={t("assignment_form.add-assignment")}>

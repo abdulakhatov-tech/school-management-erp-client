@@ -5,14 +5,15 @@ import {
   TableHeader,
   ViewOptions,
   SelectedRowCount,
+  DatePickerWithRange,
 } from "@/components/ui/data-table";
 import AddBtn from "../add-btn";
-import useDataTableFeatures from "./features";
 import { Table } from "@/components/ui/table";
+import useDataTableFeatures from "./features";
 import { Skeleton } from "@/components/ui/skeleton";
+import {  StatusSelector, TypeSelector } from "./customs";
 import { DataTablePropsI } from "@/interfaces/data-table";
 import { PaginationLoading, TableLoading } from "./loading";
-import { DatePickerWithRange, StatusSelector, TypeSelector } from "./customs";
 
 function DataTable<TData, TValue>({
   data,
@@ -27,17 +28,17 @@ function DataTable<TData, TValue>({
   return (
     <div className='min-w-[1200px]'>
       <div className='flex items-center justify-between py-4'>
-        <SearchInput table={table} loading={true} />
+        <SearchInput table={table} loading={loading} />
         <div className='flex items-center gap-2 md:gap-3'>
-          <DatePickerWithRange />
-          <TypeSelector />
-          <StatusSelector />
+          <DatePickerWithRange loading={loading} />
+          <TypeSelector loading={loading} />
+          <StatusSelector loading={loading} />
           {loading ? (
             <Skeleton className='w-20 h-8' />
           ) : (
             <ViewOptions table={table} />
           )}
-          {canModify && <AddBtn />}
+          {canModify && <AddBtn loading={loading} />}
         </div>
       </div>
 

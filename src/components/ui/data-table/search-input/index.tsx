@@ -4,6 +4,7 @@ import { useSearchParams } from "react-router-dom";
 import React, { useState, useCallback, useEffect } from "react";
 
 import { Input } from "@/components/ui/input";
+import { Skeleton } from "../../skeleton";
 
 interface PropsI {
   table: any;
@@ -55,6 +56,12 @@ const DataTableSearchInput: React.FC<PropsI> = ({ table, loading }) => {
     // When `searchParams` changes, update the search state
     setSearch(searchParams.get("search") || "");
   }, [searchParams]);
+
+  
+  if(loading) {
+    return <Skeleton className="w-[300px] md:w-[370px] h-8" />
+  }
+
 
   return (
     <Input

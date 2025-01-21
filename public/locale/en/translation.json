@@ -456,7 +456,9 @@
       "score": "Score",
       "all_types": "All Types",
       "all_classes": "All Classes",
-      "all_lessons": "All Lessons"
+      "all_lessons": "All Lessons",
+      "all_subjects": "All Subjects",
+      "email": "Email"
     },
     "active": "Active",
     "inactive": "Inactive",

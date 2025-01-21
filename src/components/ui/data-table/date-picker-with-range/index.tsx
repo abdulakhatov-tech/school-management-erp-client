@@ -4,22 +4,30 @@ import { CalendarIcon } from "lucide-react";
 import { DateRange } from "react-day-picker";
 import { useSearchParams } from "react-router-dom";
 
-import { cn } from "@/lib/utils";
-import { Button } from "@/components/ui/button";
-import { Calendar } from "@/components/ui/calendar";
 import {
   Popover,
   PopoverContent,
   PopoverTrigger,
 } from "@/components/ui/popover";
+import { cn } from "@/lib/utils";
+import { Skeleton } from "../../skeleton";
+import { Button } from "@/components/ui/button";
+import { Calendar } from "@/components/ui/calendar";
 
-function DatePickerWithRange({ className }: React.HTMLAttributes<HTMLDivElement>) {
+function DatePickerWithRange({
+  className,
+  loading,
+}: React.HTMLAttributes<HTMLDivElement> & { loading: boolean }) {
   const [searchParams, setSearchParams] = useSearchParams();
   const startDateParam = searchParams.get("startDate");
   const dueDateParam = searchParams.get("dueDate");
 
-  const initialStartDate = startDateParam ? new Date(startDateParam) : new Date();
-  const initialDueDate = dueDateParam ? new Date(dueDateParam) : addDays(initialStartDate, 20);
+  const initialStartDate = startDateParam
+    ? new Date(startDateParam)
+    : new Date();
+  const initialDueDate = dueDateParam
+    ? new Date(dueDateParam)
+    : addDays(initialStartDate, 20);
 
   const [date, setDate] = React.useState<DateRange | undefined>({
     from: initialStartDate,
@@ -43,15 +51,19 @@ function DatePickerWithRange({ className }: React.HTMLAttributes<HTMLDivElement>
     setDate(range);
   };
 
+  if (loading) {
+    return <Skeleton className='w-[270px]  h-8' />;
+  }
+
   return (
     <div className={cn("grid gap-2", className)}>
       <Popover>
         <PopoverTrigger asChild>
           <Button
-            id="date"
+            id='date'
             variant={"outline"}
             className={cn(
-              "w-[300px] justify-start text-left font-normal",
+              "w-[270px] justify-start text-left font-normal",
               !date && "text-muted-foreground"
             )}
           >
@@ -59,7 +71,8 @@ function DatePickerWithRange({ className }: React.HTMLAttributes<HTMLDivElement>
             {date?.from ? (
               date.to ? (
                 <>
-                  {format(date.from, "LLL dd, y")} - {format(date.to, "LLL dd, y")}
+                  {format(date.from, "LLL dd, y")} -{" "}
+                  {format(date.to, "LLL dd, y")}
                 </>
               ) : (
                 format(date.from, "LLL dd, y")
@@ -69,10 +82,10 @@ function DatePickerWithRange({ className }: React.HTMLAttributes<HTMLDivElement>
             )}
           </Button>
         </PopoverTrigger>
-        <PopoverContent className="w-auto p-0" align="start">
+        <PopoverContent className='w-auto p-0' align='start'>
           <Calendar
             initialFocus
-            mode="range"
+            mode='range'
             defaultMonth={date?.from}
             selected={date}
             onSelect={handleDateChange}

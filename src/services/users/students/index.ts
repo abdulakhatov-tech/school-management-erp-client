@@ -5,7 +5,6 @@ import { useParams, useSearchParams } from "react-router-dom";
 import useAxiosInstance from "@/api";
 import { useToast } from "@/hooks/use-toast";
 import useQueryHandler from "@/hooks/useQueryHandler";
-import { IPaginationParams } from "@/interfaces/pagination";
 import { useMutation, useQueryClient } from "@tanstack/react-query";
 
 export const useStudentService = () => {
@@ -36,6 +35,18 @@ export const useStudentService = () => {
     return searchParams.get("status") || "enrolled";
   }, [searchParams]);
 
+  const getClass = useCallback(() => {
+    return searchParams.get("class") || "all";
+  }, [searchParams]);
+
+  const getStartDate = useCallback(() => {
+    return searchParams.get("startDate") || "";
+  }, [searchParams]);
+
+  const getDueDate = useCallback(() => {
+    return searchParams.get("dueDate") || "";
+  }, [searchParams]);
+
   useEffect(() => {
     const newSearchParams = new URLSearchParams(searchParams);
 
@@ -46,7 +57,15 @@ export const useStudentService = () => {
     }
   }, [searchParams, setSearchParams, getLimit]);
 
-  const params: IPaginationParams = {
+  const params: {
+    limit?: number;
+    page?: number;
+    search?: string;
+    class?: string;
+    startDate?: string;
+    dueDate?: string;
+    status?: string;
+  } = {
     limit: getLimit(),
     page: getPage(),
   };
@@ -59,6 +78,21 @@ export const useStudentService = () => {
   const status = getStatus();
   if (status) {
     params.status = status;
+  }
+
+  const classId = getClass();
+  if (classId) {
+    params.class = classId;
+  }
+
+  const startDate = getStartDate();
+  if (startDate) {
+    params.startDate = startDate;
+  }
+
+  const dueDate = getDueDate();
+  if (dueDate) {
+    params.dueDate = dueDate;
   }
 
   const getAllStudents = useQueryHandler({

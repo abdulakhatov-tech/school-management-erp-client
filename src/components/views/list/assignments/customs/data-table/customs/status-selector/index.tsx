@@ -13,7 +13,7 @@ import { ILesson } from "@/interfaces/lesson";
 import { Skeleton } from "@/components/ui/skeleton";
 import { useLessonService } from "@/services/lessons";
 
-const StatusSelector: React.FC = () => {
+const StatusSelector: React.FC<{loading: boolean}> = ({ loading }) => {
   const { t } = useTranslation();
   const { getAllLessonsUnpaginated } = useLessonService();
   const [searchParams, setSearchParams] = useSearchParams();
@@ -35,6 +35,10 @@ const StatusSelector: React.FC = () => {
     newSearchParams.set("lesson", value); // Update the status parameter
     setSearchParams(newSearchParams); // Apply the updated query parameters
   };
+
+    if(loading) {
+      return <Skeleton className="w-[180px] h-8" />
+    }
 
   return (
     <Select value={currentStatus} onValueChange={handleSelectChange}>

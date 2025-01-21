@@ -48,6 +48,17 @@ export const useColumns = () => {
       ),
     },
     {
+      accessorKey: "email",
+      header: ({ column }) => (
+        <ColumnHeader column={column} title='email' />
+      ),
+      cell: ({ row }) => {
+        const email = row.original.email;
+
+        return email ? <CopyableText row={row} accessorKey='email' /> : '-'
+      },
+    },
+    {
       accessorKey: "children",
       header: ({ column }) => (
         <ColumnHeader column={column} title='students' />

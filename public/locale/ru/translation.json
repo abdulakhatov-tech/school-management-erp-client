@@ -441,7 +441,9 @@
       "score": "Оценка",
       "all_types": "Все типы",
       "all_classes": "Все классы",
-      "all_lessons": "Все уроки"
+      "all_lessons": "Все уроки",
+      "all_subjects": "Все предметы",
+      "email": "Электронная почта"
     },
     "active": "Активный",
     "inactive": "Неактивный",

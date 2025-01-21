@@ -36,6 +36,18 @@ export const useTeacherService = () => {
     return searchParams.get("status") || "active";
   }, [searchParams]);
 
+  const getSubject = useCallback(() => {
+    return searchParams.get("subject") || "all";
+  }, [searchParams]);
+
+  const getStartDate = useCallback(() => {
+    return searchParams.get("startDate") || "";
+  }, [searchParams]);
+
+  const getDueDate = useCallback(() => {
+    return searchParams.get("dueDate") || "";
+  }, [searchParams]);
+
   useEffect(() => {
     const newSearchParams = new URLSearchParams(searchParams);
 
@@ -46,7 +58,15 @@ export const useTeacherService = () => {
     }
   }, [searchParams, setSearchParams, getLimit]);
 
-  const params: IPaginationParams = {
+  const params: {
+    limit: number;
+    page: number;
+    search?: string;
+    status?: string;
+    subject?: string;
+    startDate?: string;
+    dueDate?: string;
+  } = {
     limit: getLimit(),
     page: getPage(),
   };
@@ -59,6 +79,21 @@ export const useTeacherService = () => {
   const status = getStatus();
   if (status) {
     params.status = status;
+  }
+
+  const subject = getSubject();
+  if (subject) {
+    params.subject = subject;
+  }
+
+  const startDate = getStartDate();
+  if (startDate) {
+    params.startDate = startDate;
+  }
+
+  const dueDate = getDueDate();
+  if (dueDate) {
+    params.dueDate = dueDate;
   }
 
   const getAllTeachers = useQueryHandler({

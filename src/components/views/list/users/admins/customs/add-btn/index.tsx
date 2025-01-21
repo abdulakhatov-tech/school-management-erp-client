@@ -6,6 +6,7 @@ import { useTranslation } from "react-i18next";
 import { CustomTooltip } from "@/tools";
 import { useAppDispatch } from "@/hooks/useRedux";
 import { UserModalType, setUserFormModal } from "@/store/slices/user-form-modal";
+import { Skeleton } from "@/components/ui/skeleton";
 
 type TPath = "/list/admins";
 
@@ -31,6 +32,10 @@ const AddBtn: React.FC<{ loading?: boolean }> = ({ loading }) => {
       );
     }
   };
+
+  if(loading) {
+    return <Skeleton className="w-9 h-9 rounded-full" />
+  }
 
   return (
     <CustomTooltip title={t('admin_form.add-admin')}>
