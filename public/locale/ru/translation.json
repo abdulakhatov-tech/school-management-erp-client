@@ -421,6 +421,45 @@
     "status_required": "Статус обязателен!"
   },
 
+  "event_form": {
+    "add-event": "Добавить событие",
+    "edit-event": "Редактировать событие",
+    "delete-event": "Удалить событие",
+    "delete_description": "Это действие необратимо. Это навсегда удалит и удалит ваши данные с наших серверов.",
+    "event_created_successfully": "Событие успешно создано",
+    "event_deleted_successfully": "Событие успешно удалено",
+    "event_updated_successfully": "Событие успешно обновлено",
+    "failed_to_create_event": "Не удалось создать событие, попробуйте позже",
+    "failed_to_edit_event": "Не удалось отредактировать событие, попробуйте позже",
+    "failed_to_delete_event": "Не удалось удалить событие, попробуйте позже",
+    "failed_to_fetch_event": "Не удалось загрузить событие, попробуйте позже",
+    "failed_to_fetch_events": "Не удалось загрузить события, попробуйте позже",
+
+    "name": "Название события",
+    "enter_name": "Введите название события",
+    "name_required": "Название события обязательно!",
+
+    "description": "Описание",
+    "enter_description": "Введите описание события",
+    "description_required": "Описание обязательно!",
+
+    "startDate": "Дата начала",
+    "select_startDate": "Выберите дату начала",
+    "startDate_required": "Дата начала обязательна!",
+
+    "endDate": "Дата окончания",
+    "select_endDate": "Выберите дату окончания",
+    "endDate_required": "Дата окончания обязательна!",
+
+    "class": "Класс",
+    "select_class": "Выберите класс",
+    "class_required": "Класс обязателен!",
+
+    "status": "Статус",
+    "select_status": "Выберите статус",
+    "status_required": "Статус обязателен!"
+  },
+
   "data-table": {
     "general": "Общее",
     "search": "Поиск",

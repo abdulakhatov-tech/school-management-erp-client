@@ -436,6 +436,45 @@
     "status_required": "Status is required!"
   },
 
+  "event_form": {
+    "add-event": "Add Event",
+    "edit-event": "Edit Event",
+    "delete-event": "Delete Event",
+    "delete_description": "This action cannot be undone. This will permanently delete and remove your data from our servers.",
+    "event_created_successfully": "Event created successfully",
+    "event_deleted_successfully": "Event deleted successfully",
+    "event_updated_successfully": "Event updated successfully",
+    "failed_to_create_event": "Failed to create Event, Please try again later",
+    "failed_to_edit_event": "Failed to edit Event, Please try again later",
+    "failed_to_delete_event": "Failed to delete Event, Please try again later",
+    "failed_to_fetch_event": "Failed to fetch Event, Please try again later",
+    "failed_to_fetch_events": "Failed to fetch Events, Please try again later",
+
+    "name": "Event Name",
+    "enter_name": "Enter event name",
+    "name_required": "Event Name is required!",
+
+    "description": "Description",
+    "enter_description": "Enter event description",
+    "description_required": "Description is required!",
+
+    "startDate": "Start date",
+    "select_startDate": "Select start date",
+    "startDate_required": "Start date is required!",
+
+    "endDate": "End date",
+    "select_endDate": "Select end date",
+    "endDate_required": "End date is required!",
+
+    "class": "Class",
+    "select_class": "Select class",
+    "class_required": "Class is required!",
+
+    "status": "Status",
+    "select_status": "Select status",
+    "status_required": "Status is required!"
+  },
+
   "data-table": {
     "general": "General",
     "search": "Search",

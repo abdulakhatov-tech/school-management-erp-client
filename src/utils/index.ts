@@ -300,6 +300,29 @@ const useMockData = () => {
     },
   ];
 
+  const event_status_options = [
+    {
+      _id: "1",
+      label: t("data-table.status_options.approved"),
+      value: "approved",
+    },
+    {
+      _id: "2",
+      label: t("data-table.status_options.pending"),
+      value: "pending",
+    },
+    {
+      _id: "3",
+      label: t("data-table.status_options.rejected"),
+      value: "rejected",
+    },
+    {
+      _id: "4",
+      label: t("data-table.status_options.finished"),
+      value: "finished",
+    },
+  ];
+
   return {
     announcement_status_options,
     subject_status_options,
@@ -308,6 +331,7 @@ const useMockData = () => {
     lesson_status_options,
     admin_status_options,
     class_status_options,
+    event_status_options,
     grade_options,
     week_days,
   };

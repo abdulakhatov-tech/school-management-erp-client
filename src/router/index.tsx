@@ -23,7 +23,7 @@ const ClassesPage = lazy(() => import("@/pages/list/classes"));
 
 const LessonsPage = lazy(() => import("@/pages/list/lessons"));
 
-const ExamsPage = lazy(() => import('@/pages/list/exams'))
+const ExamsPage = lazy(() => import("@/pages/list/exams"));
 
 const SubjectsPage = lazy(() => import("@/pages/list/subjects"));
 
@@ -32,7 +32,12 @@ const AssignmentsPage = lazy(() => import("@/pages/list/assignments"));
 const ResultsPage = lazy(() => import("@/pages/list/results"));
 
 const AnnouncementsPage = lazy(() => import("@/pages/list/announcements"));
-const AnnouncementDetailsPage = lazy(() => import("@/pages/list/announcements/details"));
+const AnnouncementDetailsPage = lazy(
+  () => import("@/pages/list/announcements/details")
+);
+
+const EventsPage = lazy(() => import("@/pages/list/events"));
+const EventDetailsPage = lazy(() => import("@/pages/list/events/details"));
 
 const NotFoundPage = lazy(() => import("@/pages/not-found"));
 const ErrorsPage = lazy(() => import("@/pages/errors"));
@@ -142,7 +147,7 @@ const AppRouter: React.FC = () => {
                 </PrivateRoute>
               ),
             },
-          ]
+          ],
         },
         {
           path: "/list/parents",
@@ -176,7 +181,7 @@ const AppRouter: React.FC = () => {
                 </PrivateRoute>
               ),
             },
-          ], 
+          ],
         },
         {
           path: "/list/classes",
@@ -224,7 +229,7 @@ const AppRouter: React.FC = () => {
             >
               <ExamsPage />
             </PrivateRoute>
-          )
+          ),
         },
         {
           path: "/list/assignments",
@@ -240,7 +245,7 @@ const AppRouter: React.FC = () => {
             >
               <AssignmentsPage />
             </PrivateRoute>
-          )
+          ),
         },
         {
           path: "/list/results",
@@ -256,7 +261,41 @@ const AppRouter: React.FC = () => {
             >
               <ResultsPage />
             </PrivateRoute>
-          )
+          ),
+        },
+        {
+          path: "/list/events",
+          element: (
+            <PrivateRoute
+              allowedRoles={[
+                "admin",
+                "super-admin",
+                "teacher",
+                "student",
+                "parent",
+              ]}
+            >
+              <EventsPage />
+            </PrivateRoute>
+          ),
+          children: [
+            {
+              path: ":eventId",
+              element: (
+                <PrivateRoute
+                  allowedRoles={[
+                    "admin",
+                    "super-admin",
+                    "teacher",
+                    "student",
+                    "parent",
+                  ]}
+                >
+                  <EventDetailsPage />
+                </PrivateRoute>
+              ),
+            },
+          ],
         },
         {
           path: "/list/announcements",
@@ -290,10 +329,10 @@ const AppRouter: React.FC = () => {
                 </PrivateRoute>
               ),
             },
-          ]
+          ],
         },
         {
-          path: '/list/subjects',
+          path: "/list/subjects",
           element: (
             <PrivateRoute
               allowedRoles={[
@@ -306,8 +345,7 @@ const AppRouter: React.FC = () => {
             >
               <SubjectsPage />
             </PrivateRoute>
-          )
-
+          ),
         },
         {
           path: "/logout",

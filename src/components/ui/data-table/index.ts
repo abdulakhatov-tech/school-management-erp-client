@@ -7,6 +7,7 @@ export { default as SelectedRowCount } from "./selected-row-count";
 export { default as RowLessonActions } from "./row-lesson-actions";
 export { default as RowResultActions } from "./row-result-actions";
 export { default as RowClassActions } from "./row-class-actions";
+export { default as RowEventActions } from "./row-event-actions";
 export { default as RowUserActions } from "./row-user-actions";
 export { default as RowExamActions } from "./row-exam-actions";
 export { default as ClassSelector } from "./class-selector";

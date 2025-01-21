@@ -421,6 +421,45 @@
     "status_required": "Holat majburiy!"
   },
 
+  "event_form": {
+    "add-event": "Tadbir qo‘shish",
+    "edit-event": "Tadbirni tahrirlash",
+    "delete-event": "Tadbirni o‘chirish",
+    "delete_description": "Bu amal qaytarib bo‘lmaydi. Bu sizning ma’lumotlaringizni bizning serverlarimizdan butunlay o‘chiradi.",
+    "event_created_successfully": "Tadbir muvaffaqiyatli yaratildi",
+    "event_deleted_successfully": "Tadbir muvaffaqiyatli o‘chirildi",
+    "event_updated_successfully": "Tadbir muvaffaqiyatli yangilandi",
+    "failed_to_create_event": "Tadbirni yaratib bo‘lmadi, iltimos keyinroq urinib ko‘ring",
+    "failed_to_edit_event": "Tadbirni tahrirlab bo‘lmadi, iltimos keyinroq urinib ko‘ring",
+    "failed_to_delete_event": "Tadbirni o‘chirib bo‘lmadi, iltimos keyinroq urinib ko‘ring",
+    "failed_to_fetch_event": "Tadbirni yuklab bo‘lmadi, iltimos keyinroq urinib ko‘ring",
+    "failed_to_fetch_events": "Tadbirlarni yuklab bo‘lmadi, iltimos keyinroq urinib ko‘ring",
+
+    "name": "Tadbir nomi",
+    "enter_name": "Tadbir nomini kiriting",
+    "name_required": "Tadbir nomi talab qilinadi!",
+
+    "description": "Tavsif",
+    "enter_description": "Tadbir tavsifini kiriting",
+    "description_required": "Tavsif talab qilinadi!",
+
+    "startDate": "Boshlanish sanasi",
+    "select_startDate": "Boshlanish sanasini tanlang",
+    "startDate_required": "Boshlanish sanasi talab qilinadi!",
+
+    "endDate": "Tugash sanasi",
+    "select_endDate": "Tugash sanasini tanlang",
+    "endDate_required": "Tugash sanasi talab qilinadi!",
+
+    "class": "Sinfi",
+    "select_class": "Sinfni tanlang",
+    "class_required": "Sinfi talab qilinadi!",
+
+    "status": "Holat",
+    "select_status": "Holatni tanlang",
+    "status_required": "Holat talab qilinadi!"
+  },
+
   "data-table": {
     "general": "Umumiy",
     "search": "Qidirish",
