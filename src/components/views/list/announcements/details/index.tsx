@@ -4,7 +4,7 @@ import { useTranslation } from "react-i18next";
 
 import Loading from "./loading";
 import { Card } from "@/components/ui/card";
-import announcementImage from "@/assets/images/image.png";
+import announcementImage from "@/assets/images/announcement.png";
 import { useAnnouncementsService } from "@/services/announcements";
 
 const AnnouncementDetailsPageView: React.FC = () => {

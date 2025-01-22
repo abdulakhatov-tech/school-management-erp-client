@@ -4,7 +4,7 @@ import { useTranslation } from "react-i18next";
 
 import Loading from "./loading";
 import { Card } from "@/components/ui/card";
-import eventImage from "@/assets/images/image.png";
+import eventImage from "@/assets/images/event.png";
 import { useEventsService } from "@/services/events";
 
 const EventDetailsPageView: React.FC = () => {
@@ -86,11 +86,15 @@ const EventDetailsPageView: React.FC = () => {
         </>
       )}
 
+
       <img
-        className='w-full max-w-xl  mx-auto mt-6 rounded-lg shadow-md object-cover'
+        className='w-full max-w-xl  mx-auto mt-10 md:mt-12 rounded-lg shadow-md object-cover'
         src={eventImage}
         alt='event'
       />
+
+
+
     </Card>
   );
 };

@@ -4,6 +4,7 @@ export { default as ClassFormModal } from "./ClassFormModal";
 export { default as EventFormModal } from "./EventFormModal";
 export { default as ResultFormModal } from "./ResultFormModal";
 export { default as LessonFormModal } from "./LessonFormModal";
+export { default as BookDetailsModal } from "./BookDetailsModal";
 export { default as SubjectFormModal } from "./SubjectFormModal";
 export { default as AssignmentFormModal } from "./AssignmentFormModal";
 export { default as AnnouncementFormModal } from "./AnnouncementFormModal";

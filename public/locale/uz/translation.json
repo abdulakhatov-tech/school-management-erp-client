@@ -271,7 +271,10 @@
 
     "pending": "Kutilmoqda",
     "active": "Faol",
-    "inactive": "Nofaol"
+    "inactive": "Nofaol",
+
+    "teachers": "O‘qituvchilar",
+    "no_teachers": "O‘qituvchilar yo‘q"
   },
 
   "exam_form": {

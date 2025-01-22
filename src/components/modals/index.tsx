@@ -10,6 +10,7 @@ import {
   AssignmentFormModal,
   AnnouncementFormModal,
   EventFormModal,
+  BookDetailsModal,
 } from "./customs";
 
 const ModalVisibility: React.FC = () => {
@@ -22,6 +23,7 @@ const ModalVisibility: React.FC = () => {
       <ResultFormModal />
       <LessonFormModal />
       <SubjectFormModal />
+      <BookDetailsModal />
       <AssignmentFormModal />
       <AnnouncementFormModal />
     </>

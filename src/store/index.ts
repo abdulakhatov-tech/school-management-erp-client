@@ -10,6 +10,7 @@ import {
   subjectFormModal,
   assignmentFormModal,
   announcementFormModal,
+  bookDetailsModal,
 } from "./slices";
 
 export const store = configureStore({
@@ -22,6 +23,7 @@ export const store = configureStore({
     lessonFormModal,
     resultFormModal,
     subjectFormModal,
+    bookDetailsModal,
     assignmentFormModal,
     announcementFormModal,
   },

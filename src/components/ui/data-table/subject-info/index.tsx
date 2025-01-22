@@ -6,6 +6,7 @@ import "./style.css";
 import noUser from "@/assets/icons/no-user.svg";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
 import { useTranslation } from "react-i18next";
+import { useSearchParams } from "react-router-dom";
 
 interface Subject {
   _id: string;
@@ -21,6 +22,8 @@ interface SubjectInfoProps {
 const SubjectInfo: React.FC<SubjectInfoProps> = ({ row, accessorKey }) => {
   const { t } = useTranslation();
   const subject = row.original;
+  
+  const [searchParams, setSearchParams ] = useSearchParams();
 
   // Handle image error and set fallback icon
   const handleImageError = (
@@ -28,6 +31,10 @@ const SubjectInfo: React.FC<SubjectInfoProps> = ({ row, accessorKey }) => {
   ) => {
     e.currentTarget.src = noUser; // Set fallback icon if image is broken or invalid
   };
+
+  const handleClick = () => {
+    setSearchParams({...searchParams, subjectId: subject._id }); 
+  }
 
   return (
     <div className='flex items-center gap-3'>
@@ -49,7 +56,7 @@ const SubjectInfo: React.FC<SubjectInfoProps> = ({ row, accessorKey }) => {
         </div>
       </PhotoProvider>
       <div>
-        <h4 className='text-[16px] font-bold capitalize'>{t(`subjects.${subject.name}`, subject.name)}</h4>
+        <h4 className='text-[16px] font-bold capitalize' onClick={handleClick}>{t(`subjects.${subject.name}`, subject.name)}</h4>
       </div>
     </div>
   );

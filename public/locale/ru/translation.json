@@ -271,7 +271,10 @@
 
     "pending": "В ожидании",
     "active": "Активный",
-    "inactive": "Неактивный"
+    "inactive": "Неактивный",
+
+    "teachers": "Учителя",
+    "no_teachers": "Учителей нет"
   },
 
   "exam_form": {

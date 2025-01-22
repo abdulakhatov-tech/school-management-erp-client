@@ -281,7 +281,10 @@
 
     "pending": "Pending",
     "active": "Active",
-    "inactive": "Inactive"
+    "inactive": "Inactive",
+
+    "teachers": "Teachers",
+    "no_teachers": "No teachers"
   },
 
   "exam_form": {
