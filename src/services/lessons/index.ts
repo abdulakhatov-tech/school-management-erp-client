@@ -6,13 +6,15 @@ import { useMutation, useQueryClient } from "@tanstack/react-query";
 import useAxiosInstance from "@/api";
 import { useToast } from "@/hooks/use-toast";
 import useQueryHandler from "@/hooks/useQueryHandler";
-import { IPaginationParams } from "@/interfaces/pagination";
+import useAuthUser from "react-auth-kit/hooks/useAuthUser";
+import { TUser } from "@/interfaces/user";
 
 export const useLessonService = () => {
   const param = useParams();
   const { toast } = useToast();
   const { t } = useTranslation();
   const $axios = useAxiosInstance();
+  const user = useAuthUser() as TUser;
   const queryClient = useQueryClient();
   const [searchParams, setSearchParams] = useSearchParams();
 
@@ -104,7 +106,9 @@ export const useLessonService = () => {
   const getAllLessonsUnpaginated = useQueryHandler({
     queryKey: ["lessons"],
     queryFn: async () => {
-      const response = await $axios.get("/lessons", { params: { search } });
+      const response = await $axios.get("/lessons", {
+        params: { search, user: { _id: user?._id, role: user?.role } },
+      });
 
       return response?.data || [];
     },

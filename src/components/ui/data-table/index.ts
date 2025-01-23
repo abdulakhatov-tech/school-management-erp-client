@@ -10,6 +10,7 @@ export { default as RowClassActions } from "./row-class-actions";
 export { default as RowEventActions } from "./row-event-actions";
 export { default as RowUserActions } from "./row-user-actions";
 export { default as RowExamActions } from "./row-exam-actions";
+export { default as LessonSelector } from "./lesson-selector";
 export { default as ClassSelector } from "./class-selector";
 export { default as ActiveStatus } from "./active-status";
 export { default as CopyableText } from "./copyable-text";

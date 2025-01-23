@@ -539,7 +539,11 @@
       "email": "Email",
       "status": "Status",
       "createdBy": "Created By",
-      "date": "Date"
+      "date": "Date",
+      "present": "Present",
+      "late": "late",
+      "minutes": "mins",
+      "absent": "Absent"
     },
     "active": "Active",
     "inactive": "Inactive",

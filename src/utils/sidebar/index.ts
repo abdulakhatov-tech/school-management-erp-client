@@ -110,7 +110,7 @@ const useSidebarMenu = () => {
         },
         {
           _id: "1-13",
-          href: "/list/attendance",
+          href: "/list/attendances",
           label: t("app_sidebar.attendance"),
           icon: FaUserCheck,
           visible: ["super-admin", "admin", "teacher", "student", "parent"],

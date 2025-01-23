@@ -9,9 +9,10 @@ import { Skeleton } from "../../skeleton";
 interface PropsI {
   table: any;
   loading?: boolean;
+  disabled?: boolean;
 }
 
-const DataTableSearchInput: React.FC<PropsI> = ({ table, loading }) => {
+const DataTableSearchInput: React.FC<PropsI> = ({ table, loading, disabled=false }) => {
   const { t } = useTranslation();
   const [searchParams, setSearchParams] = useSearchParams();
   const [search, setSearch] = useState(searchParams.get("search") || "");
@@ -66,6 +67,7 @@ const DataTableSearchInput: React.FC<PropsI> = ({ table, loading }) => {
   return (
     <Input
       value={search}
+      disabled={disabled || loading}
       readOnly={loading}
       className='max-w-sm'
       onChange={handleInputChange}

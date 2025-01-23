@@ -524,7 +524,11 @@
       "email": "Elektron pochta",
       "status": "Holat",
       "createdBy": "Yaratgan",
-      "date": "Sana"
+      "date": "Sana",
+      "present": "Kelgan",
+      "late": "Kechikkan",
+      "minutes": "daqiqa",
+      "absent": "Kelmagan"
     },
     "active": "Faol",
     "inactive": "Nofaol",
