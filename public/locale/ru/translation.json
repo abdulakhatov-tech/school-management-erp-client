@@ -67,7 +67,23 @@
 
     "children": "Дети",
     "select_children": "Выберите детей",
-    "children_required": "Дети обязательны"
+    "children_required": "Дети обязательны",
+
+    "bio": "Биография",
+    "enter_your_bio": "Введите вашу биографию",
+    "bio_required": "Биография обязательна",
+
+    "subject": "Предмет",
+    "select_subject": "Выберите предмет",
+    "subject_required": "Предмет обязателен",
+
+    "primaryClass": "Основной класс",
+    "select_primary_class": "Выберите основной класс",
+    "primary_class_required": "Основной класс обязателен",
+
+    "assignedClasses": "Назначенные классы",
+    "select_assigned_classes": "Выберите назначенные классы",
+    "assigned_classes_required": "Назначенные классы обязательны"
   },
 
   "admin_form": {
@@ -528,7 +544,8 @@
       "present": "Присутствует",
       "late": "Опоздал",
       "minutes": "минут",
-      "absent": "Отсутствует"
+      "absent": "Отсутствует",
+      "primaryClass": "Основной класс"
     },
     "active": "Активный",
     "inactive": "Неактивный",

@@ -11,7 +11,14 @@ import useTeachersFormFeatures from "./features";
 import { useAppSelector } from "@/hooks/useRedux";
 import FormSubtitle from "@/components/form/subtitle";
 import { useUserValidation } from "@/validations/users";
-import { DateField, InputField, SelectField, UploadImageField } from "@/components/form";
+import {
+  DateField,
+  DatePickerField,
+  InputField,
+  MultiSelectField,
+  SelectField,
+  UploadImageField,
+} from "@/components/form";
 
 const TeacherForm: React.FC = () => {
   const {
@@ -21,6 +28,10 @@ const TeacherForm: React.FC = () => {
     isFormChanged,
     handleFormSubmit,
     isTeacherDataLoading,
+    classOptions,
+    isClassesDataLoading,
+    subjectOptions,
+    isSubjectsDataLoading,
   } = useTeachersFormFeatures();
   const { t } = useTranslation();
   const { admin_status_options } = useMockData();
@@ -98,12 +109,10 @@ const TeacherForm: React.FC = () => {
                 loading={isTeacherDataLoading && actionType === "edit"}
               />
 
-              <DateField
-                name='birthday'
+              <DatePickerField  name='birthday'
                 label={t("user_form.birthday")}
-                placeholder={t("user_form.enter_your_birthday")}
-                loading={isTeacherDataLoading && actionType === "edit"}
-              />
+                placeholder={t("user_form.select_your_birthday")}
+                loading={isTeacherDataLoading && actionType === "edit"} />
 
               <InputField
                 type='text'
@@ -113,16 +122,50 @@ const TeacherForm: React.FC = () => {
                 placeholder='Beruniy 29, Navruz, Zafarabad, Djizak, Uzbekistan'
                 loading={isTeacherDataLoading && actionType === "edit"}
               />
-            </div>
 
-            <SelectField
-              name='status'
-              label={t("user_form.status")}
-              options={admin_status_options}
-              placeholder={t("user_form.select_status")}
-              value={props.values.status}
-              loading={isTeacherDataLoading && actionType === "edit"}
-            />
+              <MultiSelectField
+                name='subjects'
+                label={t("user_form.subjects")}
+                options={subjectOptions}
+                placeholder={t("user_form.select_your_subjects")}
+                loading={
+                  (isTeacherDataLoading || isSubjectsDataLoading) &&
+                  actionType === "edit"
+                }
+              />
+
+              <SelectField
+                name='primaryClass'
+                label={t("user_form.primaryClass")}
+                options={classOptions}
+                placeholder={t("user_form.select_primary_class")}
+                value={props.values.primaryClass}
+                loading={
+                  (isTeacherDataLoading || isClassesDataLoading) &&
+                  actionType === "edit"
+                }
+              />
+
+              <MultiSelectField
+                name='assignedClasses'
+                label={t("user_form.assignedClasses")}
+                options={classOptions}
+                placeholder={t("user_form.select_assigned_classes")}
+                loading={
+                  (isTeacherDataLoading || isClassesDataLoading) &&
+                  actionType === "edit"
+                }
+              />
+
+              <SelectField
+                name='status'
+                label={t("user_form.status")}
+                options={admin_status_options}
+                placeholder={t("user_form.select_status")}
+                value={props.values.status}
+                loading={isTeacherDataLoading && actionType === "edit"}
+              />
+            </div>
 
             <UploadImageField
               name='profilePhoto'

@@ -72,7 +72,23 @@
 
     "children": "Children",
     "select_children": "Select Children",
-    "children_required": "Children is required"
+    "children_required": "Children is required",
+
+    "bio": "Biography",
+    "enter_your_bio": "Enter your biography",
+    "bio_required": "Biography is required",
+
+    "subject": "Subject",
+    "select_subject": "Select Subject",
+    "subject_required": "Subject is required",
+
+    "primaryClass": "Primary Class",
+    "select_primary_class": "Select Primary Class",
+    "primary_class_required": "Primary Class is required",
+
+    "assignedClasses": "Assigned Classes",
+    "select_assigned_classes": "Select Assigned Classes",
+    "assigned_classes_required": "Assigned Classes is required"
   },
 
   "admin_form": {
@@ -543,7 +559,8 @@
       "present": "Present",
       "late": "late",
       "minutes": "mins",
-      "absent": "Absent"
+      "absent": "Absent",
+      "primaryClass": "Primary Class"
     },
     "active": "Active",
     "inactive": "Inactive",

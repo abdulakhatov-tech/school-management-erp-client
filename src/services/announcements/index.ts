@@ -36,12 +36,20 @@ export const useAnnouncementsService = () => {
     return searchParams.get("status") || "approved";
   }, [searchParams]);
 
+  const getClass = useCallback(() => {
+    return searchParams.get("class") || "all";
+  }, [searchParams]);
+
   const getStartDate = useCallback(() => {
     return searchParams.get("startDate") || "";
   }, [searchParams]);
 
   const getDueDate = useCallback(() => {
     return searchParams.get("dueDate") || "";
+  }, [searchParams]);
+
+  const getDate = useCallback(() => {
+    return searchParams.get("date") || "";
   }, [searchParams]);
 
   useEffect(() => {
@@ -61,6 +69,8 @@ export const useAnnouncementsService = () => {
     status?: string;
     startDate?: string;
     dueDate?: string;
+    class?: string;
+    date?: string;
   } = {
     limit: getLimit(),
     page: getPage(),
@@ -76,6 +86,11 @@ export const useAnnouncementsService = () => {
     params.status = status;
   }
 
+  const classN = getClass();
+  if (classN) {
+    params.class = classN;
+  }
+
   const startDate = getStartDate();
   if (startDate) {
     params.startDate = startDate;
@@ -84,6 +99,11 @@ export const useAnnouncementsService = () => {
   const dueDate = getDueDate();
   if (dueDate) {
     params.dueDate = dueDate;
+  }
+
+  const date = getDate();
+  if (date) {
+    params.date = date;
   }
 
   const getAllAnnouncements = useQueryHandler({
@@ -197,6 +217,6 @@ export const useAnnouncementsService = () => {
     getAllAnnouncements,
     createAnnouncement,
     updateAnnouncement,
-    deleteAnnouncement
+    deleteAnnouncement,
   };
 };

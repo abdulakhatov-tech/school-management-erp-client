@@ -62,20 +62,20 @@ export const useColumns = () => {
       header: ({ column }) => (
         <ColumnHeader column={column} title='startTime' />
       ),
-      // cell: ({ row }) => {
-      //   const createdAt = new Date(row.original?.startTime);
-      //   return format(new Date(createdAt), "MMMM dd, yyyy");
-      // },
+      cell: ({ row }) => {
+        const createdAt = new Date(row.original?.startTime);
+        return format(new Date(createdAt), "hh:mm:a, MMMM dd");
+      },
     },
     {
       accessorKey: "endTime",
       header: ({ column }) => (
         <ColumnHeader column={column} title='endTime' />
       ),
-      // cell: ({ row }) => {
-      //   const createdAt = new Date(row.original?.endTime);
-      //   return format(new Date(createdAt), "MMMM dd, yyyy");
-      // },
+      cell: ({ row }) => {
+        const createdAt = new Date(row.original?.endTime);
+        return format(new Date(createdAt), "hh:mm:a, MMMM dd");
+      },
     },
     {
       accessorKey: "actions",

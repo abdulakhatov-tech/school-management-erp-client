@@ -50,12 +50,13 @@ const useDataTableFeatures = <TData, TValue>({
 
   const isSuperAdmin = user?.role === "super-admin";
   const isAdmin = user?.role === "admin";
+  const isTeacher = user?.role === "teacher";
 
   // Check if the pathname matches and role is allowed to view edit action
   const canModify =
     (location.pathname === "/list/lessons" && isSuperAdmin) ||
     (["/list/lessons"].includes(location.pathname) &&
-      (isSuperAdmin || isAdmin));
+      (isSuperAdmin || isAdmin || isTeacher));
 
   return {
     table,

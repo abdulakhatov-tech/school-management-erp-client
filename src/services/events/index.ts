@@ -43,6 +43,10 @@ export const useEventsService = () => {
     return searchParams.get("dueDate") || "";
   }, [searchParams]);
 
+  const getDate = useCallback(() => {
+    return searchParams.get("date") || "";
+  }, [searchParams]);
+
   useEffect(() => {
     const newSearchParams = new URLSearchParams(searchParams);
 
@@ -60,6 +64,7 @@ export const useEventsService = () => {
     status?: string;
     startDate?: string;
     dueDate?: string;
+    date?: string;
   } = {
     limit: getLimit(),
     page: getPage(),
@@ -83,6 +88,11 @@ export const useEventsService = () => {
   const dueDate = getDueDate();
   if (dueDate) {
     params.dueDate = dueDate;
+  }
+
+  const date = getDate();
+  if (date) {
+    params.date = date;
   }
 
   const getAllEvents = useQueryHandler({

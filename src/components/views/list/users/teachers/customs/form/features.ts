@@ -6,6 +6,10 @@ import { useAppSelector } from "@/hooks/useRedux";
 import { useTeacherService } from "@/services/users/teachers";
 import { handleValidationError } from "@/helpers/validation-error";
 import useUserFormModalFeatures from "@/components/modals/customs/UserFormModal/features";
+import { useClassService } from "@/services/classes";
+import { IClass } from "@/interfaces/class";
+import { useSubjectService } from "@/services/subjects";
+import { ISubject } from "@/interfaces/subject";
 
 interface IInitialValues {
   fullName: string;
@@ -18,6 +22,9 @@ interface IInitialValues {
   profilePhoto: string;
   email?: string;
   status: string;
+  primaryClass: string;
+  subjects: string[];
+  assignedClasses: string[];
 }
 
 const initialTeacherValues: IInitialValues = {
@@ -31,9 +38,14 @@ const initialTeacherValues: IInitialValues = {
   profilePhoto: "",
   email: "",
   status: "pending",
+  primaryClass: "",
+  subjects: [],
+  assignedClasses: [],
 };
 
 const useTeachersFormFeatures = () => {
+  const { getAllClasssUnpaginated } = useClassService();
+  const { getAllSubjectsUnpaginated } = useSubjectService();
   const { createTeacher, getTeacherById, updateTeacher } = useTeacherService();
   const { handleCloseUserModal } = useUserFormModalFeatures();
   const { modalType, actionType } = useAppSelector(
@@ -67,6 +79,9 @@ const useTeachersFormFeatures = () => {
         profilePhoto: teacherData.profilePhoto || "",
         email: teacherData.email || "",
         status: teacherData.status || "pending",
+        primaryClass: teacherData.primaryClass || "",
+        subjects: teacherData.subjects || [],
+        assignedClasses: teacherData.assignedClasses || [],
       });
     } else {
       setInitialValues(initialTeacherValues);
@@ -116,6 +131,22 @@ const useTeachersFormFeatures = () => {
     return !isEqual(values, initialValues);
   };
 
+  const { data: classesData, isLoading: isClassesDataLoading } =
+    getAllClasssUnpaginated;
+
+  const classOptions = classesData?.map((item: IClass) => ({
+    value: item._id,
+    label: item.name,
+  }));
+
+  const { data: subjectsData, isLoading: isSubjectsDataLoading } =
+    getAllSubjectsUnpaginated;
+
+  const subjectOptions = subjectsData?.map((item: ISubject) => ({
+    value: item._id,
+    label: item.name,
+  }));
+
   return {
     loading: state.loading,
     error: state.error,
@@ -123,6 +154,10 @@ const useTeachersFormFeatures = () => {
     handleFormSubmit,
     initialValues,
     isFormChanged,
+    classOptions,
+    isClassesDataLoading,
+    subjectOptions,
+    isSubjectsDataLoading,
   };
 };
 

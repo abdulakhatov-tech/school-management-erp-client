@@ -52,7 +52,7 @@ function DatePickerWithRange({
   };
 
   if (loading) {
-    return <Skeleton className='w-[270px]  h-8' />;
+    return <Skeleton className='w-[300px]  h-8' />;
   }
 
   return (
@@ -63,7 +63,7 @@ function DatePickerWithRange({
             id='date'
             variant={"outline"}
             className={cn(
-              "w-[270px] justify-start text-left font-normal",
+              "w-[300px] justify-start text-left font-normal",
               !date && "text-muted-foreground"
             )}
           >

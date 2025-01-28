@@ -6,10 +6,17 @@ import DropDown from "../dropdown";
 import CardTitle from "../card-title";
 import { Card } from "@/components/ui/card";
 import AnnouncementsFeatures from "./features";
+import { useAnnouncementsService } from "@/services/announcements";
 
 const Announcements: React.FC = () => {
   const { t } = useTranslation();
   const { announcements } = AnnouncementsFeatures();
+
+  const { getAllAnnouncements } = useAnnouncementsService();
+
+  const { data, isLoading } = getAllAnnouncements;
+
+
 
   return (
     <Card className='relative p-4'>
@@ -22,7 +29,7 @@ const Announcements: React.FC = () => {
         {announcements?.length === 0 ? (
           <p>{t("admin_dashboard.no_data_available")}</p>
         ) : (
-          announcements?.map(({ _id, name, description, bg }) => (
+          data?.data?.map(({ _id, name, description, bg }) => (
             <Card
               key={_id}
               className={`p-4 ${bg} hover:scale-95 transition-all`}
@@ -30,7 +37,7 @@ const Announcements: React.FC = () => {
               <h5 className='text-md font-semibold underline mb-2'>
                 <Link to={`/list/announcements/${_id}`}>{name}</Link>
               </h5>
-              <p className={`text-sm text-[#A1ADB4] line-clamp-1`}>
+              <p className={`text-sm text-[#A1ADB4] line-clamp-2`}>
                 {description}
               </p>
             </Card>

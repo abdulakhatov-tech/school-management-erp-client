@@ -67,7 +67,23 @@
 
     "children": "Bolalar",
     "select_children": "Bolalarni tanlang",
-    "children_required": "Bolalar majburiy"
+    "children_required": "Bolalar majburiy",
+
+    "bio": "Biografiya",
+    "enter_your_bio": "Biografiyangizni kiriting",
+    "bio_required": "Biografiya majburiy",
+
+    "subject": "Fan",
+    "select_subject": "Fanni tanlang",
+    "subject_required": "Fan majburiy",
+
+    "primaryClass": "Asosiy sinf",
+    "select_primary_class": "Asosiy sinfni tanlang",
+    "primary_class_required": "Asosiy sinf majburiy",
+
+    "assignedClasses": "Biriktirilgan sinflar",
+    "select_assigned_classes": "Biriktirilgan sinflarni tanlang",
+    "assigned_classes_required": "Biriktirilgan sinflar majburiy"
   },
 
   "admin_form": {
@@ -528,7 +544,8 @@
       "present": "Kelgan",
       "late": "Kechikkan",
       "minutes": "daqiqa",
-      "absent": "Kelmagan"
+      "absent": "Kelmagan",
+      "primaryClass": "Asosiy sinf"
     },
     "active": "Faol",
     "inactive": "Nofaol",

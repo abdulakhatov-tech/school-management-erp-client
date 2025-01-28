@@ -50,11 +50,12 @@ export const useColumns = () => {
       ),
     },
     {
-      accessorKey: "groups",
-      header: ({ column }) => <ColumnHeader column={column} title='groups' />,
+      accessorKey: "primaryClass",
+      header: ({ column }) => <ColumnHeader column={column} title='primaryClass' />,
       cell: ({ row }) => (
-        <DataLinks row={row} accessorKey='groups' navigate={true} />
+        <DataLinks row={row} accessorKey='primaryClass' navigate={true} />
       ),
+
     },
     {
       accessorKey: "gender",

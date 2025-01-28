@@ -6,6 +6,7 @@ import {
     ViewOptions,
     SelectedRowCount,
     DatePickerWithRange,
+    ClassSelector,
   } from "@/components/ui/data-table";
   import AddBtn from "../add-btn";
   import { StatusSelector } from "./customs";
@@ -31,6 +32,7 @@ import {
           <SearchInput table={table} loading={loading} />
           <div className='flex items-center gap-2 md:gap-3'>
             <DatePickerWithRange loading={loading} />
+            <ClassSelector loading={loading} />
             <StatusSelector loading={loading} />
             {loading ? (
               <Skeleton className='w-20 h-8' />

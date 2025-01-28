@@ -6,19 +6,20 @@ import DropDown from "../dropdown";
 import CardTitle from "../card-title";
 import { Card } from "@/components/ui/card";
 import useFinanceChartFeatures from "./features";
+import { Skeleton } from "@/components/ui/skeleton";
 
-const FinanceChart: React.FC = () => {
+const FinanceChart: React.FC<{loading: boolean}> = ({loading}) => {
   const { t } = useTranslation();
   const { data } = useFinanceChartFeatures();
 
   return (
-    <Card className='relative p-4'>
+    <Card className='relative p-4 h-[340px]'>
       <CardTitle>{t('admin_dashboard.finance_chart')}</CardTitle>      
       <DropDown />
 
 
       {/* ---------------------- CHART ---------------------- */}
-      {data.length === 0 ? (
+      {loading ? <Skeleton className='h-[270px] w-full mt-2' /> : data.length === 0 ? (
         <p>{t('admin_dashboard.no_data_available')}</p>
       ) : (
         <Chart data={data} />

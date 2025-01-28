@@ -38,6 +38,10 @@ export const useLessonService = () => {
     return searchParams.get("status") || "scheduled";
   }, [searchParams]);
 
+  const getClass = useCallback(() => {
+    return searchParams.get("class") || "all";
+  }, [searchParams]);
+
   const getStartDate = useCallback(() => {
     return searchParams.get("startDate") || "";
   }, [searchParams]);
@@ -63,6 +67,7 @@ export const useLessonService = () => {
     status?: string;
     startDate?: string;
     dueDate?: string;
+    class?: string;
   } = {
     limit: getLimit(),
     page: getPage(),
@@ -76,6 +81,11 @@ export const useLessonService = () => {
   const status = getStatus();
   if (status) {
     params.status = status;
+  }
+
+  const className = getClass();
+  if (className) {
+    params.class = className;
   }
 
   const startDate = getStartDate();
@@ -216,4 +226,48 @@ export const useLessonService = () => {
     deleteLesson,
     getAllLessonsUnpaginated,
   };
+};
+
+export const useGetAllLessonsByClassId = (classId: string) => {
+  const $axios = useAxiosInstance();
+
+  return useQueryHandler({
+    queryKey: ["lessonsByClass", classId],
+    queryFn: async () => {
+      const response = await $axios.get(`/lessons/class/${classId}`);
+      return response?.data?.data || [];
+    },
+    onError: () => {
+      console.error("Failed to fetch lessons by class ID");
+    },
+  });
+};
+
+export const useGetAllLessonsByTeacherId = (teacherId: string) => {
+  const $axios = useAxiosInstance();
+  const [searchParams] = useSearchParams();
+
+  const params: { date?: string } = {};
+
+  const getDate = useCallback(() => {
+    return searchParams.get("date") || "";
+  }, [searchParams]);
+
+  const date = getDate();
+  if (date) {
+    params.date = date;
+  }
+
+  return useQueryHandler({
+    queryKey: ["lessonsByTeacher", teacherId],
+    queryFn: async () => {
+      const response = await $axios.get(`/lessons/teacher/${teacherId}`, {
+        params,
+      });
+      return response?.data?.data || [];
+    },
+    onError: () => {
+      console.error("Failed to fetch lessons by teacher ID");
+    },
+  });
 };

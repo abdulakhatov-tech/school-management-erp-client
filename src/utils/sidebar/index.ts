@@ -65,13 +65,12 @@ const useSidebarMenu = () => {
           icon: IoPeopleOutline,
           visible: ["super-admin", "admin", "teacher"],
         },
-
         {
           _id: "1-7",
           href: "/list/subjects",
           label: t("app_sidebar.subjects"),
           icon: MdSubject,
-          visible: ["admin"],
+          visible: ["super-admin", "admin"],
         },
         {
           _id: "1-8",
@@ -136,13 +135,7 @@ const useSidebarMenu = () => {
           icon: GrAnnounce,
           visible: ["super-admin", "admin", "teacher", "student", "parent"],
         },
-        {
-          _id: "1-16",
-          href: "/list/subjects",
-          label: t("app_sidebar.subjects"),
-          icon: MdSubject,
-          visible: ["super-admin", "admin"],
-        },
+
       ],
     },
     {

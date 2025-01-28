@@ -4,8 +4,9 @@ import useAuthUser from "react-auth-kit/hooks/useAuthUser";
 
 import { FaUser } from "react-icons/fa6";
 import { TUser } from "@/interfaces/user";
-import noUser from "@/assets/icons/no-user.svg"
+import noUser from "@/assets/icons/no-user.svg";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import { Link } from "react-router-dom";
 
 const UserInfo: React.FC = () => {
   const { t } = useTranslation();
@@ -20,15 +21,18 @@ const UserInfo: React.FC = () => {
           {t(`app_sidebar.${user?.role}`)}
         </p>
       </div>
-      <Avatar>
-        <AvatarImage src={user?.profilePhoto || noUser} onError={
-          (e: any) => e.target.src = noUser 
-        } />
+      <Link to={`/profile`}>
+        <Avatar>
+          <AvatarImage
+            src={user?.profilePhoto || noUser}
+            onError={(e: any) => (e.target.src = noUser)}
+          />
 
-        <AvatarFallback>
-          <FaUser className='w-5 h-5' />
-        </AvatarFallback>
-      </Avatar>
+          <AvatarFallback>
+            <FaUser className='w-5 h-5' />
+          </AvatarFallback>
+        </Avatar>
+      </Link>
     </div>
   );
 };

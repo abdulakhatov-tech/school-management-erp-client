@@ -13,6 +13,8 @@ interface PropsI {
   type: string;
   placeholder: string;
   loading?: boolean;
+  disabled?: boolean;
+  value?:string
 }
 
 const InputField: React.FC<PropsI> = (props) => {
@@ -41,6 +43,7 @@ const InputField: React.FC<PropsI> = (props) => {
           <Input
             {...field}
             {...props}
+            disabled={props?.disabled}
             id={field.name}
             type={isPasswordField && showPassword ? "text" : props.type}
             className={classNames({

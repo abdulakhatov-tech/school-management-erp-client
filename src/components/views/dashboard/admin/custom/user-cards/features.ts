@@ -1,5 +1,5 @@
-import { useAnalyticsService } from "@/services/analytics";
 import { useTranslation } from "react-i18next";
+import { useAnalyticsService } from "@/services/analytics";
 
 interface UserCardItem {
   _id: string;
@@ -35,8 +35,8 @@ const useUserCardsFeatures = () => {
     },
     {
       _id: "4",
-      count: data?.subjectsCount || 0,
-      title: t("admin_dashboard.subjects"),
+      count: data?.parentsCount || 0,
+      title: t("app_sidebar.parents"),
       url: "subjects",
     },
   ];

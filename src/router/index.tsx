@@ -41,9 +41,13 @@ const AnnouncementDetailsPage = lazy(
 const EventsPage = lazy(() => import("@/pages/list/events"));
 const EventDetailsPage = lazy(() => import("@/pages/list/events/details"));
 
+const MessagesPage = lazy(() => import("@/pages/list/messages"))
+
+const ProfilePage = lazy(() => import("@/pages/profile"));
 const NotFoundPage = lazy(() => import("@/pages/not-found"));
 const ErrorsPage = lazy(() => import("@/pages/errors"));
 const LogoutPage = lazy(() => import("@/pages/logout"));
+const SettingsPage = lazy(() => import("@/pages/settings"));
 
 const AppRouter: React.FC = () => {
   const router = createBrowserRouter([
@@ -86,15 +90,7 @@ const AppRouter: React.FC = () => {
         {
           path: "/list/teachers",
           element: (
-            <PrivateRoute
-              allowedRoles={[
-                "admin",
-                "super-admin",
-                "teacher",
-                "student",
-                "parent",
-              ]}
-            >
+            <PrivateRoute allowedRoles={["admin", "super-admin", "teacher"]}>
               <TeachersPage />
             </PrivateRoute>
           ),
@@ -103,13 +99,7 @@ const AppRouter: React.FC = () => {
               path: ":teacherId",
               element: (
                 <PrivateRoute
-                  allowedRoles={[
-                    "admin",
-                    "super-admin",
-                    "teacher",
-                    "student",
-                    "parent",
-                  ]}
+                  allowedRoles={["admin", "super-admin", "teacher"]}
                 >
                   <TeacherProfilePage />
                 </PrivateRoute>
@@ -120,15 +110,7 @@ const AppRouter: React.FC = () => {
         {
           path: "/list/students",
           element: (
-            <PrivateRoute
-              allowedRoles={[
-                "admin",
-                "super-admin",
-                "teacher",
-                "student",
-                "parent",
-              ]}
-            >
+            <PrivateRoute allowedRoles={["admin", "super-admin", "teacher"]}>
               <StudentsPage />
             </PrivateRoute>
           ),
@@ -137,13 +119,7 @@ const AppRouter: React.FC = () => {
               path: ":studentId",
               element: (
                 <PrivateRoute
-                  allowedRoles={[
-                    "admin",
-                    "super-admin",
-                    "teacher",
-                    "student",
-                    "parent",
-                  ]}
+                  allowedRoles={["admin", "super-admin", "teacher"]}
                 >
                   <StudentProfilePage />
                 </PrivateRoute>
@@ -154,15 +130,7 @@ const AppRouter: React.FC = () => {
         {
           path: "/list/parents",
           element: (
-            <PrivateRoute
-              allowedRoles={[
-                "admin",
-                "super-admin",
-                "teacher",
-                "student",
-                "parent",
-              ]}
-            >
+            <PrivateRoute allowedRoles={["admin", "super-admin", "teacher"]}>
               <ParentsPage />
             </PrivateRoute>
           ),
@@ -171,13 +139,7 @@ const AppRouter: React.FC = () => {
               path: ":parentId",
               element: (
                 <PrivateRoute
-                  allowedRoles={[
-                    "admin",
-                    "super-admin",
-                    "teacher",
-                    "student",
-                    "parent",
-                  ]}
+                  allowedRoles={["admin", "super-admin", "teacher"]}
                 >
                   <ParentProfilePage />
                 </PrivateRoute>
@@ -186,17 +148,17 @@ const AppRouter: React.FC = () => {
           ],
         },
         {
+          path: "/list/subjects",
+          element: (
+            <PrivateRoute allowedRoles={["admin", "super-admin"]}>
+              <SubjectsPage />
+            </PrivateRoute>
+          ),
+        },
+        {
           path: "/list/classes",
           element: (
-            <PrivateRoute
-              allowedRoles={[
-                "admin",
-                "super-admin",
-                "teacher",
-                "student",
-                "parent",
-              ]}
-            >
+            <PrivateRoute allowedRoles={["admin", "super-admin", "teacher"]}>
               <ClassesPage />
             </PrivateRoute>
           ),
@@ -204,15 +166,7 @@ const AppRouter: React.FC = () => {
         {
           path: "/list/lessons",
           element: (
-            <PrivateRoute
-              allowedRoles={[
-                "admin",
-                "super-admin",
-                "teacher",
-                "student",
-                "parent",
-              ]}
-            >
+            <PrivateRoute allowedRoles={["admin", "super-admin", "teacher"]}>
               <LessonsPage />
             </PrivateRoute>
           ),
@@ -349,8 +303,9 @@ const AppRouter: React.FC = () => {
             },
           ],
         },
+
         {
-          path: "/list/subjects",
+          path: "/list/messages",
           element: (
             <PrivateRoute
               allowedRoles={[
@@ -361,7 +316,40 @@ const AppRouter: React.FC = () => {
                 "parent",
               ]}
             >
-              <SubjectsPage />
+              <MessagesPage />
+            </PrivateRoute>
+          ),
+        },
+
+        {
+          path: "/profile",
+          element: (
+            <PrivateRoute
+              allowedRoles={[
+                "admin",
+                "super-admin",
+                "teacher",
+                "student",
+                "parent",
+              ]}
+            >
+              <ProfilePage />
+            </PrivateRoute>
+          ),
+        },
+        {
+          path: "/settings",
+          element: (
+            <PrivateRoute
+              allowedRoles={[
+                "admin",
+                "super-admin",
+                "teacher",
+                "student",
+                "parent",
+              ]}
+            >
+              <SettingsPage />
             </PrivateRoute>
           ),
         },

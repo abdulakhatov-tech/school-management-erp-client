@@ -1,60 +1,51 @@
 import BigCalendar from "@/components/generic/big-calendar";
 import { Card, CardTitle } from "@/components/ui/card";
+import { Skeleton } from "@/components/ui/skeleton";
 import { adjustScheduleToCurrentWeek } from "@/helpers";
+import { ILesson } from "@/interfaces/lesson";
+import { IStudent } from "@/interfaces/user";
+import { useGetAllLessonsByClassId } from "@/services/lessons";
 
 const mockData = [
   {
-    id: 1,
     name: "Math Class",
-    startTime: new Date("2024-12-25T09:00:00"),
-    endTime: new Date("2024-12-25T10:30:00"),
-    teacherId: "teacher-1",
-    classId: 101,
+    start: new Date("2024-12-25T09:00:00"),
+    end: new Date("2024-12-25T10:30:00"),
   },
   {
-    id: 2,
     name: "Science Class",
-    startTime: new Date("2024-12-26T11:00:00"),
-    endTime: new Date("2024-12-26T12:30:00"),
-    teacherId: "teacher-2",
-    classId: 102,
+    start: new Date("2024-12-26T11:00:00"),
+    end: new Date("2024-12-26T12:30:00"),
   },
   {
-    id: 3,
     name: "History Class",
-    startTime: new Date("2024-12-27T13:00:00"),
-    endTime: new Date("2024-12-27T14:30:00"),
-    teacherId: "teacher-1",
-    classId: 101,
+    start: new Date("2024-12-27T13:00:00"),
+    end: new Date("2024-12-27T14:30:00"),
   },
 ];
 
-const BigCalendarContainer = ({
-  type,
-  id,
-}: {
-  type: "teacherId" | "classId";
-  id: string | number;
-}) => {
-  const dataRes = mockData.filter((lesson) =>
-    type === "teacherId"
-      ? lesson.teacherId === id
-      : lesson.classId === Number(id)
-  );
+const BigCalendarContainer = ({ user }: { user: IStudent }) => {
+  const { data, isLoading } = useGetAllLessonsByClassId(user?.class?._id);
 
-  const data = dataRes.map((lesson: any) => ({
+  const lessonsData = data?.map((lesson: ILesson) => ({
     title: lesson.name,
-    start: lesson.startTime,
-    end: lesson.endTime,
+    start: new Date(lesson.startTime),
+    end: new Date(lesson.endTime),
   }));
 
-  const schedule = adjustScheduleToCurrentWeek(data);
+  const schedule = adjustScheduleToCurrentWeek(lessonsData);
 
   return (
     <Card className='relative pt-4 pb-14 px-6 gap-4'>
-      <CardTitle className='mb-2 text-lg'>Schedule (Jack Smith)</CardTitle>
+      <CardTitle className='mb-2 text-lg'>
+        Schedule ({user?.fullName})
+      </CardTitle>
 
-      <BigCalendar data={schedule} />
+      {
+        isLoading ? <Skeleton /> :<BigCalendar data={schedule} />
+      }
+
+      
     </Card>
   );
 };

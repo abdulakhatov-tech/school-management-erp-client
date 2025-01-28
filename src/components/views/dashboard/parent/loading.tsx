@@ -15,7 +15,7 @@ const Loading: React.FC = () => {
       </div>
 
       {/* RIGHT SIDE */}
-      <div className='flex flex-col md:flex-col gap-4 min-w-[280px] lg:max-w-[280px]'>
+      <div className='flex flex-col md:flex-col gap-4 min-w-[320px] lg:max-w-[320px]'>
         {/* ANNOUNCEMENTS */}
         <div className='flex flex-col gap-4'>
           {Array.from({ length: 5 }, (_, idx) => (

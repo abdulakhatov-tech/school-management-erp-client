@@ -10,7 +10,6 @@ const AdminsPage:React.FC = () => {
     return <Outlet />
   }
 
-
   return <AdminsPageViews />
 };
 

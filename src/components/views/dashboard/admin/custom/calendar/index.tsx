@@ -1,14 +1,12 @@
 import React, { useEffect, useState } from "react";
-
-import { Calendar } from "@/components/ui/calendar";
-import { Card } from "@/components/ui/card";
 import { useSearchParams } from "react-router-dom";
 
-const CalendarComponent: React.FC = () => {
+import { Card } from "@/components/ui/card";
+import { Calendar } from "@/components/ui/calendar";
+
+const CalendarComponent: React.FC<{loading:boolean}> = ({loading}) => {
   const [searchParams, setSearchParams] = useSearchParams();
   const [date, setDate] = useState<Date | undefined>(new Date());
-
-  console.log(date, 'date')
 
   useEffect(() => {
     const dateString = searchParams.get("date");
@@ -27,7 +25,7 @@ const CalendarComponent: React.FC = () => {
     if (date) {
       setSearchParams((prev) => {
         const newParams = new URLSearchParams(prev);
-        newParams.set("date", date.toISOString().split("T")[0]); // Set date in YYYY-MM-DD format
+        newParams.set("date", date.toISOString().split("T")[0]); 
         return newParams;
       });
     }
@@ -35,12 +33,18 @@ const CalendarComponent: React.FC = () => {
 
   return (
     <Card>
-      {/* <h4 className='text-lg font-semibold'>Calendar</h4> */}
+      {/* <CardTitle className='text-lg font-semibold mb-2'>
+        {t("admin_dashboard.calendar", "Calendar")}
+      </CardTitle> */}
       <Calendar
         mode='single'
         selected={date}
         onSelect={setDate}
         className='rounded-md border flex justify-center'
+        captionLayout='dropdown-buttons'
+        fromYear={1980}
+        toYear={new Date().getFullYear() + 10}
+        disabled={loading}
       />
     </Card>
   );

@@ -8,7 +8,7 @@ interface IData {
 
 interface DataLinksPropsI {
   row: any;
-  accessorKey: "subjects" | "groups";
+  accessorKey: "subjects" | "primaryClass";
   navigate?: boolean;
 }
 
@@ -29,7 +29,7 @@ const DataLinks: React.FC<DataLinksPropsI> = ({
           <div key={item?._id}>
             {navigate ? (
               <Link
-                to={`/list/${accessorKey}/${item?._id}`}
+                to={`/list/${accessorKey === 'primaryClass' ? 'classes' : accessorKey}/${item?._id}`}
                 className='hover:text-blue-500 hover:underline'
               >
                 {item?.name}

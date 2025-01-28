@@ -5,8 +5,9 @@ import DropDown from "../dropdown";
 import CardTitle from "../card-title";
 import { Card } from "@/components/ui/card";
 import useUserCardsFeatures from "./features";
+import { Skeleton } from "@/components/ui/skeleton";
 
-const UserCards: React.FC = () => {
+const UserCards: React.FC<{ loading: boolean }> = ({ loading }) => {
   const { items } = useUserCardsFeatures();
 
   const getClassForUrl = (url: string) => {
@@ -24,9 +25,13 @@ const UserCards: React.FC = () => {
       {items?.map((item) => (
         <Card key={item._id} className='relative p-4'>
           <div className='flex flex-col gap-2'>
-            <h3 className='text-[32px] sm:text-[36px] md:text-[40px] font-bold'>
-              {item.count}
-            </h3>
+            {loading ? (
+              <Skeleton className='w-[85%] h-14' />
+            ) : (
+              <h3 className='text-[32px] sm:text-[36px] md:text-[40px] font-bold'>
+                {item.count}
+              </h3>
+            )}
             <div className='flex items-center gap-2'>
               <span
                 className={classNames(
@@ -34,7 +39,7 @@ const UserCards: React.FC = () => {
                   getClassForUrl(item.url)
                 )}
               />
-              <CardTitle>{item.title}</CardTitle>
+              <CardTitle>{item?.title}</CardTitle>
             </div>
           </div>
           <DropDown url={`/list/${item.url}`} />
