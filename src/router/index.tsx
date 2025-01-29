@@ -32,6 +32,7 @@ const AssignmentsPage = lazy(() => import("@/pages/list/assignments"));
 const ResultsPage = lazy(() => import("@/pages/list/results"));
 
 const AttendancesPage = lazy(() => import("@/pages/list/attendances"));
+const AddAttendancePage = lazy(() => import("@/pages/list/attendances/class"));
 
 const AnnouncementsPage = lazy(() => import("@/pages/list/announcements"));
 const AnnouncementDetailsPage = lazy(
@@ -234,6 +235,22 @@ const AppRouter: React.FC = () => {
               <AttendancesPage />
             </PrivateRoute>
           ),
+          children: [
+            {
+              path: "class/:classId",
+              element: (
+                <PrivateRoute
+                  allowedRoles={[
+                    "admin",
+                    "super-admin",
+                    "teacher",
+                  ]}
+                >
+                  <AddAttendancePage />
+                </PrivateRoute>
+              ),
+            },
+          ]
         },
         {
           path: "/list/events",

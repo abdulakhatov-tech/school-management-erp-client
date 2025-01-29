@@ -9,7 +9,7 @@ import {
   SelectedRowCount,
   DatePickerWithRange,
 } from "@/components/ui/data-table";
-// import AddBtn from "../add-btn";
+import AddBtn from "../add-btn";
 import useDataTableFeatures from "./features";
 import { Table } from "@/components/ui/table";
 import { Skeleton } from "@/components/ui/skeleton";
@@ -41,7 +41,9 @@ function DataTable<TData, TValue>({
             <ViewOptions table={table} />
           )}
           {/* {canModify && <AddBtn loading={loading} />} */}
+        <AddBtn />
         </div>
+
       </div>
 
       <div className='rounded-md border min-h-[740px]'>
