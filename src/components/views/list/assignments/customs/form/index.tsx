@@ -25,8 +25,8 @@ const AssignmentForm: React.FC = () => {
     isFormChanged,
     initialValues,
     lesson_options,
-    isAssignmentDataLoading,
     isLessonsDataLoading,
+    isAssignmentDataLoading,
     handleFormSubmit,
   } = useAssignmentFormFeatures();
 
