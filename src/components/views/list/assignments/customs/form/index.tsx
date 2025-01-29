@@ -47,7 +47,6 @@ const AssignmentForm: React.FC = () => {
               label={t("subject_form.name")}
               placeholder={t("assignment_form.enter_name")}
               rows={7}
-              value={props.values.name}
               loading={isAssignmentDataLoading && actionType === "edit"}
             />
 
