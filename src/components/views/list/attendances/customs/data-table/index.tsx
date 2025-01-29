@@ -21,7 +21,7 @@ function DataTable<TData, TValue>({
   columns,
   loading = false,
 }: DataTablePropsI<TData, TValue>) {
-  const { table, canModify } = useDataTableFeatures<TData, TValue>({
+  const { table } = useDataTableFeatures<TData, TValue>({
     columns,
     data: data?.data || [],
   });

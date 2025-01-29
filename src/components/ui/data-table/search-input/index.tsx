@@ -12,7 +12,7 @@ interface PropsI {
   disabled?: boolean;
 }
 
-const DataTableSearchInput: React.FC<PropsI> = ({ table, loading, disabled=false }) => {
+const DataTableSearchInput: React.FC<PropsI> = ({ loading, disabled=false }) => {
   const { t } = useTranslation();
   const [searchParams, setSearchParams] = useSearchParams();
   const [search, setSearch] = useState(searchParams.get("search") || "");

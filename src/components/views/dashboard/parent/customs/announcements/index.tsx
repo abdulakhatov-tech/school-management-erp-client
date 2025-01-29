@@ -16,6 +16,9 @@ const Announcements: React.FC = () => {
 
   const { data, isLoading } = getAllAnnouncements;
 
+  if(isLoading) {
+    return <div>Loading...</div>
+  }
 
 
   return (
@@ -29,10 +32,10 @@ const Announcements: React.FC = () => {
         {announcements?.length === 0 ? (
           <p>{t("admin_dashboard.no_data_available")}</p>
         ) : (
-          data?.data?.map(({ _id, name, description, bg }) => (
+          data?.data?.map(({ _id, name, description }: any) => (
             <Card
               key={_id}
-              className={`p-4 ${bg} hover:scale-95 transition-all`}
+              className={`p-4 hover:scale-95 transition-all`}
             >
               <h5 className='text-md font-semibold underline mb-2'>
                 <Link to={`/list/announcements/${_id}`}>{name}</Link>

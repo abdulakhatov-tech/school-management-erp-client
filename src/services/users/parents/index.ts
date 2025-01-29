@@ -6,7 +6,6 @@ import { useMutation, useQueryClient } from "@tanstack/react-query";
 import useAxiosInstance from "@/api";
 import { useToast } from "@/hooks/use-toast";
 import useQueryHandler from "@/hooks/useQueryHandler";
-import { IPaginationParams } from "@/interfaces/pagination";
 
 export const useParentsService = () => {
   const param = useParams();

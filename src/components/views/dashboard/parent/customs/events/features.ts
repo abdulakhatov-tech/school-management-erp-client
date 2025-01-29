@@ -1,4 +1,3 @@
-import { useEventsService } from "@/services/events";
 
 const events = [
   {

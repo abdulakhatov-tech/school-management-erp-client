@@ -56,7 +56,6 @@ const SubjectForm: React.FC = () => {
               label={t("subject_form.description")}
               placeholder={t("subject_form.enter_description")}
               rows={5}
-              value={props.values.description}
               loading={isSubjectDataLoading && actionType === "edit"}
             />
 

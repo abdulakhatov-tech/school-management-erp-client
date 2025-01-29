@@ -7,7 +7,7 @@ import {
 import { IClass } from "./class";
 import { ILesson } from "./lesson";
 import { ISubject } from "./subject";
-import { IResults } from "./result";
+import { IResult } from "./result";
 import { IPayment } from "./payment";
 import { IAttendance } from "./attendance";
 
@@ -55,7 +55,7 @@ export interface IStudent extends IUser {
   parent: IParent;
   class: IClass;
   attendances: Array<IAttendance>;
-  results: Array<IResults>;
+  results: Array<IResult>;
   payments: Array<IPayment>;
 }
 

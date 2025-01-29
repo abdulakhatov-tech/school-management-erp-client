@@ -1,21 +1,18 @@
 import { useCallback, useEffect } from "react";
 import { useTranslation } from "react-i18next";
-import { useParams, useSearchParams } from "react-router-dom";
-import { useMutation, useQueryClient } from "@tanstack/react-query";
+import { useSearchParams } from "react-router-dom";
 
 import useAxiosInstance from "@/api";
 import { useToast } from "@/hooks/use-toast";
 import useQueryHandler from "@/hooks/useQueryHandler";
 
 export const useAttendancesService = () => {
-  const param = useParams();
   const { toast } = useToast();
   const { t } = useTranslation();
   const $axios = useAxiosInstance();
-  const queryClient = useQueryClient();
   const [searchParams, setSearchParams] = useSearchParams();
 
-  const attendanceId = searchParams.get("attendanceId") || param?.attendanceId;
+  // const attendanceId = searchParams.get("attendanceId") || param?.attendanceId;
 
   // Get limit and page from search params
   const getLimit = useCallback(() => {

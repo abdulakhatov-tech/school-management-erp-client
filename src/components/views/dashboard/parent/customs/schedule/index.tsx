@@ -6,24 +6,6 @@ import { ILesson } from "@/interfaces/lesson";
 import { IStudent } from "@/interfaces/user";
 import { useGetAllLessonsByClassId } from "@/services/lessons";
 
-const mockData = [
-  {
-    name: "Math Class",
-    start: new Date("2024-12-25T09:00:00"),
-    end: new Date("2024-12-25T10:30:00"),
-  },
-  {
-    name: "Science Class",
-    start: new Date("2024-12-26T11:00:00"),
-    end: new Date("2024-12-26T12:30:00"),
-  },
-  {
-    name: "History Class",
-    start: new Date("2024-12-27T13:00:00"),
-    end: new Date("2024-12-27T14:30:00"),
-  },
-];
-
 const BigCalendarContainer = ({ user }: { user: IStudent }) => {
   const { data, isLoading } = useGetAllLessonsByClassId(user?.class?._id);
 

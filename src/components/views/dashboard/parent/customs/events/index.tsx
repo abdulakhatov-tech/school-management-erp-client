@@ -1,6 +1,5 @@
 import React from "react";
 
-import EventsFeatures from "./features";
 import EventCards from "@/components/generic/event-cards";
 import { useEventsService } from "@/services/events";
 import { IEvent } from "@/interfaces/event";
@@ -24,7 +23,7 @@ const Events: React.FC = () => {
       endDate: new Date(event.endDate),
     }))
 
-    return <EventCards events={events} />;
+    return <EventCards data={events} />;
 };
 
 export default Events;

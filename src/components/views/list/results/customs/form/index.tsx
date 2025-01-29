@@ -35,7 +35,6 @@ const ResultForm: React.FC = () => {
               label={t("result_form.description")}
               placeholder={t("result_form.enter_description")}
               rows={7}
-              value={props.values.description}
               // loading={isAssignmentDataLoading && actionType === "edit"}
             />
 

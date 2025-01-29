@@ -10,7 +10,7 @@ export const useRoomService = () => {
   const { toast } = useToast();
   const { t } = useTranslation();
   const $axios = useAxiosInstance();
-  const [searchParams, setSearchParams] = useSearchParams();
+  const [searchParams] = useSearchParams();
 
   const getSearch = useCallback(() => {
     return searchParams.get("search") || "";

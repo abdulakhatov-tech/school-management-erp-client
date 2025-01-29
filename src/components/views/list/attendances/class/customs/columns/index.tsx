@@ -1,5 +1,4 @@
 import { Link } from "react-router-dom";
-import { useTranslation } from "react-i18next";
 import { ColumnDef } from "@tanstack/react-table";
 
 import { IStudent } from "@/interfaces/user";
@@ -10,7 +9,6 @@ import {
 } from "@/components/ui/data-table";
 
 const useColumns = () => {
-  const { t } = useTranslation();
 
   const columns: ColumnDef<IStudent>[] = [
     {

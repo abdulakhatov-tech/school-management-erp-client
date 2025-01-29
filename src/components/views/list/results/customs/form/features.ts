@@ -20,20 +20,22 @@ const initialResultValues: IInitialValues = {
 };
 
 const useResultFormFeatures = () => {
-  const [state, setState] = useState<{
+  const [state] = useState<{
     loading: boolean;
     error: string | null;
   }>({
     loading: false,
     error: null,
   });
-  const [initialValues, setInitialValues] =
-    useState<IInitialValues>(initialResultValues);
+  const [initialValues] = useState<IInitialValues>(initialResultValues);
 
   const handleFormSubmit = async (
     values: IInitialValues,
     { resetForm }: { resetForm: () => void }
-  ) => {};
+  ) => {
+    console.log(values);
+    resetForm();
+  };
 
   // Compute whether form values are changed
   const isFormChanged = (values: IInitialValues): boolean => {
