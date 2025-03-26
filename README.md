@@ -1,3 +1,27 @@
 ![image](https://github.com/user-attachments/assets/5b40a812-c3ec-4497-8768-ee7ccb2f6c0e)# School Management ERP/CRM
 
-The School Management ERP/CRM Backend is designed to provide a modular, extensible, and secure API for managing all school operations, from academic performance to administrative processes. Built with Express.js, TypeScript, and MongoDB, this system ensures robust data integrity, multi-role access control, and seamless integration with modern frontend applications.
+# School Management ERP/CRM - Frontend
+
+Modern frontend for a comprehensive School Management System, built to integrate with the Node.js/TypeScript/MongoDB backend. Features multi-role dashboards, real-time analytics, and responsive design for all school operations.
+
+### Key Features
+- 📊 Role-based dashboards (Admin, Teacher, Student, Parent)
+
+- 🏫 Academic management (Classes, Subjects, Timetables)
+
+- 📝 Student information system with performance tracking
+
+- 🗓️ Attendance and scheduling modules
+
+- 💬 Communication portal with notifications
+
+- 📱 Fully responsive PWA design
+
+### Technology Stack
+- Framework: React.js with TypeScript
+
+- State Management: Redux Toolkit
+
+- UI Library: ShadCN UI
+
+- API Client: Axios with JWT authentication
